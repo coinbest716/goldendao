@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: dao-font;
+  src: url('../assets/fonts/source-code-pro.ttf');
+}
+
+@font-face {
+  font-family: dao-font-italic;
+  src: url('../assets/fonts/source-code-pro-italic.ttf');
+}
+
+@font-face {
+  font-family: ethnocentric-font;
+  src: url('../assets/fonts/ethnocentric-rg.ttf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: dao-font;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-background {
+  background-color: black;
+}
+
+.main_header .nav-menu-wrapper {
+  background: linear-gradient(0.25turn, #88601f11, #88601f);
+}
+
+.section-info-wrapper > p {
+  color: white;
+}
+
+.caption-wrapper .caption {
+  font-size: 26pt;
+  font-family: ethnocentric-font;
+  text-align: center;
+  color: #f6d42e;
+}
+
+/* .welcome-section .section-container {
+  width: 400px;
+} */
+
+.center-container {
+  margin-left: 220px;
+  margin-right: 220px;
+}
