@@ -102,9 +102,15 @@ a {
     rgba(200, 200, 200, 0.2) 0px 14px 80px;
 }
 
-.membership-card-viewer .membership-card {
+.membership-card-viewer .membership-card,
+.allocation-card {
   box-shadow: rgba(200, 200, 200, 0.2) 0px 8px 20px, rgba(200, 200, 200, 0.2) 0px -4px 20px,
     rgba(200, 200, 200, 0.2) 0px 6px 80px;
+}
+
+.allocation-card .title {
+  font-size: 20pt;
+  font-family: ethnocentric-font;
 }
 
 .welcome-section {
@@ -121,14 +127,41 @@ a {
   background: linear-gradient(#b08000, #895f1f);
 }
 
-.membership-card-viewer .membership-card.opacity {
-  opacity: 0.8;
-}
-
 .bg-special-shape {
   background-image: url('../assets/images/tiger.png');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   top: -280px;
+}
+
+.faq-wrapper {
+  color: #ffffffee;
+}
+.Collapsible .Collapsible__trigger {
+  display: block;
+  position: relative;
+}
+
+.Collapsible .Collapsible__trigger.is-open::after {
+  content: '-';
+  color: white;
+  right: 0;
+  top: -8px;
+  position: absolute;
+  font-size: 25px;
+}
+
+.Collapsible .Collapsible__trigger.is-closed::after {
+  content: '+';
+  color: white;
+  font-size: 25px;
+  right: 0;
+  top: -8px;
+  position: absolute;
+}
+
+.community-section .dao-font-bold {
+  font-size: 20pt;
+  font-weight: 600;
 }
