@@ -165,3 +165,9 @@ a {
   font-size: 20pt;
   font-weight: 600;
 }
+
+.footer-wrapper {
+  background-image: url('../assets/images/logo-mark.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

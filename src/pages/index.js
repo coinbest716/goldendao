@@ -1,12 +1,18 @@
-import Caption from '@src/components/caption'
+import React, { useEffect } from 'react'
 import SectionInfo from '@src/components/section_info'
 import DaoButton from '@src/components/dao_button'
 import NFTCard from '@src/components/nft_card'
 import MembershipCardViewer from '@src/components/membership_card_viewer'
 import Image from 'next/image'
+import Faq from '@src/components/faq'
+import MemberShipCard from '@src/components/membership_card'
+import AllocationCard from '@src/components/allocation_card'
+import DaoIconButton from '@src/components/dao_icon_btn'
 
 import NFTImg from '@src/assets/images/nft.png'
 import ImgLogo from '@src/assets/images/logo.png'
+import DiscordImg from '@src/assets/social_links/discord.svg'
+
 const CaptionInfo = {
   welcome: {
     caption: 'WELCOME TO GOLDENDAO',
@@ -36,6 +42,9 @@ const CaptionInfo = {
   },
 }
 
+const allocationCard = {
+  title: 'NFT Allocation',
+}
 export default function Index() {
   return (
     <>
@@ -55,7 +64,7 @@ export default function Index() {
       </section>
 
       <section className="membership-section relative mt-[110px]">
-        <div className="bg-special-shape w-full h-[2000px]"></div>
+        <div className="bg-special-shape w-full h-[2500px]"></div>
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['membership']['caption']}>
             <p className="mb-[36px]">{CaptionInfo['membership']['content1']}</p>
@@ -108,12 +117,51 @@ export default function Index() {
           </p>
         </SectionInfo>
       </section>
-      <section className="faq-section">
+      <section className="faq-section center-container">
         <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
+        <Faq className="pt-[40px]" />
+        <AllocationCard title={allocationCard.title} className="mt-[100px]">
+          <p>Public Sale (2000 mint total, priced at 1 ETH)</p>
+          <br />
+          <p>
+            Presale (.80 ETH, 888 total): Saved for individuals who show commitment (via social media, discord
+            engagement or other methods) to GoldenDAO initiatives, mission.
+          </p>
+          <br />
+          <p>
+            Reserves (200 total): Reserved for individuals, partners who show long term commitment to GoldenDAO
+            initiatives, mission (i.e. social and community engagement, appearance, performance, MC at GoldenDAO
+            in-person event, etc.).
+          </p>
+        </AllocationCard>
       </section>
-      <section className="community-section">
-        <SectionInfo info_title={CaptionInfo['community']['caption1']}></SectionInfo>
-        <SectionInfo info_title={CaptionInfo['community']['caption2']}></SectionInfo>
+      <section className="community-section mt-[185px] center-container">
+        <SectionInfo info_title={CaptionInfo['community']['caption1']} className="text-center">
+          <p>GoldenDAO community values are hinged upon supporting the Asian community through but not limited to:</p>
+          <div className="dao-font-bold text-white space-y-[45px] mt-[65px]">
+            <p>Combating social injustice</p>
+            <p>Civic and community outreach</p>
+            <p>Demystifying Asian mental health stigma</p>
+            <p>Closing the gap on economic disparities</p>
+            <p>
+              Lifting up Asian culture, artistry, creatives in addition to promoting executive and thought leadership
+            </p>
+            <p>Allyship and advocacy</p>
+          </div>
+        </SectionInfo>
+        <SectionInfo className="mt-[180px]" info_title={CaptionInfo['community']['caption2']} />
+        <div className="flex justify-center pt-[20px]">
+          <DaoIconButton width="580px">
+            <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
+            <span className="mt-[15px] ml-[8px] text-[19px]">JOIN DISCORD</span>
+          </DaoIconButton>
+        </div>
+        <div className="flex justify-center mt-[50px]">
+          <div className="singup-wrapper dao-btn-wrapper flex rounded">
+            <input className="signup-info w-[400px] rounded m-[2px] px-[4px]" />
+            <button className="dao-btn-wrapper text-white w-[180px] rounded">Sign up</button>
+          </div>
+        </div>
       </section>
     </>
   )
