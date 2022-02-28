@@ -1,7 +1,10 @@
 import Caption from '@src/components/caption'
 import SectionInfo from '@src/components/section_info'
 import DaoButton from '@src/components/dao_button'
+import NFTCard from '@src/components/nft_card'
+import MembershipCardViewer from '@src/components/membership_card_viewer'
 
+import NFTImg from '@src/assets/images/nft.png'
 const CaptionInfo = {
   welcome: {
     caption: 'WELCOME TO GOLDENDAO',
@@ -10,11 +13,12 @@ const CaptionInfo = {
   },
   membership: {
     caption: 'MEMBERSHIP',
-    content:
-      'Become a member of GoldenDAO and join a core network of individuals contributing to the future of the web3 community across the metaverse and IRL. As a founding member, you will have access to:',
+    content1:
+      'Become a member of GoldenDAO and join a core network of individuals contributing to the future of the web3 community across the metaverse and IRL.',
+    content2: ' As a founding member, you will have access to:',
   },
-  loadmap: {
-    caption: 'LOADMAP',
+  roadmap: {
+    caption: 'ROADMAP',
   },
   team: {
     caption1: 'CORE FOUNDERS',
@@ -33,28 +37,33 @@ const CaptionInfo = {
 export default function Index() {
   return (
     <>
-      <section className="welcome-section center-container">
-        <div className="flex flex-row">
+      <section className="welcome-section center-container mt-[20px]">
+        <div className="flex flex-row space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col">
-            <SectionInfo info_title={CaptionInfo['welcome']['caption']}>
+            <SectionInfo className="mb-[50px]" info_title={CaptionInfo['welcome']['caption']}>
               <p>{CaptionInfo['welcome']['content']}</p>
             </SectionInfo>
-            <DaoButton>MINT YOUR NFT</DaoButton>
+            <DaoButton width="280px">MINT YOUR NFT</DaoButton>
           </div>
 
-          <div className="basis-1/2">awefjiawe</div>
+          <div className="basis-1/2 flex justify-center">
+            <NFTCard className="nft-card-shadow z-10" img={NFTImg} width={435} height={435}></NFTCard>
+          </div>
         </div>
       </section>
 
-      <section className="membership-section">
+      <section className="membership-section relative">
+        <div className="bg-special-shape w-full h-[2000px]"></div>
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['membership']['caption']}>
-            <p>{CaptionInfo['membership']['content']}</p>
+            <p className="mb-[36px]">{CaptionInfo['membership']['content1']}</p>
+            <p>{CaptionInfo['membership']['content2']}</p>
           </SectionInfo>
         </div>
+        <MembershipCardViewer className="mt-[80px] mx-[50px]" />
       </section>
       <section className="roadmap-section">
-        <SectionInfo info_title={CaptionInfo['loadmap']['caption']}></SectionInfo>
+        <SectionInfo info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
       </section>
       <section className="team-section">
         <SectionInfo info_title={CaptionInfo['team']['caption1']}></SectionInfo>

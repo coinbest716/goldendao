@@ -1,12 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from 'react'
 
-
-export default function NavItem(prop) 
-{
-    return (
-        <a className="text-gray-300 hover:bg-gray-700 hover:text-white">
-            abc
-        </a>
-    )
+export default function NavItem(prop) {
+  return (
+    <a className="nav-item hover:text-lightest_gold text-white px-[25px] h-full pt-[12px] cursor-pointer">
+      {prop.name}
+    </a>
+  )
 }
-

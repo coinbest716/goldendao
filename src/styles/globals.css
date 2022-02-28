@@ -37,6 +37,27 @@ a {
   background-color: black;
 }
 
+/*colors*/
+.darkest_gold {
+  color: #895f1f;
+}
+
+.medium_gold {
+  color: #c6a000;
+}
+
+.lightest_gold {
+  color: #f6d42e;
+}
+
+.lightest_gray {
+  color: #efefef;
+}
+
+.medium_gray {
+  color: #999999;
+}
+
 .main_header .nav-menu-wrapper {
   background: linear-gradient(0.25turn, #88601f11, #88601f);
 }
@@ -46,10 +67,9 @@ a {
 }
 
 .caption-wrapper .caption {
-  font-size: 26pt;
+  font-size: 28pt;
   font-family: ethnocentric-font;
   text-align: center;
-  color: #f6d42e;
 }
 
 /* .welcome-section .section-container {
@@ -59,4 +79,50 @@ a {
 .center-container {
   margin-left: 220px;
   margin-right: 220px;
+}
+
+.nav-item-wrapper .nav-item {
+  display: inline-block;
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.nav-item-wrapper .nav-item:last-child {
+  padding-right: 45px;
+}
+
+.dao-btn-wrapper {
+  font-size: 15pt;
+  height: 60px;
+  background: linear-gradient(#c6a000, #895f1f);
+}
+
+.nft-card-shadow {
+  box-shadow: rgba(200, 200, 200, 0.2) 0px 18px 30px, rgba(200, 200, 200, 0.2) 0px -22px 40px,
+    rgba(200, 200, 200, 0.2) 0px 14px 80px;
+}
+
+.membership-card-viewer .membership-card {
+  box-shadow: rgba(200, 200, 200, 0.2) 0px 8px 20px, rgba(200, 200, 200, 0.2) 0px -4px 20px,
+    rgba(200, 200, 200, 0.2) 0px 6px 80px;
+}
+
+.welcome-section {
+  margin-bottom: 110px;
+}
+
+.membership-card-viewer .card1 {
+  background: linear-gradient(#b08000, #895f1f);
+}
+
+.membership-card-viewer .membership-card.opacity {
+  opacity: 0.8;
+}
+
+.bg-special-shape {
+  background-image: url('../assets/images/tiger.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -280px;
 }
