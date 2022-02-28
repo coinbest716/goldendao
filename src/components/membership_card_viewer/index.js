@@ -40,9 +40,9 @@ export default function MembershipCardViewer(props) {
 
       <div className={`grid grid-cols-3 gap-[50px] mt-[70px]`}>
         <div className="col-span-1"></div>
-        <div className="col-span-2">
+        <div className="col-span-2 flex items-center flex-col">
           <MemberShipCard className="opacity" content={membershipContentFinal.content} />
-          <DaoButton className="relative">MINT YOUR NFT</DaoButton>
+          <DaoButton className="relative w-[410px] mt-[50px]">MINT YOUR NFT</DaoButton>
         </div>
       </div>
     </div>

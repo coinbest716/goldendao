@@ -3,8 +3,10 @@ import SectionInfo from '@src/components/section_info'
 import DaoButton from '@src/components/dao_button'
 import NFTCard from '@src/components/nft_card'
 import MembershipCardViewer from '@src/components/membership_card_viewer'
+import Image from 'next/image'
 
 import NFTImg from '@src/assets/images/nft.png'
+import ImgLogo from '@src/assets/images/logo.png'
 const CaptionInfo = {
   welcome: {
     caption: 'WELCOME TO GOLDENDAO',
@@ -23,7 +25,7 @@ const CaptionInfo = {
   team: {
     caption1: 'CORE FOUNDERS',
     caption2: 'ARTISTS / ENGINEEERS / COMMUNITY',
-    caption2: 'MESSAGE FROM ANDREW',
+    caption3: 'MESSAGE FROM ANDREW',
   },
   faq: {
     caption: 'FREQUENTLY ASKED QUESTIONS',
@@ -37,7 +39,7 @@ const CaptionInfo = {
 export default function Index() {
   return (
     <>
-      <section className="welcome-section center-container mt-[20px]">
+      <section className="welcome-section center-container mt-[20px] ">
         <div className="flex flex-row space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col">
             <SectionInfo className="mb-[50px]" info_title={CaptionInfo['welcome']['caption']}>
@@ -52,7 +54,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="membership-section relative">
+      <section className="membership-section relative mt-[110px]">
         <div className="bg-special-shape w-full h-[2000px]"></div>
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['membership']['caption']}>
@@ -62,12 +64,49 @@ export default function Index() {
         </div>
         <MembershipCardViewer className="mt-[80px] mx-[50px]" />
       </section>
-      <section className="roadmap-section">
+      <section className="roadmap-section mt-[200px]">
         <SectionInfo info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
       </section>
-      <section className="team-section">
-        <SectionInfo info_title={CaptionInfo['team']['caption1']}></SectionInfo>
-        <SectionInfo info_title={CaptionInfo['team']['caption2']}></SectionInfo>
+      <section className="team-section center-container">
+        <div className="text-center">
+          <Image src={ImgLogo} alt="Golden Dao logo" width={250} height={250} />
+        </div>
+        <SectionInfo className="mt-[88px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
+          <div className="founder-info text-center space-y-[50px] pt-[20px]">
+            <p>ANDREW YANG</p>
+            <p>JOHN DOE</p>
+            <p>FRANK SINATRA</p>
+          </div>
+        </SectionInfo>
+        <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
+          <div className="artists-info grid grid-cols-2 pt-[20px]">
+            <div className="col-1 text-center space-y-[50px]">
+              <p>Celio Jyrki</p>
+              <p>Lú Raylene</p>
+              <p>Maud Metrodora</p>
+              <p>Francisco Javier Miltiades</p>
+              <p>Abbie Sulaiman</p>
+              <p>Daiva Ros</p>
+              <p>Prabodh Evandrus</p>
+            </div>
+            <div className="col-1 text-center space-y-[50px]">
+              <p>Celio Jyrki</p>
+              <p>Lú Raylene</p>
+              <p>Maud Metrodora</p>
+              <p>Francisco Javier Miltiades</p>
+              <p>Abbie Sulaiman</p>
+              <p>Daiva Ros</p>
+              <p>Prabodh Evandrus</p>
+            </div>
+          </div>
+        </SectionInfo>
+        <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption3']}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+        </SectionInfo>
       </section>
       <section className="faq-section">
         <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
