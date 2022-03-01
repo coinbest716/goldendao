@@ -70,7 +70,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="membership-section mt-[110px] relative">
+      <section id="membership" className="membership-section mt-[110px] relative">
         <div className="background">
           <Image src={MembershipBackground} />
         </div>
@@ -85,7 +85,7 @@ export default function Index() {
           <MembershipCardViewer className="mt-[80px] mx-[50px]" />
         </div>
       </section>
-      <section className="roadmap-section mt-[200px] relative">
+      <section id="roadmap" className="roadmap-section mt-[200px] relative">
         <div className="background">
           <Image src={RoadmapBackground} layout="fill" />
         </div>
@@ -94,7 +94,7 @@ export default function Index() {
           <Roadmap className="center-container" />
         </div>
       </section>
-      <section className="team-section mt-[200px] relative">
+      <section id="team" className="team-section mt-[200px] relative">
         <div className="background">
           <Image src={CofounderBackground} layout="fill" />
         </div>
@@ -145,7 +145,7 @@ export default function Index() {
           </SectionInfo>
         </div>
       </section>
-      <section className="faq-section mt-[170px] relative">
+      <section id="faq" className="faq-section mt-[170px] relative">
         <div className="background">
           <Image src={FaqBackground} layout="fill" />
         </div>
@@ -168,7 +168,7 @@ export default function Index() {
           </AllocationCard>
         </div>
       </section>
-      <section className="community-section mt-[185px] center-container">
+      <section id="community" className="community-section mt-[185px] center-container">
         <SectionInfo info_title={CaptionInfo['community']['caption1']} className="text-center">
           <p>GoldenDAO community values are hinged upon supporting the Asian community through but not limited to:</p>
           <div className="dao-font-bold text-white space-y-[45px] mt-[65px]">

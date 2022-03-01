@@ -23,23 +23,33 @@ export default function Footer(props) {
         </div>
 
         <div className="text-center">
-          <span>MEMBERSHIP</span>
+          <span>
+            <a href="#membership">MEMBERSHIP</a>
+          </span>
         </div>
 
         <div className="text-center">
-          <span>ROADMAP</span>
+          <span>
+            <a href="#roadmap">ROADMAP</a>
+          </span>
         </div>
 
         <div className="text-center">
-          <span>TEAM</span>
+          <span>
+            <a href="#team">TEAM</a>
+          </span>
         </div>
 
         <div className="text-center">
-          <span>FAQ</span>
+          <span>
+            <a href="#faq">FAQ</a>
+          </span>
         </div>
 
         <div className="text-center">
-          <span>COMMUNITY VALUES</span>
+          <span>
+            <a href="#community">COMMUNITY VALUES</a>
+          </span>
         </div>
 
         <div className="text-center">

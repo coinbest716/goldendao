@@ -20,11 +20,11 @@ const Header = () => {
               <ImgLink img={LogoImg} width={130} height={150} />
             </div>
             <NavWrapper>
-              <NavItem name="MEMBERSHIP" />
-              <NavItem name="ROADMAP" />
-              <NavItem name="TEAM" />
-              <NavItem name="FAQ" />
-              <NavItem name="COMMUNITY VALUES" />
+              <NavItem name="MEMBERSHIP" href="#membership" />
+              <NavItem name="ROADMAP" href="#roadmap" />
+              <NavItem name="TEAM" href="#team" />
+              <NavItem name="FAQ" href="#faq" />
+              <NavItem name="COMMUNITY VALUES" href="#community" />
             </NavWrapper>
           </div>
         </div>
