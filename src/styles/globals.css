@@ -87,9 +87,9 @@ a {
   font-weight: 700;
 }
 
-.nav-item-wrapper .nav-item:last-child {
+/* .nav-item-wrapper .nav-item:last-child {
   padding-right: 45px;
-}
+} */
 
 .dao-btn-wrapper {
   font-size: 15pt;
@@ -169,4 +169,65 @@ a {
   background-image: url('../assets/images/logo-mark.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.roadmap-wrapper .roadmap-list {
+  position: relative;
+}
+.roadmap-wrapper .timeline {
+  top: 0px;
+  bottom: 0px;
+  left: -10px;
+  width: 5px;
+  background-color: white;
+  position: absolute;
+}
+
+.roadmap-wrapper .roadmap-list-item span {
+  font-family: ethnocentric-font;
+}
+
+.roadmap-wrapper .roadmap-list-item .item-content {
+  white-space: pre-line;
+}
+
+.roadmap-wrapper .roadmap-list-item:before {
+  content: '';
+  position: absolute;
+  background-color: #898783;
+  height: 18px;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 18px;
+  top: 3px;
+  left: -16px;
+}
+
+.roadmap-wrapper .roadmap-list-item.active::before {
+  background: linear-gradient(42.84deg, #895f1f -0.59%, #f6d42e 101.55%);
+}
+
+.roadmap-wrapper .roadmap-list-item .roadmap-content-link {
+  display: block;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.roadmap-section .background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.roadmap-section .background > div {
+  position: unset !important;
+}
+
+.roadmap-section .background .image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }

@@ -8,10 +8,13 @@ import Faq from '@src/components/faq'
 import MemberShipCard from '@src/components/membership_card'
 import AllocationCard from '@src/components/allocation_card'
 import DaoIconButton from '@src/components/dao_icon_btn'
+import Roadmap from '@src/components/roadmap'
 
 import NFTImg from '@src/assets/images/nft.png'
 import ImgLogo from '@src/assets/images/logo.png'
 import DiscordImg from '@src/assets/social_links/discord.svg'
+
+import RoadmapBackground from '@src/assets/images/roadmap_bg.png'
 
 const CaptionInfo = {
   welcome: {
@@ -73,10 +76,15 @@ export default function Index() {
         </div>
         <MembershipCardViewer className="mt-[80px] mx-[50px]" />
       </section>
-      <section className="roadmap-section mt-[200px]">
-        <SectionInfo info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
+      <section className="roadmap-section mt-[200px] relative">
+        <div className="background">
+          <Image className="background" src={RoadmapBackground} layout="fill" />
+        </div>
+
+        <SectionInfo className="center-container" info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
+        <Roadmap className="center-container" />
       </section>
-      <section className="team-section center-container">
+      <section className="team-section center-container mt-[200px]">
         <div className="text-center">
           <Image src={ImgLogo} alt="Golden Dao logo" width={250} height={250} />
         </div>
@@ -117,7 +125,7 @@ export default function Index() {
           </p>
         </SectionInfo>
       </section>
-      <section className="faq-section center-container">
+      <section className="faq-section center-container mt-[170px]">
         <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
         <Faq className="pt-[40px]" />
         <AllocationCard title={allocationCard.title} className="mt-[100px]">
