@@ -15,6 +15,9 @@ import ImgLogo from '@src/assets/images/logo.png'
 import DiscordImg from '@src/assets/social_links/discord.svg'
 
 import RoadmapBackground from '@src/assets/images/roadmap_bg.png'
+import MembershipBackground from '@src/assets/images/tiger.png'
+import CofounderBackground from '@src/assets/images/cofounder_bg.png'
+import FaqBackground from '@src/assets/images/video_bg.png'
 
 const CaptionInfo = {
   welcome: {
@@ -48,11 +51,12 @@ const CaptionInfo = {
 const allocationCard = {
   title: 'NFT Allocation',
 }
+
 export default function Index() {
   return (
     <>
-      <section className="welcome-section center-container mt-[20px] ">
-        <div className="flex flex-row space-x-[50px]">
+      <section className="container mx-auto  welcome-section center-container mt-[20px] ">
+        <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col">
             <SectionInfo className="mb-[50px]" info_title={CaptionInfo['welcome']['caption']}>
               <p>{CaptionInfo['welcome']['content']}</p>
@@ -60,88 +64,109 @@ export default function Index() {
             <DaoButton width="280px">MINT YOUR NFT</DaoButton>
           </div>
 
-          <div className="basis-1/2 flex justify-center">
+          <div className="basis-1/2 flex justify-center md:mt-[0px] mt-[20px]">
             <NFTCard className="nft-card-shadow z-10" img={NFTImg} width={435} height={435}></NFTCard>
           </div>
         </div>
       </section>
 
-      <section className="membership-section relative mt-[110px]">
-        <div className="bg-special-shape w-full h-[2500px]"></div>
-        <div className="center-container">
-          <SectionInfo info_title={CaptionInfo['membership']['caption']}>
-            <p className="mb-[36px]">{CaptionInfo['membership']['content1']}</p>
-            <p>{CaptionInfo['membership']['content2']}</p>
-          </SectionInfo>
+      <section className="membership-section mt-[110px] relative">
+        <div className="background">
+          <Image src={MembershipBackground} />
         </div>
-        <MembershipCardViewer className="mt-[80px] mx-[50px]" />
+
+        <div className="container mx-auto">
+          <div className="center-container">
+            <SectionInfo info_title={CaptionInfo['membership']['caption']}>
+              <p className="mb-[36px]">{CaptionInfo['membership']['content1']}</p>
+              <p>{CaptionInfo['membership']['content2']}</p>
+            </SectionInfo>
+          </div>
+          <MembershipCardViewer className="mt-[80px] mx-[50px]" />
+        </div>
       </section>
       <section className="roadmap-section mt-[200px] relative">
         <div className="background">
-          <Image className="background" src={RoadmapBackground} layout="fill" />
+          <Image src={RoadmapBackground} layout="fill" />
         </div>
+        <div className="center mx-auto">
+          <SectionInfo className="center-container" info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
+          <Roadmap className="center-container" />
+        </div>
+      </section>
+      <section className="team-section mt-[200px] relative">
+        <div className="background">
+          <Image src={CofounderBackground} layout="fill" />
+        </div>
+        <div className="center-container">
+          <div className="text-center">
+            <Image src={ImgLogo} alt="Golden Dao logo" width={250} height={250} />
+          </div>
+          <SectionInfo className="mt-[88px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
+            <div className="founder-info text-center space-y-[50px] pt-[20px]">
+              <p>ANDREW YANG</p>
+              <p>JOHN DOE</p>
+              <p>FRANK SINATRA</p>
+            </div>
+          </SectionInfo>
 
-        <SectionInfo className="center-container" info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
-        <Roadmap className="center-container" />
-      </section>
-      <section className="team-section center-container mt-[200px]">
-        <div className="text-center">
-          <Image src={ImgLogo} alt="Golden Dao logo" width={250} height={250} />
+          <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
+            <div className="artists-info grid md:grid-cols-2 grid-cols-1 pt-[20px]">
+              <div className="col-1 text-center space-y-[50px]">
+                <p>Celio Jyrki</p>
+                <p>Lú Raylene</p>
+                <p>Maud Metrodora</p>
+                <p>Francisco Javier Miltiades</p>
+                <p>Abbie Sulaiman</p>
+                <p>Daiva Ros</p>
+                <p>Prabodh Evandrus</p>
+              </div>
+              <div className="col-1 text-center space-y-[50px]">
+                <p>Celio Jyrki</p>
+                <p>Lú Raylene</p>
+                <p>Maud Metrodora</p>
+                <p>Francisco Javier Miltiades</p>
+                <p>Abbie Sulaiman</p>
+                <p>Daiva Ros</p>
+                <p>Prabodh Evandrus</p>
+              </div>
+            </div>
+          </SectionInfo>
         </div>
-        <SectionInfo className="mt-[88px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
-          <div className="founder-info text-center space-y-[50px] pt-[20px]">
-            <p>ANDREW YANG</p>
-            <p>JOHN DOE</p>
-            <p>FRANK SINATRA</p>
-          </div>
-        </SectionInfo>
-        <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
-          <div className="artists-info grid grid-cols-2 pt-[20px]">
-            <div className="col-1 text-center space-y-[50px]">
-              <p>Celio Jyrki</p>
-              <p>Lú Raylene</p>
-              <p>Maud Metrodora</p>
-              <p>Francisco Javier Miltiades</p>
-              <p>Abbie Sulaiman</p>
-              <p>Daiva Ros</p>
-              <p>Prabodh Evandrus</p>
-            </div>
-            <div className="col-1 text-center space-y-[50px]">
-              <p>Celio Jyrki</p>
-              <p>Lú Raylene</p>
-              <p>Maud Metrodora</p>
-              <p>Francisco Javier Miltiades</p>
-              <p>Abbie Sulaiman</p>
-              <p>Daiva Ros</p>
-              <p>Prabodh Evandrus</p>
-            </div>
-          </div>
-        </SectionInfo>
-        <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption3']}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-        </SectionInfo>
       </section>
-      <section className="faq-section center-container mt-[170px]">
-        <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
-        <Faq className="pt-[40px]" />
-        <AllocationCard title={allocationCard.title} className="mt-[100px]">
-          <p>Public Sale (2000 mint total, priced at 1 ETH)</p>
-          <br />
-          <p>
-            Presale (.80 ETH, 888 total): Saved for individuals who show commitment (via social media, discord
-            engagement or other methods) to GoldenDAO initiatives, mission.
-          </p>
-          <br />
-          <p>
-            Reserves (200 total): Reserved for individuals, partners who show long term commitment to GoldenDAO
-            initiatives, mission (i.e. social and community engagement, appearance, performance, MC at GoldenDAO
-            in-person event, etc.).
-          </p>
-        </AllocationCard>
+      <section className="message-section mt-[170px] relative">
+        <div className="center-container">
+          <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption3']}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.
+            </p>
+          </SectionInfo>
+        </div>
+      </section>
+      <section className="faq-section mt-[170px] relative">
+        <div className="background">
+          <Image src={FaqBackground} layout="fill" />
+        </div>
+        <div className="center-container">
+          <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
+          <Faq className="pt-[40px]" />
+          <AllocationCard title={allocationCard.title} className="mt-[100px]">
+            <p>Public Sale (2000 mint total, priced at 1 ETH)</p>
+            <br />
+            <p>
+              Presale (.80 ETH, 888 total): Saved for individuals who show commitment (via social media, discord
+              engagement or other methods) to GoldenDAO initiatives, mission.
+            </p>
+            <br />
+            <p>
+              Reserves (200 total): Reserved for individuals, partners who show long term commitment to GoldenDAO
+              initiatives, mission (i.e. social and community engagement, appearance, performance, MC at GoldenDAO
+              in-person event, etc.).
+            </p>
+          </AllocationCard>
+        </div>
       </section>
       <section className="community-section mt-[185px] center-container">
         <SectionInfo info_title={CaptionInfo['community']['caption1']} className="text-center">
@@ -165,9 +190,9 @@ export default function Index() {
           </DaoIconButton>
         </div>
         <div className="flex justify-center mt-[50px]">
-          <div className="singup-wrapper dao-btn-wrapper flex rounded">
-            <input className="signup-info w-[400px] rounded m-[2px] px-[4px]" />
-            <button className="dao-btn-wrapper text-white w-[180px] rounded">Sign up</button>
+          <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded">
+            <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
+            <button className="basis-1/4 dao-btn-wrapper text-white rounded">Sign up</button>
           </div>
         </div>
       </section>

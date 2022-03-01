@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       </Head>
       <div className="page-background">
         <Header />
-        <main className="container mx-auto pb-[100px]">{children}</main>
+        <main className="pb-[100px]">{children}</main>
         <Footer />
       </div>
     </>

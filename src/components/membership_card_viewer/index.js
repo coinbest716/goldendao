@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import MemberShipCard from '@components/membership_card'
 import DaoButton from '@components/dao_button'
+
 const membershipContent = {
   card11:
     'Exclusive, priority, and complimentary access to GoldenDAO member meet-ups, parties across different cities including our much-anticipated launch party in April with special guests, celebrity appearances, and Andrew Yang as our host.',
@@ -18,10 +19,13 @@ const membershipContentFinal = {
   content:
     'IRL and virtual GoldenDAO gifts, including our prestigious made-to-fit, precious metal forged, silver sterling 18kg gold plated founding members signet ring, cross-referencing the NFT mint #. The ring is designed by Maxwell Amadeus Coombs, founder of streetwear brand Control Sector and an active designer for LVMH Hennessey merchandise. *Note that the inner section of ring is subject to change due to total mint #',
 }
+
+const imageList = [{ url: '/viewer/ring-1.jpg' }, { url: '/viewer/ring-2.jpg' }, { url: '/viewer/ring-3.jpg' }]
+
 export default function MembershipCardViewer(props) {
   return (
     <div className={`membership-card-viewer ${props.className}`}>
-      <div className={`grid grid-cols-3 gap-[50px]`}>
+      <div className={`grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[50px]`}>
         <div className="col-span-1 space-y-[50px] ">
           <MemberShipCard content={membershipContent.card11} />
           <MemberShipCard className="opacity" content={membershipContent.card12} />
@@ -38,8 +42,8 @@ export default function MembershipCardViewer(props) {
         </div>
       </div>
 
-      <div className={`grid grid-cols-3 gap-[50px] mt-[70px]`}>
-        <div className="col-span-1"></div>
+      <div className={`grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[50px] mt-[70px]`}>
+        <div className="col-span-1">{/* <Slider imageList={imageList} showArrowControls={false} /> */}</div>
         <div className="col-span-2 flex items-center flex-col">
           <MemberShipCard className="opacity" content={membershipContentFinal.content} />
           <DaoButton className="relative w-[410px] mt-[50px]">MINT YOUR NFT</DaoButton>
