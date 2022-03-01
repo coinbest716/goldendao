@@ -69,7 +69,6 @@ export default function Roadmap(props) {
     initalArray.push('')
     diamondsRefs.push(useRef(null))
   }
-
   const [timePonints, setTimePointsArray] = useState(initalArray)
   let halfScreenHeight = null
 

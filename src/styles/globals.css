@@ -283,3 +283,7 @@ a {
 .carousel-root .carousel .control-dots {
   bottom: -60px;
 }
+
+.nft-section-info h2 {
+  text-align: left !important;
+}
