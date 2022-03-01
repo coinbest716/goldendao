@@ -67,8 +67,21 @@ export default function Roadmap(props) {
   let diamondsRefs = []
   for (var i = 0; i < 13; i++) {
     initalArray.push('')
-    diamondsRefs.push(useRef(null))
   }
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+
   const [timePonints, setTimePointsArray] = useState(initalArray)
   let halfScreenHeight = null
 
