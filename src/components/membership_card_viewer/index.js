@@ -2,6 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import MemberShipCard from '@components/membership_card'
 import DaoButton from '@components/dao_button'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
 
 const membershipContent = {
   card11:
@@ -43,7 +45,20 @@ export default function MembershipCardViewer(props) {
       </div>
 
       <div className={`grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[50px] mt-[70px]`}>
-        <div className="col-span-1">{/* <Slider imageList={imageList} showArrowControls={false} /> */}</div>
+        <div className="col-span-1 relative">
+          <div className="carousel-background" />
+          <Carousel showThumbs={false} showArrows={false} showStatus={false}>
+            <div>
+              <img src="/viewer/ring-1.jpg" alt="image1" />
+            </div>
+            <div>
+              <img src="/viewer/ring-2.jpg" alt="image2" />
+            </div>
+            <div>
+              <img src="/viewer/ring-3.jpg" alt="image3" />
+            </div>
+          </Carousel>
+        </div>
         <div className="col-span-2 flex items-center flex-col">
           <MemberShipCard className="opacity" content={membershipContentFinal.content} />
           <DaoButton className="relative w-[410px] mt-[50px]">MINT YOUR NFT</DaoButton>

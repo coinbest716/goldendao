@@ -260,3 +260,25 @@ a {
   width: 100%;
   left: 0px;
 }
+
+.carousel-background {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 100%;
+  height: 100%;
+  background: #895f1f;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.carousel-root {
+  position: relative;
+}
+.carousel-root .carousel {
+  position: initial !important;
+}
+
+.carousel-root .carousel .control-dots {
+  bottom: -60px;
+}
