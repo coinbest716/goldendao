@@ -51,6 +51,22 @@ const Header = () => {
       <div className="w-full">
         <div className="wallet-connection-wrapper container mx-auto flex justify-end font-bold text-lightest_gold pr-[25px] h-[50px] items-center">
           WALLET CONNECTED
+          {/* <ImgLink
+            className="mt-[5px] ml-[16px]"
+            img={CardImg}
+            width={25}
+            height={21}
+            onClick={() => connectWallet()}
+          /> */}
+          {web3Provider ? (
+            <button className="button" type="button" onClick={disconnect}>
+              Disconnect
+            </button>
+          ) : (
+            <button className="button" type="button" onClick={connect}>
+              Connect
+            </button>
+          )}
         </div>
         <div className="nav-menu-wrapper">
           <div className="container mx-auto flex justify-end bg-gray-100 relative">
