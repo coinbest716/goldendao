@@ -87,6 +87,11 @@ export default function Roadmap(props) {
 
   const animation = () => {
     if (timeline.current != null) {
+      const rect = timeline.current.getBoundingClientRect()
+      if (rect.top - 200 > halfScreenHeight || rect.bottom + 200 < halfScreenHeight) {
+        //reduce too many calculations on unnecessary part
+        return
+      }
       window.requestAnimationFrame(() => {
         const initialColor = '#898783'
         const fillColor = '#895F1F'
