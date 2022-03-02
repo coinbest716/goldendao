@@ -9,10 +9,13 @@ import MemberShipCard from '@src/components/membership_card'
 import AllocationCard from '@src/components/allocation_card'
 import DaoIconButton from '@src/components/dao_icon_btn'
 import Roadmap from '@src/components/roadmap'
+import ImgLink from '@components/img_link'
 
 import NFTImg from '@src/assets/images/nft.png'
 import ImgLogo from '@src/assets/images/logo.png'
+import InstagramImg from '@src/assets/social_links/instagram.svg'
 import DiscordImg from '@src/assets/social_links/discord.svg'
+import TwitterImg from '@src/assets/social_links/twitter.svg'
 
 import RoadmapBackground from '@src/assets/images/roadmap_bg.png'
 import MembershipBackground from '@src/assets/images/tiger.png'
@@ -55,6 +58,16 @@ const allocationCard = {
 export default function Index() {
   return (
     <>
+      <div className="container mx-auto  flex justify-end space-x-[10px] pr-[25px]  pt-[120px]">
+        <ImgLink img={TwitterImg} width={30} height={30} />
+        <ImgLink
+          className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5 "
+          img={DiscordImg}
+          width={43}
+          height={33}
+        />
+        <ImgLink img={InstagramImg} width={30} height={30} />
+      </div>
       <section className="container mx-auto  welcome-section center-container mt-[20px] ">
         <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col">
@@ -70,7 +83,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="membership" className="membership-section mt-[110px] relative">
+      <section id="membership" className="membership-section pt-[110px] relative">
         <div className="background">
           <Image src={MembershipBackground} />
         </div>
@@ -85,11 +98,11 @@ export default function Index() {
           <MembershipCardViewer className="mt-[80px] mx-[50px]" />
         </div>
       </section>
-      <section id="roadmap" className="roadmap-section mt-[200px] relative">
+      <section id="roadmap" className="roadmap-section pt-[200px] relative">
         <div className="background">
           <Image src={RoadmapBackground} layout="fill" />
         </div>
-        <div className="center mx-auto">
+        <div className="center mx-auto relative z-10">
           <SectionInfo className="center-container" info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
           <Roadmap className="center-container" />
         </div>
@@ -145,7 +158,7 @@ export default function Index() {
           </SectionInfo>
         </div>
       </section>
-      <section id="faq" className="faq-section mt-[170px] relative">
+      <section id="faq" className="faq-section pt-[170px] relative">
         <div className="background">
           <Image src={FaqBackground} layout="fill" />
         </div>
@@ -168,31 +181,33 @@ export default function Index() {
           </AllocationCard>
         </div>
       </section>
-      <section id="community" className="community-section mt-[185px] center-container">
-        <SectionInfo info_title={CaptionInfo['community']['caption1']} className="text-center">
-          <p>GoldenDAO community values are hinged upon supporting the Asian community through but not limited to:</p>
-          <div className="dao-font-bold text-white space-y-[45px] mt-[65px]">
-            <p>Combating social injustice</p>
-            <p>Civic and community outreach</p>
-            <p>Demystifying Asian mental health stigma</p>
-            <p>Closing the gap on economic disparities</p>
-            <p>
-              Lifting up Asian culture, artistry, creatives in addition to promoting executive and thought leadership
-            </p>
-            <p>Allyship and advocacy</p>
+      <section id="community" className="community-section pt-[185px]">
+        <div className="center-container">
+          <SectionInfo info_title={CaptionInfo['community']['caption1']} className="text-center">
+            <p>GoldenDAO community values are hinged upon supporting the Asian community through but not limited to:</p>
+            <div className="dao-font-bold text-white space-y-[45px] mt-[65px]">
+              <p>Combating social injustice</p>
+              <p>Civic and community outreach</p>
+              <p>Demystifying Asian mental health stigma</p>
+              <p>Closing the gap on economic disparities</p>
+              <p>
+                Lifting up Asian culture, artistry, creatives in addition to promoting executive and thought leadership
+              </p>
+              <p>Allyship and advocacy</p>
+            </div>
+          </SectionInfo>
+          <SectionInfo className="mt-[180px]" info_title={CaptionInfo['community']['caption2']} />
+          <div className="flex justify-center pt-[20px]">
+            <DaoIconButton width="580px">
+              <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
+              <span className="mt-[15px] ml-[8px] text-[19px]">JOIN DISCORD</span>
+            </DaoIconButton>
           </div>
-        </SectionInfo>
-        <SectionInfo className="mt-[180px]" info_title={CaptionInfo['community']['caption2']} />
-        <div className="flex justify-center pt-[20px]">
-          <DaoIconButton width="580px">
-            <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
-            <span className="mt-[15px] ml-[8px] text-[19px]">JOIN DISCORD</span>
-          </DaoIconButton>
-        </div>
-        <div className="flex justify-center mt-[50px]">
-          <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded">
-            <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
-            <button className="basis-1/4 dao-btn-wrapper text-white rounded">Sign up</button>
+          <div className="flex justify-center mt-[50px]">
+            <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded">
+              <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
+              <button className="basis-1/4 dao-btn-wrapper text-white rounded">Sign up</button>
+            </div>
           </div>
         </div>
       </section>

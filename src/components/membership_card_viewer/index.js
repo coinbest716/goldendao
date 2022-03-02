@@ -5,6 +5,9 @@ import DaoButton from '@components/dao_button'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
+import Diamond1 from '@src/assets/images/viewer/ring-1.JPG'
+import Diamond2 from '@src/assets/images/viewer/ring-2.JPG'
+import Diamond3 from '@src/assets/images/viewer/ring-3.JPG'
 const membershipContent = {
   card11:
     'Exclusive, priority, and complimentary access to GoldenDAO member meet-ups, parties across different cities including our much-anticipated launch party in April with special guests, celebrity appearances, and Andrew Yang as our host.',
@@ -49,13 +52,13 @@ export default function MembershipCardViewer(props) {
           <div className="carousel-background" />
           <Carousel showThumbs={false} showArrows={false} showStatus={false}>
             <div>
-              <img src="/viewer/ring-1.jpg" alt="image1" />
+              <Image src={Diamond1} layout="responsive" />
             </div>
             <div>
-              <img src="/viewer/ring-2.jpg" alt="image2" />
+              <Image src={Diamond2} layout="responsive" />
             </div>
             <div>
-              <img src="/viewer/ring-3.jpg" alt="image3" />
+              <Image src={Diamond3} layout="responsive" />
             </div>
           </Carousel>
         </div>
