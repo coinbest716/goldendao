@@ -78,7 +78,7 @@ export default function Index() {
           </div>
 
           <div className="basis-1/2 flex justify-center md:mt-[0px] mt-[20px]">
-            <NFTCard className="nft-card-shadow z-10" img={NFTImg} width={435} height={435}></NFTCard>
+            <NFTCard className="nft-card-shadow z-[1]" img={NFTImg} width={435} height={435}></NFTCard>
           </div>
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function Index() {
         <div className="background">
           <Image src={RoadmapBackground} layout="fill" />
         </div>
-        <div className="center mx-auto relative z-10">
+        <div className="center mx-auto relative z-2">
           <SectionInfo className="center-container" info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
           <Roadmap className="center-container" />
         </div>
@@ -165,7 +165,7 @@ export default function Index() {
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
           <Faq className="pt-[40px]" />
-          <AllocationCard title={allocationCard.title} className="mt-[100px]">
+          <AllocationCard title={allocationCard.title} className="mt-[100px] relative">
             <p>Public Sale (2000 mint total, priced at 1 ETH)</p>
             <br />
             <p>
