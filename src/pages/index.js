@@ -21,6 +21,7 @@ import RoadmapBackground from '@src/assets/images/roadmap_bg.png'
 import MembershipBackground from '@src/assets/images/tiger.png'
 import CofounderBackground from '@src/assets/images/cofounder_bg.png'
 import FaqBackground from '@src/assets/images/video_bg.png'
+import CommunityBackground from '@src/assets/images/community_bg.png'
 
 const CaptionInfo = {
   welcome: {
@@ -58,7 +59,7 @@ const allocationCard = {
 export default function Index() {
   return (
     <>
-      <div className="container mx-auto  flex justify-end space-x-[10px] pr-[25px] pt-[120px]">
+      <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
         <ImgLink img={TwitterImg} width={30} height={30} />
         <ImgLink
           className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5 "
@@ -68,7 +69,7 @@ export default function Index() {
         />
         <ImgLink img={InstagramImg} width={30} height={30} />
       </div>
-      <section className="container mx-auto  welcome-section center-container mt-[20px] ">
+      <section className="container mx-auto  welcome-section center-container md:pt-[20px] pt-[120px] ">
         <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col">
             <SectionInfo className="mb-[50px]" info_title={CaptionInfo['welcome']['caption']}>
@@ -95,7 +96,7 @@ export default function Index() {
               <p>{CaptionInfo['membership']['content2']}</p>
             </SectionInfo>
           </div>
-          <MembershipCardViewer className="mt-[80px] mx-[50px] relative" />
+          <MembershipCardViewer className="mt-[80px] xl:mx-[50px] mx-[10px] relative" />
         </div>
       </section>
       <section id="roadmap" className="roadmap-section pt-[200px] relative">
@@ -194,8 +195,11 @@ export default function Index() {
           </AllocationCard>
         </div>
       </section>
-      <section id="community" className="community-section pt-[185px]">
-        <div className="center-container">
+      <section id="community" className="community-section pt-[185px] relative">
+        <div className="background">
+          <Image src={CommunityBackground} layout="fill" />
+        </div>
+        <div className="center-container relative">
           <SectionInfo info_title={CaptionInfo['community']['caption1']} className="text-center">
             <p>GoldenDAO community values are hinged upon supporting the Asian community through but not limited to:</p>
             <div className="dao-font-bold text-white space-y-[45px] mt-[65px]">

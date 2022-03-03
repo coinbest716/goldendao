@@ -11,6 +11,11 @@ import Web3Modal from 'web3modal'
 import CardImg from '@src/assets/images/card.png'
 import LogoImg from '@src/assets/images/logo2.png'
 import LogoSmallImg from '@src/assets/images/logo.png'
+
+import InstagramImg from '@src/assets/social_links/instagram.svg'
+import DiscordImg from '@src/assets/social_links/discord1.svg'
+import TwitterImg from '@src/assets/social_links/twitter.svg'
+
 const INFURA_ID = '460f40a260564ac4a4f4b3fffb032dad'
 
 const providerOptions = {
@@ -206,7 +211,7 @@ const Header = () => {
   return (
     <header className={`main_header ${fixed}`}>
       <div className="w-full">
-        <div className="wallet-connection-wrapper container mx-auto flex justify-end font-bold text-lightest_gold pr-[25px] h-[50px] items-center">
+        <div className="container wallet-connection-wrapper mx-auto flex justify-end font-bold text-lightest_gold xl:pr-[50px] pr-[10px] h-[50px] items-center">
           <div
             className="flex items-center cursor-pointer"
             onClick={() => {
@@ -225,23 +230,30 @@ const Header = () => {
           </div>
         </div>
         <div className="nav-menu-wrapper">
-          <div className="container mx-auto flex justify-end bg-gray-100 relative">
-            <div className="logo-big-img absolute left-[25px] top-[-35px]">
+          <div className="container mx-auto bg-gray-100 relative">
+            <div className="logo-big-img absolute xl:left-[50px] left-[10px] top-[-35px]">
               <ImgLink img={LogoImg} width={130} height={150} />
             </div>
 
-            <div className="logo-small-img absolute left-[25px] top-[10px]">
+            <div className="logo-small-img absolute left-[10px] top-[10px]">
               <ImgLink img={LogoSmallImg} width={30} height={30} />
             </div>
+
+            <div className="w-full flex absolute left-[0] top-[12px] space-x-[16px] items-center justify-center md:hidden">
+              <ImgLink img={TwitterImg} width={30} height={30} />
+              <ImgLink img={DiscordImg} width={30} height={30} />
+              <ImgLink img={InstagramImg} width={30} height={30} />
+            </div>
+
             <div className={`mobile-button ${menuOpen ? 'active' : ''}`} onClick={onMenuClicked}>
               <span></span>
             </div>
-            <NavWrapper className={`${menuOpen ? 'show-menu' : ''}`}>
+            <NavWrapper className={`${menuOpen ? 'show-menu' : ''} xl:pr-[50px] flex justify-end`}>
               <NavItem onClick={() => onMenuClicked()} name="MEMBERSHIP" href="/#membership" />
               <NavItem onClick={() => onMenuClicked()} name="ROADMAP" href="#roadmap" />
               <NavItem onClick={() => onMenuClicked()} name="TEAM" href="#team" />
               <NavItem onClick={() => onMenuClicked()} name="FAQ" href="#faq" />
-              <NavItem onClick={() => onMenuClicked()} name="COMMUNITY VALUES" href="#community" />
+              <NavItem className="pr-[0px]" onClick={() => onMenuClicked()} name="COMMUNITY VALUES" href="#community" />
             </NavWrapper>
           </div>
         </div>
