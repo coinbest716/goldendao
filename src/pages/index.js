@@ -58,7 +58,7 @@ const allocationCard = {
 export default function Index() {
   return (
     <>
-      <div className="container mx-auto  flex justify-end space-x-[10px] pr-[25px]  pt-[120px]">
+      <div className="container mx-auto  flex justify-end space-x-[10px] pr-[25px] pt-[120px]">
         <ImgLink img={TwitterImg} width={30} height={30} />
         <ImgLink
           className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5 "
@@ -95,7 +95,7 @@ export default function Index() {
               <p>{CaptionInfo['membership']['content2']}</p>
             </SectionInfo>
           </div>
-          <MembershipCardViewer className="mt-[80px] mx-[50px]" />
+          <MembershipCardViewer className="mt-[80px] mx-[50px] relative" />
         </div>
       </section>
       <section id="roadmap" className="roadmap-section pt-[200px] relative">
@@ -109,7 +109,7 @@ export default function Index() {
       </section>
       <section id="team" className="team-section mt-[200px] relative">
         <div className="background">
-          <Image src={CofounderBackground} layout="fill" />
+          <Image src={CofounderBackground} layout="fill" objectFit="scale-down" />
         </div>
         <div className="center-container">
           <div className="text-center">
@@ -160,7 +160,7 @@ export default function Index() {
       </section>
       <section id="faq" className="faq-section pt-[170px] relative">
         <div className="background">
-          <Image src={FaqBackground} layout="fill" />
+          <Image src={FaqBackground} layout="fill" objectFit="scale-down" />
         </div>
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>

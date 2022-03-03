@@ -8,6 +8,7 @@ import { useReducer } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
 
+import CardImg from '@src/assets/images/card.png'
 import LogoImg from '@src/assets/images/logo2.png'
 import LogoSmallImg from '@src/assets/images/logo.png'
 const INFURA_ID = '460f40a260564ac4a4f4b3fffb032dad'
@@ -108,7 +109,6 @@ const Header = () => {
   }
 
   function onMenuClicked() {
-    console.log('abc')
     setMenuOpen(!menuOpen)
   }
 
@@ -207,23 +207,22 @@ const Header = () => {
     <header className={`main_header ${fixed}`}>
       <div className="w-full">
         <div className="wallet-connection-wrapper container mx-auto flex justify-end font-bold text-lightest_gold pr-[25px] h-[50px] items-center">
-          WALLET CONNECTED
-          {/* <ImgLink
-            className="mt-[5px] ml-[16px]"
-            img={CardImg}
-            width={25}
-            height={21}
-            onClick={() => connectWallet()}
-          /> */}
-          {web3Provider ? (
-            <button className="button" type="button" onClick={disconnect}>
-              Disconnect
-            </button>
-          ) : (
-            <button className="button" type="button" onClick={connect}>
-              Connect
-            </button>
-          )}
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => {
+              return web3Provider ? disconnect() : connect()
+            }}
+          >
+            {web3Provider ? (
+              <>
+                <span className="w-[10px] h-[10px] rounded-full bg-dao_green mr-[8px]"></span>WALLET CONNECT: XXXX
+                {address.slice(-4)}
+              </>
+            ) : (
+              'CONNECT WALLET'
+            )}
+            <ImgLink className="mt-[5px] ml-[16px]" img={CardImg} width={25} height={21} />
+          </div>
         </div>
         <div className="nav-menu-wrapper">
           <div className="container mx-auto flex justify-end bg-gray-100 relative">
@@ -238,7 +237,7 @@ const Header = () => {
               <span></span>
             </div>
             <NavWrapper className={`${menuOpen ? 'show-menu' : ''}`}>
-              <NavItem onClick={() => onMenuClicked()} name="MEMBERSHIP" href="#membership" />
+              <NavItem onClick={() => onMenuClicked()} name="MEMBERSHIP" href="/#membership" />
               <NavItem onClick={() => onMenuClicked()} name="ROADMAP" href="#roadmap" />
               <NavItem onClick={() => onMenuClicked()} name="TEAM" href="#team" />
               <NavItem onClick={() => onMenuClicked()} name="FAQ" href="#faq" />

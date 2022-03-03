@@ -10,6 +10,7 @@ module.exports = {
       lightest_gold: '#f6d42e',
       lightest_gray: '#efefef',
       medium_gray: '#999999',
+      dao_green: '#12ff00',
     },
   },
   plugins: [],
