@@ -342,16 +342,16 @@ a {
 
 .membership-section .background {
   position: absolute;
-  top: -200px;
+  top: -100px;
   bottom: 0px;
   right: 0px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%;
 }
 
 .team-section .background {
   position: absolute;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
   top: -100px;
   bottom: 400px;
@@ -360,9 +360,9 @@ a {
 
 .faq-section .background {
   position: absolute;
-  top: -200px;
-  bottom: 0px;
-  max-width: 1200px;
+  top: -400px;
+  height: 1300px;
+  max-width: 100%;
   width: 100%;
   left: 0px;
 }

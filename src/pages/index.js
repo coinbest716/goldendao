@@ -85,7 +85,7 @@ export default function Index() {
 
       <section id="membership" className="membership-section pt-[110px] relative">
         <div className="background">
-          <Image src={MembershipBackground} />
+          <Image src={MembershipBackground} layout="fill" objectFit="scale-down" objectPosition="right" />
         </div>
 
         <div className="container mx-auto">
@@ -109,7 +109,7 @@ export default function Index() {
       </section>
       <section id="team" className="team-section mt-[200px] relative">
         <div className="background">
-          <Image src={CofounderBackground} layout="fill" objectFit="scale-down" />
+          <Image src={CofounderBackground} layout="fill" objectFit="scale-down" objectPosition="right" />
         </div>
         <div className="center-container">
           <div className="text-center">
@@ -156,11 +156,24 @@ export default function Index() {
               ea commodo consequat.
             </p>
           </SectionInfo>
+
+          <div className="w-full mt-[60px] relative z-[1]">
+            <iframe
+              className="mx-auto"
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/cTsEzmFamZ8"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </section>
       <section id="faq" className="faq-section pt-[170px] relative">
         <div className="background">
-          <Image src={FaqBackground} layout="fill" objectFit="scale-down" />
+          <Image src={FaqBackground} layout="fill" objectFit="scale-down" objectPosition="left" />
         </div>
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
