@@ -7,7 +7,9 @@ export default function MemberShipCard(props) {
       className={`membership-card bg-gradient-to-t from-darkest_gold  to-dark_gold inline-block p-[20px] w-full ${props.className} relative opacity-80`}
     >
       {props.children}
-      <p className="text-white">{props.content}</p>
+      <div>
+        <p className="text-white">{props.content}</p>
+      </div>
     </div>
   )
 }

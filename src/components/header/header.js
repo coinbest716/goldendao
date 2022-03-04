@@ -12,6 +12,9 @@ import CardImg from '@src/assets/images/card.png'
 import LogoImg from '@src/assets/images/logo2.png'
 import LogoSmallImg from '@src/assets/images/logo.png'
 
+import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import InstagramImg from '@src/assets/social_links/instagram.svg'
 import DiscordImg from '@src/assets/social_links/discord1.svg'
 import TwitterImg from '@src/assets/social_links/twitter.svg'
@@ -226,7 +229,9 @@ const Header = () => {
             ) : (
               'CONNECT WALLET'
             )}
-            <ImgLink className="mt-[5px] ml-[16px]" img={CardImg} width={25} height={21} />
+
+            <FontAwesomeIcon icon={faCreditCard} className="ml-[16px] text-[27px]" />
+            {/* <ImgLink className="mt-[5px] ml-[16px]" img={CardImg} width={25} height={21} /> */}
           </div>
         </div>
         <div className="nav-menu-wrapper">

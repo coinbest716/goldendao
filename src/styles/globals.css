@@ -102,6 +102,9 @@ a {
   background: linear-gradient(0.25turn, #88601f11, #88601f);
 }
 
+.section-info-wrapper {
+  word-break: break-word;
+}
 .section-info-wrapper > p {
   color: white;
 }
@@ -398,7 +401,7 @@ a {
   text-align: left !important;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .center-container {
     max-width: 1024px;
   }
