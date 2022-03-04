@@ -11,6 +11,8 @@ module.exports = {
       lightest_gray: '#efefef',
       medium_gray: '#999999',
       dao_green: '#12ff00',
+      dao_dlg_color: '#222222',
+      black: '#000',
     },
     screens: {
       sm: '640px',

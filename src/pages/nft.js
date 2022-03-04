@@ -33,10 +33,10 @@ export default function NFTDetail() {
       <section className="container mx-auto  welcome-section center-container md:pt-[20px] pt-[120px] ">
         <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center md:mt-[0px] mt-[20px]">
-            <NFTCard className="nft-card-shadow z-[1]" img={NFTImg} width={435} height={435}></NFTCard>
+            <NFTCard className="nft-card-shadow" img={NFTImg} width={435} height={435}></NFTCard>
           </div>
 
-          <div className="basis-1/2 flex justify-center flex-col">
+          <div className="basis-1/2 flex justify-center flex-col md:mt-0 mt-[26px]">
             <SectionInfo className="mb-[50px] nft-section-info" info_title="Your Goldendao membership starts here">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -51,12 +51,12 @@ export default function NFTDetail() {
 
         <div className="text-center mt-[140px]">
           <span
-            className="text-lightest_gold cursor-pointer"
+            className="text-lightest_gold cursor-pointer font-bold"
             onClick={e => {
               router.back()
             }}
           >
-            <FontAwesomeIcon icon={faAngleLeft} />
+            <FontAwesomeIcon className="mr-[8px]" icon={faAngleLeft} />
             BACK TO HOME
           </span>
         </div>

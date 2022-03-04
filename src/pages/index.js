@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import SectionInfo from '@src/components/section_info'
 import DaoButton from '@src/components/dao_button'
 import NFTCard from '@src/components/nft_card'
@@ -10,18 +10,23 @@ import AllocationCard from '@src/components/allocation_card'
 import DaoIconButton from '@src/components/dao_icon_btn'
 import Roadmap from '@src/components/roadmap'
 import ImgLink from '@components/img_link'
+import Modal from 'react-modal'
 
 import NFTImg from '@src/assets/images/nft.png'
 import ImgLogo from '@src/assets/images/logo.png'
 import InstagramImg from '@src/assets/social_links/instagram.svg'
 import DiscordImg from '@src/assets/social_links/discord.svg'
 import TwitterImg from '@src/assets/social_links/twitter.svg'
+import TwitterWhiteImg from '@src/assets/social_links/twitter_white.svg'
 
 import RoadmapBackground from '@src/assets/images/roadmap_bg.png'
 import MembershipBackground from '@src/assets/images/tiger.png'
 import CofounderBackground from '@src/assets/images/cofounder_bg.png'
 import FaqBackground from '@src/assets/images/video_bg.png'
 import CommunityBackground from '@src/assets/images/community_bg.png'
+
+import { faClose } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const CaptionInfo = {
   welcome: {
@@ -56,7 +61,24 @@ const allocationCard = {
   title: 'NFT Allocation',
 }
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+}
+
 export default function Index() {
+  const [isOpenDlg, setIsOpenDlg] = useState(false)
+  useEffect(() => {
+    const body = document.querySelector('body')
+    body.style.overflow = isOpenDlg ? 'hidden' : 'auto'
+  }, [isOpenDlg])
+
   return (
     <>
       <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
@@ -71,11 +93,19 @@ export default function Index() {
       </div>
       <section className="container mx-auto  welcome-section center-container md:pt-[20px] pt-[120px] ">
         <div className="md:flex md:space-x-[50px]">
-          <div className="basis-1/2 flex justify-center flex-col">
+          <div className="basis-1/2 flex justify-center flex-col items-center md:items-stretch">
             <SectionInfo className="mb-[50px]" info_title={CaptionInfo['welcome']['caption']}>
               <p>{CaptionInfo['welcome']['content']}</p>
             </SectionInfo>
-            <DaoButton width="280px">MINT YOUR NFT</DaoButton>
+            <DaoButton
+              className="h-[60px] relative z-[1]"
+              width="280px"
+              onClick={() => {
+                setIsOpenDlg(true)
+              }}
+            >
+              MINT YOUR NFT
+            </DaoButton>
           </div>
 
           <div className="basis-1/2 flex justify-center md:mt-[0px] mt-[20px]">
@@ -91,12 +121,15 @@ export default function Index() {
 
         <div className="container mx-auto">
           <div className="center-container">
-            <SectionInfo info_title={CaptionInfo['membership']['caption']}>
+            <SectionInfo className="sm:m-0 m-[-10px]" info_title={CaptionInfo['membership']['caption']}>
               <p className="mb-[36px]">{CaptionInfo['membership']['content1']}</p>
               <p>{CaptionInfo['membership']['content2']}</p>
             </SectionInfo>
           </div>
-          <MembershipCardViewer className="mt-[80px] xl:mx-[50px] mx-[10px] relative" />
+          <MembershipCardViewer
+            className="mt-[80px] xl:mx-[50px] mx-[10px] relative"
+            onMintBtnEvent={() => setIsOpenDlg(true)}
+          />
         </div>
       </section>
       <section id="roadmap" className="roadmap-section pt-[200px] relative">
@@ -178,7 +211,7 @@ export default function Index() {
         </div>
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
-          <Faq className="pt-[40px]" />
+          <Faq className="pt-[40px] pr-[20px]" />
           <AllocationCard title={allocationCard.title} className="mt-[100px] relative">
             <p>Public Sale (2000 mint total, priced at 1 ETH)</p>
             <br />
@@ -215,19 +248,70 @@ export default function Index() {
           </SectionInfo>
           <SectionInfo className="mt-[180px]" info_title={CaptionInfo['community']['caption2']} />
           <div className="flex justify-center pt-[20px]">
-            <DaoIconButton width="580px">
+            <DaoIconButton width="580px" className="h-[60px]">
               <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
               <span className="mt-[15px] ml-[8px] text-[19px]">JOIN DISCORD</span>
             </DaoIconButton>
           </div>
           <div className="flex justify-center mt-[50px]">
-            <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded">
+            <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
               <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
-              <button className="basis-1/4 dao-btn-wrapper text-white rounded">Sign up</button>
+              <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]">
+                Sign up
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <Modal
+        isOpen={isOpenDlg}
+        style={customStyles}
+        ariaHideApp={false}
+        onRequestClose={() => setIsOpenDlg(false)}
+        shouldCloseOnOverlayClick={true}
+      >
+        <div className="modal-wrapper grid md:grid-cols-2 grid-cols-1 2xl:w-[1240px] 2xl:h-[600px] lg:w-[900px] lg:h-[450px] md:w-[800px] md:h-[400px] w-[400px] h-[800px]">
+          <div className="bg-white 2xl:p-[40px] p-[20px] md:h-[100%] h-[400px]">
+            <h4 className="modal-title 2xl:text-[24px] lg:text-[18px]">Minting Opens Saturday, March 12, 1:00pm EST</h4>
+            <p className="2xl:text-[18px] md:text-[15px] text-[14px]">
+              Join our immersive community and be part of the core founding members by purchasing a founding member NFT
+              key. We look forward to seeing you in person for our launch party with special guests, celebrity
+              appearances, and our host, Andrew Yang.
+            </p>
+            <DaoIconButton className="2xl:w-[310px] md:w-[310px] 2xl:mt-[40px] lg:mt-[20px] mt-[10px] 2xl:h-[60px] sm:h-[40px] h-[40px]">
+              <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
+              <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">JOIN DISCORD</span>
+            </DaoIconButton>
+            <DaoIconButton className="2xl:w-[370px] md:w-[340px] lg:mt-[20px] mt-[10px] 2xl:h-[60px] sm:h-[40px] h-[40px]">
+              <Image className="mt-[5px]" src={TwitterWhiteImg} alt="Golden Dao logo" width={25} height={25} />
+              <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">FOLLOW ON TWITTER</span>
+            </DaoIconButton>
+
+            <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px]">
+              <div className="2xl:w-[550px] md:w-[370px] singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
+                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px] " />
+                <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]">
+                  Sign up
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="bg-dao_dlg_color flex items-center justify-center md:h-[100%]   h-[400px]">
+            <FontAwesomeIcon
+              icon={faClose}
+              className="p-[16px] absolute top-[6px] right-[12px] md:text-white cursor-pointer text-black z-10"
+              size="2x"
+              onClick={() => setIsOpenDlg(false)}
+            />
+            <div className="lg:p-[50px] p-[24px] w-full h-full">
+              <div className="w-full h-full relative">
+                <Image src={ImgLogo} layout="fill" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Modal>
     </>
   )
 }

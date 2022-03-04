@@ -156,9 +156,9 @@ export default function Roadmap(props) {
             ref={diamondsRefs[index]}
             className={`roadmap-list-item grid grid-cols-3 relative ${timePonints[index]}`}
           >
-            <span className="ml-[32px] col-span-1 text-[18px] text-lightest_gold">{item.date}</span>
+            <span className="md:ml-[32px] ml-[8px] col-span-1 text-[18px] text-lightest_gold">{item.date}</span>
             <div
-              className="item-content col-span-2 text-white"
+              className="item-content col-span-2 md:pl-[8px] pl-[16px] text-white"
               dangerouslySetInnerHTML={{ __html: item.content }}
             ></div>
           </div>

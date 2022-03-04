@@ -6,7 +6,11 @@ export default function DaoButton(props) {
     styles = { ...styles, width: props.width }
   }
   return (
-    <button className={`dao-btn-wrapper text-white font-bold rounded ${props.className}`} style={styles}>
+    <button
+      className={`dao-btn-wrapper text-white font-bold rounded ${props.className}`}
+      style={styles}
+      onClick={() => props.onClick()}
+    >
       {props.children}
     </button>
   )

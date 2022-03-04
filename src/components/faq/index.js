@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react'
-import Collapsible from 'react-collapsible'
+import dynamic from 'next/dynamic'
+
+const Collapsible = dynamic(
+  import('react-collapsible').then(mod => mod),
+  { ssr: false }
+)
 
 const faqQuestions = [
   {

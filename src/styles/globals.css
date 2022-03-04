@@ -216,8 +216,8 @@ a {
 }
 
 .dao-btn-wrapper {
-  font-size: 15pt;
-  height: 60px;
+  /* font-size: 15pt;
+  height: 60px; */
   background: linear-gradient(#c6a000, #895f1f);
 }
 
@@ -261,7 +261,7 @@ a {
 .Collapsible .Collapsible__trigger.is-open::after {
   content: '-';
   color: white;
-  right: 0;
+  right: -20px;
   top: -8px;
   position: absolute;
   font-size: 25px;
@@ -271,7 +271,7 @@ a {
   content: '+';
   color: white;
   font-size: 25px;
-  right: 0;
+  right: -20px;
   top: -8px;
   position: absolute;
 }
@@ -448,4 +448,27 @@ a {
   .center-container {
     max-width: 550px;
   }
+}
+
+.ReactModal__Overlay {
+  background-color: #111111ee !important;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  border: none !important;
+  background: transparent !important;
+}
+.ReactModal__Overlay--after-open {
+  z-index: 5;
+}
+
+.ReactModal__Content--after-open {
+  padding: 0 !important;
+  border-radius: 40px !important;
+  overflow: hidden;
+}
+
+.modal-wrapper .modal-title {
+  font-weight: 400;
+  font-family: ethnocentric-font;
 }

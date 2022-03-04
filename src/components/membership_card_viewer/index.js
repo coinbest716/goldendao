@@ -30,39 +30,46 @@ const imageList = [{ url: '/viewer/ring-1.jpg' }, { url: '/viewer/ring-2.jpg' },
 export default function MembershipCardViewer(props) {
   return (
     <div className={`membership-card-viewer ${props.className}`}>
-      <div className={`grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[50px]`}>
-        <div className="col-span-1 space-y-[50px]">
-          <MemberShipCard content={membershipContent.card11}>
-            {/* <span className="w-[2px] h-[50px] bg-dark_gold absolute bottom-[-50px] right-[50%]" /> */}
+      <div className={`grid xl:grid-cols-3 grid-cols-1 gap-[50px]`}>
+        <div className="grid grid-flow-row col-span-1 space-y-[50px] text-center">
+          <MemberShipCard className="xl:w-[100%] sm:w-[450px] mx-auto" content={membershipContent.card11}>
+            <span className="w-[2px] h-[50px] bg-dark_gold absolute bottom-[-50px] right-[50%]" />
           </MemberShipCard>
-          <MemberShipCard className="opacity" content={membershipContent.card12}></MemberShipCard>
+          <MemberShipCard className="opacity xl:w-[100%] sm:w-[450px] mx-auto" content={membershipContent.card12}>
+            <span className="w-[2px] xl:h-[115px] xl:bottom-[-115px] h-[50px] bottom-[-50px] bg-dark_gold absolute  right-[50%]" />
+          </MemberShipCard>
         </div>
-        <div className="col-span-1 space-y-[50px]">
-          <MemberShipCard className="opacity" content={membershipContent.card21}>
-            {/* <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[50%] left-[-50px]" />
-            <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[50%] right-[-50px]" />
-            <span className="w-[2px] h-[50px] bg-dark_gold absolute bottom-[-50px] right-[50%]" /> */}
+        <div className="grid grid-flow-row col-span-1 text-center">
+          <MemberShipCard className="opacity xl:w-[100%] sm:w-[450px] mx-auto" content={membershipContent.card21}>
+            <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[50%] left-[-50px] xl:inline-block hidden" />
+            <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[50%] right-[-50px] xl:inline-block hidden" />
+            <span className="w-[2px] h-[70px] bg-dark_gold absolute bottom-[-70px] right-[50%]" />
           </MemberShipCard>
-          <MemberShipCard className="opacity" content={membershipContent.card22}>
-            {/* <span className="w-[2px] h-[160px] bg-dark_gold absolute bottom-[-160px] right-[50%]" /> */}
+          <MemberShipCard
+            className="opacity mt-[70px] xl:w-[100%] sm:w-[450px] mx-auto"
+            content={membershipContent.card22}
+          >
+            <span className="w-[2px] xl:h-[70px] xl:bottom-[-70px] h-[50px] bottom-[-50px] bg-dark_gold absolute  right-[50%]" />
+            <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[80%] right-[-50px] xl:inline-block hidden" />
+            <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[80%] left-[-50px] xl:inline-block hidden" />
           </MemberShipCard>
         </div>
 
-        <div className="col-span-1 space-y-[50px]">
-          <MemberShipCard className="opacity" content={membershipContent.card31}>
-            {/* <span className="w-[2px] h-[50px] bg-dark_gold absolute bottom-[-50px] right-[50%]" />{' '} */}
+        <div className="grid grid-flow-row col-span-1 space-y-[50px] text-center">
+          <MemberShipCard className="opacity xl:w-[100%] sm:w-[450px] mx-auto" content={membershipContent.card31}>
+            <span className="w-[2px] h-[50px] bg-dark_gold absolute bottom-[-50px] right-[50%]" />{' '}
           </MemberShipCard>
-          <MemberShipCard className="opacity" content={membershipContent.card32}>
-            {/* <span className="w-[2px] h-[50px] bg-dark_gold absolute bottom-[-50px] right-[50%]" /> */}
+          <MemberShipCard className="opacity xl:w-[100%] sm:w-[450px] mx-auto" content={membershipContent.card32}>
+            <span className="w-[2px] h-[50px] bg-dark_gold absolute bottom-[-50px] right-[50%]" />
           </MemberShipCard>
-          <MemberShipCard className="opacity" content={membershipContent.card33}>
-            {/* <span className="w-[2px] h-[70px] bg-dark_gold absolute bottom-[-70px] right-[50%]" /> */}
+          <MemberShipCard className="opacity xl:w-[100%] sm:w-[450px] mx-auto" content={membershipContent.card33}>
+            <span className="w-[2px] h-[70px] bg-dark_gold absolute bottom-[-70px] right-[50%] xl:inline-block hidden" />
           </MemberShipCard>
         </div>
       </div>
 
-      <div className={`grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[50px] mt-[70px]`}>
-        <div className="col-span-1 relative">
+      <div className={`grid xl:grid-cols-3 grid-cols-1 xl:gap-[50px] mt-[70px]`}>
+        <div className="col-span-1 relative xl:w-[100%] sm:w-[450px] sm:mx-auto m-[16px]">
           <div className="carousel-background" />
           <Carousel showThumbs={false} showArrows={false} showStatus={false}>
             <div>
@@ -77,8 +84,16 @@ export default function MembershipCardViewer(props) {
           </Carousel>
         </div>
         <div className="col-span-2 flex items-center flex-col">
-          <MemberShipCard className="opacity" content={membershipContentFinal.content} />
-          <DaoButton className="relative w-[410px] mt-[50px]">MINT YOUR NFT</DaoButton>
+          <MemberShipCard
+            className="opacity xl:w-[100%] sm:w-[450px] mx-auto xl:mt-0 mt-[50px]"
+            content={membershipContentFinal.content}
+          />
+          <DaoButton
+            className="relative sm:w-[410px] w-[100%] mt-[50px] h-[60px]"
+            onClick={() => (props.onMintBtnEvent ? props.onMintBtnEvent() : '')}
+          >
+            MINT YOUR NFT
+          </DaoButton>
         </div>
       </div>
     </div>
