@@ -249,9 +249,10 @@ a {
   font-size: 20pt;
   font-family: ethnocentric-font;
 }
-.membership-card-viewer .card1 {
+
+/* .membership-card-viewer .card1 {
   background: linear-gradient(#b08000, #895f1f);
-}
+} */
 
 .faq-wrapper {
   color: #ffffffee;
