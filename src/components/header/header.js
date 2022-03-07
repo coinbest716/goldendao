@@ -4,9 +4,10 @@ import NavWrapper from '@components/header/nav_wrapper'
 import NavItem from '@components/header/nav_item'
 import WalletConnectProvider from '@walletconnect/web3-provider'
 import { providers } from 'ethers'
-import { useReducer } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
+import { useSelector, useDispatch } from 'react-redux'
+import { setWeb3Provider, setAddress, resetAddress } from '@src/redux/actions/web3Actions'
 
 import CardImg from '@src/assets/images/card.png'
 import LogoImg from '@src/assets/images/logo2.png'
@@ -61,47 +62,14 @@ if (typeof window !== 'undefined') {
   })
 }
 
-const initialState = {
-  provider: null,
-  web3Provider: null,
-  address: null,
-  chainId: null,
-}
-
-function reducer(state, action) {
-  switch (action.type) {
-    case 'SET_WEB3_PROVIDER':
-      return {
-        ...state,
-        provider: action.provider,
-        web3Provider: action.web3Provider,
-        address: action.address,
-        chainId: action.chainId,
-      }
-    case 'SET_ADDRESS':
-      return {
-        ...state,
-        address: action.address,
-      }
-    case 'SET_CHAIN_ID':
-      return {
-        ...state,
-        chainId: action.chainId,
-      }
-    case 'RESET_WEB3_PROVIDER':
-      return initialState
-    default:
-      throw new Error()
-  }
-}
-
-const Header = () => {
-  //
+const Header = props => {
   let [fixed, setFixed] = useState('')
   let [menuOpen, setMenuOpen] = useState(false)
   let offsetTop = 0
-  const [state, dispatch] = useReducer(reducer, initialState)
-  const { provider, web3Provider, address, chainId } = state
+  const walletState = useSelector(store => store.wallet)
+
+  const { provider, web3Provider, address, chainId } = walletState
+  const dispatch = useDispatch()
 
   function checkMenu() {
     offsetTop = window?.pageYOffset
@@ -141,14 +109,7 @@ const Header = () => {
     const address = await signer.getAddress()
 
     const network = await web3Provider.getNetwork()
-
-    dispatch({
-      type: 'SET_WEB3_PROVIDER',
-      provider,
-      web3Provider,
-      address,
-      chainId: network.chainId,
-    })
+    dispatch(setWeb3Provider({ provider, web3Provider, address, chainId: network.chainId }))
   }, [])
 
   const disconnect = useCallback(
@@ -157,9 +118,7 @@ const Header = () => {
       if (provider?.disconnect && typeof provider.disconnect === 'function') {
         await provider.disconnect()
       }
-      dispatch({
-        type: 'RESET_WEB3_PROVIDER',
-      })
+      dispatch(resetAddress())
     },
     [provider]
   )
@@ -178,11 +137,7 @@ const Header = () => {
     if (provider?.on) {
       const handleAccountsChanged = accounts => {
         // eslint-disable-next-line no-console
-        console.log('accountsChanged', accounts)
-        dispatch({
-          type: 'SET_ADDRESS',
-          address: accounts[0],
-        })
+        dispatch(setAddress(accounts[0]))
       }
 
       // https://docs.ethers.io/v5/concepts/best-practices/#best-practices--network-changes
@@ -266,5 +221,4 @@ const Header = () => {
     </header>
   )
 }
-
 export default Header
