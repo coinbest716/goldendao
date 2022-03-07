@@ -126,19 +126,16 @@ export default function Index() {
               <p>{CaptionInfo['membership']['content2']}</p>
             </SectionInfo>
           </div>
-          <MembershipCardViewer
-            className="mt-[80px] xl:mx-[50px] mx-[10px] relative"
-            onMintBtnEvent={() => setIsOpenDlg(true)}
-          />
+          <MembershipCardViewer className="mx-auto relative" onMintBtnEvent={() => setIsOpenDlg(true)} />
         </div>
       </section>
-      <section id="roadmap" className="roadmap-section pt-[200px] relative">
+      <section id="roadmap" className="roadmap-section pt-[160px] relative">
         <div className="background">
           <Image src={RoadmapBackground} layout="fill" />
         </div>
         <div className="center mx-auto relative z-2">
           <SectionInfo className="center-container" info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
-          <Roadmap className="center-container" />
+          <Roadmap className="center-container mt-[77px]" />
         </div>
       </section>
       <section id="team" className="team-section mt-[200px] relative">

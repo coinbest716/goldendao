@@ -228,10 +228,22 @@ a {
   box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.5);
 }
 
+.membership-card-viewer span {
+  transition: all 0.7s ease 0s;
+}
+
 .membership-card-viewer .membership-card,
 .allocation-card {
   box-shadow: rgba(200, 200, 200, 0.2) 0px 8px 20px, rgba(200, 200, 200, 0.2) 0px -4px 20px,
     rgba(200, 200, 200, 0.2) 0px 6px 80px;
+}
+
+.membership-card-viewer .membership-card {
+  transition: height 0.7s ease 0s, box-shadow 0.7s ease 0s, top 0.7s ease 0s, opacity 0.8s;
+}
+.membership-card-viewer .membership-card:hover {
+  transition: height 0.7s ease 0s, box-shadow 0.7s ease 0s, top 0.7s ease 0s, opacity 0.8s;
+  box-shadow: #aaeeaa 0px 0px 10px 2px, #aaeeaa 0px 0px 10px 2px inset
 }
 
 .allocation-card .title {
@@ -362,7 +374,7 @@ a {
   position: absolute;
   max-width: 100%;
   width: 100%;
-  top: -100px;
+  top: 20px;
   bottom: 400px;
   right: 0px;
 }

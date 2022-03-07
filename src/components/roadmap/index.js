@@ -148,8 +148,8 @@ export default function Roadmap(props) {
 
   return (
     <div className={`roadmap-wrapper ${props.className ? props.className : ''}`}>
-      <div className="roadmap-list pl-[16px] space-y-[50px]">
-        <div ref={timeline} className="timeline" />
+      <div className="roadmap-list pl-[16px] space-y-[40px]">
+        <div ref={timeline} className="timeline mt-[2px]" />
         {roadmapConts.map((item, index) => (
           <div
             key={index}
