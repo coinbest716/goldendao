@@ -146,7 +146,7 @@ export default function Index() {
           <div className="text-center">
             <Image src={ImgLogo} alt="Golden Dao logo" width={250} height={250} />
           </div>
-          <SectionInfo className="mt-[88px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
+          <SectionInfo className="mt-[80px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
             <div className="founder-info text-center space-y-[50px] pt-[20px]">
               <p>ANDREW YANG</p>
               <p>JOHN DOE</p>
