@@ -11,6 +11,10 @@ import DaoIconButton from '@src/components/dao_icon_btn'
 import Roadmap from '@src/components/roadmap'
 import ImgLink from '@components/img_link'
 import Modal from 'react-modal'
+import toast from 'react-hot-toast'
+import { ethers } from 'ethers'
+import ContractAbi from '@src/abi/GoldenDaoNFT.json'
+import { useSelector, useDispatch } from 'react-redux'
 
 import NFTImg from '@src/assets/images/nft.png'
 import ImgLogo from '@src/assets/images/logo.png'
@@ -74,6 +78,41 @@ const customStyles = {
 
 export default function Index() {
   const [isOpenDlg, setIsOpenDlg] = useState(false)
+  const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
+
+  async function onMintClicked() {
+    if (web3Provider != null) {
+      const signer = web3Provider.getSigner()
+      const GoldenDaoContract = new ethers.Contract(process.env.REACT_APP_NFT_ADDRESS, ContractAbi, signer)
+      try {
+        await GoldenDaoContract.requestPrivateSale({ value: price })
+          .then(tx => {
+            return tx.wait().then(
+              receipt => {
+                // This is entered if the transaction receipt indicates success
+                toast.success('Presale Success!')
+                return true
+              },
+              error => {
+                toast.error('Presale Fail!')
+              }
+            )
+          })
+          .catch(error => {
+            if (error.message.indexOf('not exist') > 0) {
+              toast.error("You aren't whitelisted!")
+            } else if (error.message.indexOf('signature')) {
+              toast.error('You canceled transaction!')
+            } else {
+              toast.error(error.message)
+            }
+          })
+      } catch (error) {
+        toast.error('Presale Fail!')
+      }
+    }
+  }
+
   useEffect(() => {
     const body = document.querySelector('body')
     body.style.overflow = isOpenDlg ? 'hidden' : 'auto'
