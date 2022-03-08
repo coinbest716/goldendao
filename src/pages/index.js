@@ -132,9 +132,12 @@ export default function Index() {
       <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px] ">
         <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col items-center md:items-stretch">
-            <SectionInfo className="mb-[50px]" info_title={CaptionInfo['welcome']['caption']}>
+            <div className={`section-info-wrapper mb-[50px]`}>
+              <div className="caption-wrapper mb-[28px]">
+                <h2 className="caption-left lightest_gold">{CaptionInfo['welcome']['caption']}</h2>
+              </div>
               <p>{CaptionInfo['welcome']['content']}</p>
-            </SectionInfo>
+            </div>
             <DaoButton
               className="h-[60px] relative z-[1]"
               width="280px"

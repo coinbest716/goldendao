@@ -114,6 +114,11 @@ a {
   font-family: ethnocentric-font;
   text-align: center;
 }
+.caption-wrapper .caption-left {
+  font-size: 28pt;
+  font-family: ethnocentric-font;
+  text-align: left;
+}
 
 .center-container {
   width: 100%;
