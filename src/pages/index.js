@@ -5,7 +5,6 @@ import NFTCard from '@src/components/nft_card'
 import MembershipCardViewer from '@src/components/membership_card_viewer'
 import Image from 'next/image'
 import Faq from '@src/components/faq'
-import MemberShipCard from '@src/components/membership_card'
 import AllocationCard from '@src/components/allocation_card'
 import DaoIconButton from '@src/components/dao_icon_btn'
 import Roadmap from '@src/components/roadmap'
@@ -14,7 +13,7 @@ import Modal from 'react-modal'
 import toast from 'react-hot-toast'
 import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import NFTImg from '@src/assets/images/nft.png'
 import ImgLogo from '@src/assets/images/logo.png'
@@ -130,7 +129,7 @@ export default function Index() {
         />
         <ImgLink img={InstagramImg} width={30} height={30} />
       </div>
-      <section className="container mx-auto  welcome-section center-container md:pt-[20px] pt-[120px] ">
+      <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px] ">
         <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col items-center md:items-stretch">
             <SectionInfo className="mb-[50px]" info_title={CaptionInfo['welcome']['caption']}>
@@ -333,7 +332,7 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <div className="bg-dao_dlg_color flex items-center justify-center md:h-[100%]   h-[400px]">
+          <div className="bg-dao_dlg_color flex items-center justify-center md:h-[100%] h-[400px]">
             <FontAwesomeIcon
               icon={faClose}
               className="p-[16px] absolute top-[6px] right-[12px] md:text-white cursor-pointer text-black z-10"

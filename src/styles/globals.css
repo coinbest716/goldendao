@@ -243,7 +243,7 @@ a {
 }
 .membership-card-viewer .membership-card:hover {
   transition: height 0.7s ease 0s, box-shadow 0.7s ease 0s, top 0.7s ease 0s, opacity 0.8s;
-  box-shadow: #aaeeaa 0px 0px 10px 2px, #aaeeaa 0px 0px 10px 2px inset
+  box-shadow: #aaeeaa 0px 0px 10px 2px, #aaeeaa 0px 0px 10px 2px inset;
 }
 
 .allocation-card .title {

@@ -4,6 +4,7 @@ import InstagramImg from '@src/assets/social_links/instagram.svg'
 import DiscordImg from '@src/assets/social_links/discord1.svg'
 import TwitterImg from '@src/assets/social_links/twitter.svg'
 import ImgLink from '@components/img_link'
+
 export default function Footer(props) {
   return (
     <footer

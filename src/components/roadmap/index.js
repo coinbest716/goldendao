@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react'
-import Image from 'next/image'
 
 const roadmapConts = [
   {
@@ -61,7 +60,6 @@ const roadmapConts = [
   },
 ]
 export default function Roadmap(props) {
-  const onCallback = () => {}
   const timeline = useRef(null)
   let initalArray = []
   let diamondsRefs = []

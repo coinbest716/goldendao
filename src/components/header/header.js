@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import ImgLink from '@components/img_link'
 import NavWrapper from '@components/header/nav_wrapper'
 import NavItem from '@components/header/nav_item'
@@ -9,7 +9,6 @@ import Web3Modal from 'web3modal'
 import { useSelector, useDispatch } from 'react-redux'
 import { setWeb3Provider, setAddress, resetAddress } from '@src/redux/actions/web3Actions'
 
-import CardImg from '@src/assets/images/card.png'
 import LogoImg from '@src/assets/images/logo2.png'
 import LogoSmallImg from '@src/assets/images/logo.png'
 
@@ -186,7 +185,6 @@ const Header = props => {
             )}
 
             <FontAwesomeIcon icon={faCreditCard} className="ml-[16px] text-[27px]" />
-            {/* <ImgLink className="mt-[5px] ml-[16px]" img={CardImg} width={25} height={21} /> */}
           </div>
         </div>
         <div className="nav-menu-wrapper">

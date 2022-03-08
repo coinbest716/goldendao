@@ -8,6 +8,7 @@ import { Carousel } from 'react-responsive-carousel'
 import Diamond1 from '@src/assets/images/viewer/ring-1.JPG'
 import Diamond2 from '@src/assets/images/viewer/ring-2.JPG'
 import Diamond3 from '@src/assets/images/viewer/ring-3.JPG'
+
 const membershipContent = {
   card11:
     'Exclusive, priority, and complimentary access to GoldenDAO member meet-ups, parties across different cities including our much-anticipated launch party in April with special guests, celebrity appearances, and Andrew Yang as our host.',
