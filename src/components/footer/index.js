@@ -54,7 +54,9 @@ export default function Footer(props) {
         </div>
 
         <div className="text-center">
-          <span>MAIL TO</span>
+          <span>
+            <a href="mailto:hello@goldendao.xyz">CONTACT US</a>
+          </span>
         </div>
       </div>
     </footer>
