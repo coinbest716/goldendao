@@ -15,7 +15,6 @@ import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 import { useSelector } from 'react-redux'
 
-import NFTImg from '@src/assets/images/gd-gif.gif'
 import ImgLogo from '@src/assets/images/logo.png'
 import InstagramImg from '@src/assets/social_links/instagram.svg'
 import DiscordImg from '@src/assets/social_links/discord.svg'
@@ -152,7 +151,7 @@ export default function Index() {
           </div>
 
           <div className="cursor-pointer basis-1/2 justify-center md:mt-[0px] mt-[20px] z-10 opacity-80">
-            <NFTCard className="nft-card-shadow z-[1]" img={NFTImg} width={690} height={388}></NFTCard>
+            <NFTCard className="nft-card-shadow z-[1]" width={690} height={388}></NFTCard>
           </div>
         </div>
       </section>
