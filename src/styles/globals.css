@@ -501,10 +501,6 @@ a {
   width: 100%;
 }
 
-.countdown ul {
-  /* display: flex; */
-  /* gap: 3.2rem; */
-}
 .countdown .clock-item {
   list-style: none;
   height: auto;
@@ -600,6 +596,6 @@ a {
 }
 
 .countdown p {
-  /* font-family: var(--font-secondary); */
+  font-family: ethnocentric-font;
   text-align: center;
 }
