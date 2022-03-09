@@ -22,14 +22,14 @@ export default function NFTDetail() {
       <div className="container mx-auto md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
         <ImgLink img={TwitterImg} width={30} height={30} />
         <ImgLink
-          className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5 "
+          className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5"
           img={DiscordImg}
           width={43}
           height={33}
         />
         <ImgLink img={InstagramImg} width={30} height={30} />
       </div>
-      <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px] ">
+      <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px]">
         <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center md:mt-[0px] mt-[20px]">
             <NFTCard className="nft-card-shadow" img={NFTImg} width={435} height={435}></NFTCard>

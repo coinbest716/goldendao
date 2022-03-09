@@ -493,3 +493,113 @@ a {
   font-weight: 400;
   font-family: ethnocentric-font;
 }
+
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.countdown ul {
+  /* display: flex; */
+  /* gap: 3.2rem; */
+}
+.countdown .clock-item {
+  list-style: none;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .countdown .clock-item {
+    width: 60px;
+  }
+  .countdown .clock-item .count-number {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .countdown .clock-item .count-text {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .countdown .clock-item {
+    width: 70px;
+  }
+  .countdown .clock-item .count-number {
+    font-size: 24px;
+    padding: 12px;
+  }
+  .countdown .clock-item .count-text {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .countdown .clock-item {
+    width: 80px;
+  }
+  .countdown .clock-item .count-number {
+    font-size: 32px;
+    padding: 14px;
+  }
+  .countdown .clock-item .count-text {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .countdown .clock-item {
+    width: 100px;
+  }
+  .countdown .clock-item .count-number {
+    font-size: 40px;
+    padding: 16px;
+  }
+  .countdown .clock-item .count-text {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
+.countdown .clock-item .count-number {
+  background: linear-gradient(216.56deg, #e7c52a 5.32%, #68570e 94.32%) !important;
+  color: white;
+  font-weight: 500;
+  font-family: ethnocentric-font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -ms-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+}
+.countdown .clock-item .count-text {
+  background: white;
+  font-family: dao-font;
+  color: #00163f;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  border-radius: 0 0 4px 4px;
+}
+
+.countdown h1 {
+  text-shadow: 2px 2px 0 #be7efe;
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.countdown p {
+  /* font-family: var(--font-secondary); */
+  text-align: center;
+}

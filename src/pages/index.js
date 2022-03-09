@@ -30,6 +30,7 @@ import CommunityBackground from '@src/assets/images/community_bg.png'
 
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import CountDown from '@src/components/countdown'
 
 const CaptionInfo = {
   welcome: {
@@ -123,14 +124,14 @@ export default function Index() {
       <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
         <ImgLink img={TwitterImg} width={30} height={30} />
         <ImgLink
-          className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5 "
+          className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5"
           img={DiscordImg}
           width={43}
           height={33}
         />
         <ImgLink img={InstagramImg} width={30} height={30} />
       </div>
-      <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px] ">
+      <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px]">
         <div className="md:flex md:space-x-[50px]">
           <div className="basis-1/2 flex justify-center flex-col items-center md:items-stretch">
             <div className={`section-info-wrapper mb-[50px]`}>
@@ -313,15 +314,16 @@ export default function Index() {
         onRequestClose={() => setIsOpenDlg(false)}
         shouldCloseOnOverlayClick={true}
       >
-        <div className="modal-wrapper grid md:grid-cols-2 grid-cols-1 2xl:w-[1240px] 2xl:h-[600px] lg:w-[900px] lg:h-[450px] md:w-[800px] md:h-[400px] w-[400px] h-[800px]">
-          <div className="bg-white 2xl:p-[40px] p-[20px] md:h-[100%] h-[400px]">
+        <div className="modal-wrapper grid md:grid-cols-2 grid-cols-1 2xl:w-[1240px] lg:w-[1000px] md:w-[800px] w-[400px] h-[auto]">
+          <div className="bg-white 2xl:p-[40px] p-[20px] md:h-[100%] h-[auto]">
             <h4 className="modal-title 2xl:text-[24px] lg:text-[18px]">Minting Opens Saturday, March 12, 1:00pm EST</h4>
             <p className="2xl:text-[18px] md:text-[15px] text-[14px]">
               Join our immersive community and be part of the core founding members by purchasing a founding member NFT
               key. We look forward to seeing you in person for our launch party with special guests, celebrity
               appearances, and our host, Andrew Yang.
             </p>
-            <DaoIconButton className="2xl:w-[310px] md:w-[310px] 2xl:mt-[40px] lg:mt-[20px] mt-[10px] 2xl:h-[60px] sm:h-[40px] h-[40px]">
+            <CountDown />
+            <DaoIconButton className="2xl:w-[310px] md:w-[310px] 2xl:h-[60px] sm:h-[40px] h-[40px]">
               <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
               <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">JOIN DISCORD</span>
             </DaoIconButton>
@@ -329,10 +331,9 @@ export default function Index() {
               <Image className="mt-[5px]" src={TwitterWhiteImg} alt="Golden Dao logo" width={25} height={25} />
               <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">FOLLOW ON TWITTER</span>
             </DaoIconButton>
-
             <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px]">
               <div className="2xl:w-[550px] md:w-[370px] singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
-                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px] " />
+                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
                 <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]">
                   Sign up
                 </button>
@@ -346,9 +347,9 @@ export default function Index() {
               size="2x"
               onClick={() => setIsOpenDlg(false)}
             />
-            <div className="lg:p-[50px] p-[24px] w-full h-full">
-              <div className="w-full h-full relative">
-                <Image src={ImgLogo} layout="fill" />
+            <div className="lg:p-[50px] p-[24px] w-full h-full flex justify-center items-center">
+              <div className="w-full h-auto relative">
+                <Image src={ImgLogo} layout="responsive" objectFit="cover" />
               </div>
             </div>
           </div>
