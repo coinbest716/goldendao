@@ -12,10 +12,15 @@ export default function NFTCard(props) {
       className={`bg-gradient-to-t from-darkest_gold to-medium_gold inline-block p-[20px] rounded-[16px] ${props.className}`}
       onClick={e => onClickCard()}
     >
-      <Image src={props.img} alt="Golden Dao logo" width={props.width} height={props.height} />
+      <video width="690" controls autoPlay muted loop>
+        <source src="gd-token.mp4" type="video/mp4" />
+        <source src="gd-token.mp4" type="video/ogg" />
+        Your browser does not support HTML video.
+      </video>
+
       <div className="text-center font-bold text-white my-[28px] space-y-[10px]">
         <p>MINT PRICE</p>
-        <p className="text-[15pt]">3 ETH (8326.89$)</p>
+        <p className="text-[15pt]">0.80 ETH (2,708.90$)</p>
       </div>
     </div>
   )
