@@ -199,24 +199,15 @@ export default function Index() {
           </SectionInfo>
 
           <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
-            <div className="artists-info grid md:grid-cols-2 grid-cols-1 pt-[20px]">
+            <div className="artists-info grid md:grid-cols-1 grid-cols-1 pt-[20px]">
               <div className="col-1 text-center space-y-[50px]">
-                <p>Celio Jyrki</p>
-                <p>Lú Raylene</p>
-                <p>Maud Metrodora</p>
-                <p>Francisco Javier Miltiades</p>
-                <p>Abbie Sulaiman</p>
-                <p>Daiva Ros</p>
-                <p>Prabodh Evandrus</p>
-              </div>
-              <div className="col-1 text-center space-y-[50px]">
-                <p>Celio Jyrki</p>
-                <p>Lú Raylene</p>
-                <p>Maud Metrodora</p>
-                <p>Francisco Javier Miltiades</p>
-                <p>Abbie Sulaiman</p>
-                <p>Daiva Ros</p>
-                <p>Prabodh Evandrus</p>
+                <p>Shane Fan</p>
+                <p>Eugene Lee</p>
+                <p>Ami Yoshimura</p>
+                <p>Sarah Lee</p>
+                <p>Devin Picciolini</p>
+                <p>Don Ho</p>
+                <p>Maxwell Amadeus Coombs</p>
               </div>
             </div>
           </SectionInfo>
