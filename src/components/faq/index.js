@@ -68,8 +68,8 @@ export default function Faq(props) {
       {faqQuestions.map((faq, index) => {
         return (
           <Collapsible key={index} trigger={faq.question} transitionTime={200}>
-            {faq.answer.map(item => (
-              <p>{item}</p>
+            {faq.answer.map((item, index) => (
+              <p key={index}>{item}</p>
             ))}
           </Collapsible>
         )
