@@ -31,7 +31,7 @@ const CountDown = () => {
           timerComponents
         ) : (
           <h1 className="heading" style={{ fontSize: '5rem' }}>
-            Time's up!
+            Time&apos;s up!
           </h1>
         )}
       </ul>
