@@ -42,6 +42,7 @@ const CaptionInfo = {
     content1:
       'Become a member of GoldenDAO and join a core network of individuals contributing to the future of the web3 community across the metaverse and IRL.',
     content2: ' As a founding member, you will have access to:',
+    content3: ' See FAQ tab to learn more on how to become a member.',
   },
   roadmap: {
     caption: 'ROADMAP',
@@ -165,6 +166,7 @@ export default function Index() {
             <SectionInfo className="sm:m-0 m-[-10px]" info_title={CaptionInfo['membership']['caption']}>
               <p className="mb-[36px]">{CaptionInfo['membership']['content1']}</p>
               <p>{CaptionInfo['membership']['content2']}</p>
+              <p>{CaptionInfo['membership']['content3']}</p>
             </SectionInfo>
           </div>
           <MembershipCardViewer className="mx-auto relative" onMintBtnEvent={() => setIsOpenDlg(true)} />
@@ -251,17 +253,19 @@ export default function Index() {
           <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
           <Faq className="pt-[40px] pr-[20px]" />
           <AllocationCard title={allocationCard.title} className="mt-[100px] relative">
-            <p>Public Sale (2000 mint total, priced at 1 ETH)</p>
-            <br />
             <p>
-              Presale (.80 ETH, 888 total): Saved for individuals who show commitment (via social media, discord
-              engagement or other methods) to GoldenDAO initiatives, mission.
+              Public Sale: General Public mint <b>2000 mint total, Priced 1 ETH, Sale Date: 3/25/22</b>
             </p>
             <br />
             <p>
-              Reserves (200 total): Reserved for individuals, partners who show long term commitment to GoldenDAO
-              initiatives, mission (i.e. social and community engagement, appearance, performance, MC at GoldenDAO
-              in-person event, etc.).
+              Presale : Saved for individuals who show commitment (via social media, discord engagement or other
+              methods) to GoldenDAO initiatives, mission. <b>Mint Total 888, Priced 0.80 ETH, Sale Date:3/21/22</b>
+            </p>
+            <br />
+            <p>
+              Reserves : Reserved for individuals, partners who show long term commitment to GoldenDAO initiatives,
+              mission (i.e. social and community engagement, appearance, performance, MC at GoldenDAO in-person event,
+              etc.) <b>Mint total 200</b>
             </p>
           </AllocationCard>
         </div>

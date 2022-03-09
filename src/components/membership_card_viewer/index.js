@@ -11,19 +11,19 @@ import Diamond3 from '@src/assets/images/viewer/ring-3.JPG'
 
 const membershipContent = {
   card11:
-    'Exclusive, priority, and complimentary access to GoldenDAO member meet-ups, parties across different cities including our much-anticipated launch party in April with special guests, celebrity appearances, and Andrew Yang as our host.',
+    'Exclusive, priority, and complimentary access to GoldenDAO member meet-ups, parties across different cities including our much-anticipated launch party in March (NFT LA) with special guests, celebrity appearances, and Andrew Yang as our host',
   card12: 'Presale, skip the line access to future project drops.',
-  card21: 'Access future GoldenDAO meet and greet events with special guests, hosts, headliners.',
+  card21: 'Access future GoldenDAO meet and greet events with special guests, hosts, headliners',
   card22:
     'NFT gated members-only chat on Discord to collaborate and contribute to the future of GoldenDAO’s impact on the AAPI web3 community.',
-  card31: 'Uniquely minted NFT representing founding membership.',
+  card31: 'Uniquely minted NFT representing founding membership',
   card32: 'Member voting rights on GoldenDAO’s community wallet fund contributions and initiatives.',
-  card33: 'VIP access to all of GoldenDAO’s Physical and Virtual events (+1 to all events guaranteed.',
+  card33: 'VIP access to all of GoldenDAO’s Physical and Virtual events <br/>■ +1 to all events guaranteed.',
 }
 
 const membershipContentFinal = {
   content:
-    'IRL and virtual GoldenDAO gifts, including our prestigious made-to-fit, precious metal forged, silver sterling 18kg gold plated founding members signet ring, cross-referencing the NFT mint #. The ring is designed by Maxwell Amadeus Coombs, founder of streetwear brand Control Sector and an active designer for LVMH Hennessey merchandise. *Note that the inner section of ring is subject to change due to total mint #',
+    'IRL and virtual GoldenDAO gifts, including our prestigious, precious metal forged, silver sterling 18K gold plated signet ring, cross-referencing the NFT mint #. The ring is designed by Max Coombs, founder of streetwear brand Control Sector, and an active designer for LVMH Hennessy merchandise.<br>■	Insert the two 3D rendered ring images seen on the notion, include a note that the inner section of the ring is subject to change due to total mint #',
 }
 
 const imageList = [{ url: '/viewer/ring-1.jpg' }, { url: '/viewer/ring-2.jpg' }, { url: '/viewer/ring-3.jpg' }]
