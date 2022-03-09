@@ -84,13 +84,13 @@ export default function MembershipCardViewer(props) {
         <div className="carousel-background" />
         <Carousel showThumbs={false} showArrows={false} showStatus={false} emulateTouch={true} infiniteLoop={true}>
           <div>
-            <Image src={Diamond1} layout="responsive" />
+            <Image alt="" src={Diamond1} layout="responsive" />
           </div>
           <div>
-            <Image src={Diamond2} layout="responsive" />
+            <Image alt="" src={Diamond2} layout="responsive" />
           </div>
           <div>
-            <Image src={Diamond3} layout="responsive" />
+            <Image alt="" src={Diamond3} layout="responsive" />
           </div>
         </Carousel>
       </div>

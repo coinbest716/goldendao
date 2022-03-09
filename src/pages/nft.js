@@ -42,7 +42,7 @@ export default function NFTDetail() {
               </p>
             </SectionInfo>
             <div className="">
-              <Image src={EtherScanBtn} width={220} height={85} />
+              <Image alt="" src={EtherScanBtn} width={220} height={85} />
             </div>
           </div>
         </div>

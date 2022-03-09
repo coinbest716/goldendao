@@ -158,7 +158,7 @@ export default function Index() {
 
       <section id="membership" className="membership-section pt-[110px] relative">
         <div className="background">
-          <Image src={MembershipBackground} layout="fill" objectFit="scale-down" objectPosition="right" />
+          <Image alt="" src={MembershipBackground} layout="fill" objectFit="scale-down" objectPosition="right" />
         </div>
 
         <div className="container mx-auto">
@@ -174,7 +174,7 @@ export default function Index() {
       </section>
       <section id="roadmap" className="roadmap-section pt-[160px] relative">
         <div className="background">
-          <Image src={RoadmapBackground} layout="fill" />
+          <Image alt="" src={RoadmapBackground} layout="fill" />
         </div>
         <div className="center mx-auto relative z-2">
           <SectionInfo className="center-container" info_title={CaptionInfo['roadmap']['caption']}></SectionInfo>
@@ -183,7 +183,7 @@ export default function Index() {
       </section>
       <section id="team" className="team-section mt-[200px] relative">
         <div className="background">
-          <Image src={CofounderBackground} layout="fill" objectFit="scale-down" objectPosition="right" />
+          <Image alt="" src={CofounderBackground} layout="fill" objectFit="scale-down" objectPosition="right" />
         </div>
         <div className="center-container">
           <div className="text-center">
@@ -238,7 +238,7 @@ export default function Index() {
       </section>
       <section id="faq" className="faq-section pt-[170px] relative">
         <div className="background">
-          <Image src={FaqBackground} layout="fill" objectFit="scale-down" objectPosition="left" />
+          <Image alt="" src={FaqBackground} layout="fill" objectFit="scale-down" objectPosition="left" />
         </div>
         <div className="center-container">
           <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
@@ -263,7 +263,7 @@ export default function Index() {
       </section>
       <section id="community" className="community-section pt-[185px] relative">
         <div className="background">
-          <Image src={CommunityBackground} layout="fill" />
+          <Image alt="" src={CommunityBackground} layout="fill" />
         </div>
         <div className="center-container relative">
           <SectionInfo info_title={CaptionInfo['community']['caption1']} className="text-center">
@@ -339,7 +339,7 @@ export default function Index() {
             />
             <div className="lg:p-[50px] p-[24px] w-full h-full flex justify-center items-center">
               <div className="w-full h-auto relative">
-                <Image src={ImgLogo} layout="responsive" objectFit="cover" />
+                <Image alt="" src={ImgLogo} layout="responsive" objectFit="cover" />
               </div>
             </div>
           </div>

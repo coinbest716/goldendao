@@ -11,7 +11,7 @@ export default function ImageLink(props) {
   return (
     <div className={` ${props.className ? props.className : ''}`}>
       <a className="cursor-pointer main-logo inline-block" onClick={onClickEvent}>
-        <Image src={props.img} width={props.width} height={props.height} />
+        <Image alt="" src={props.img} width={props.width} height={props.height} />
       </a>
     </div>
   )
