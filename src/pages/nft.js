@@ -8,7 +8,7 @@ import ImgLink from '@components/img_link'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import NFTImg from '@src/assets/images/nft.png'
+import NFTImg from '@src/assets/images/gd-gif.gif'
 import EtherScanBtn from '@src/assets/images/etherscan-btn.png'
 
 import InstagramImg from '@src/assets/social_links/instagram.svg'
@@ -31,8 +31,8 @@ export default function NFTDetail() {
       </div>
       <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px]">
         <div className="md:flex md:space-x-[50px]">
-          <div className="basis-1/2 flex justify-center md:mt-[0px] mt-[20px]">
-            <NFTCard className="nft-card-shadow" img={NFTImg} width={435} height={435}></NFTCard>
+          <div className="basis-1/2 justify-center md:mt-[0px] mt-[20px]">
+            <NFTCard className="nft-card-shadow" img={NFTImg} width={690} height={388}></NFTCard>
           </div>
 
           <div className="basis-1/2 flex justify-center flex-col md:mt-0 mt-[26px]">
