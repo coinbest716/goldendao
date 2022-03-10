@@ -287,6 +287,16 @@ export default function Index() {
                 Lifting up Asian culture, artistry, creatives in addition to promoting executive and thought leadership
               </p>
               <p>Allyship and advocacy</p>
+              <p className="pt-[45px]">
+                See &nbsp;
+                <a
+                  href="https://hill-queen-628.notion.site/GoldenDAO-AAPI-Solidarity-Empowerment-EXTERNAL-e6e11a8cac0949e5a13aab8ca57e25e3"
+                  className="underline"
+                >
+                  here
+                </a>
+                &nbsp; for our overview.
+              </p>
             </div>
           </SectionInfo>
           <SectionInfo className="mt-[180px]" info_title={CaptionInfo['community']['caption2']} />

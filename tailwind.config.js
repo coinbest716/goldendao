@@ -13,6 +13,7 @@ module.exports = {
       dao_green: '#12ff00',
       dao_dlg_color: '#222222',
       black: '#000',
+      blue: '#2563eb',
     },
     screens: {
       sm: '640px',
