@@ -16,15 +16,7 @@ export default function NFTCard(props) {
       className={`relative bg-gradient-to-t from-darkest_gold to-medium_gold inline-block p-[20px] rounded-[16px] ${props.className}`}
       onClick={e => onClickCard(e)}
     >
-      <video
-        width="690"
-        className="video-tag"
-        autoPlay
-        muted
-        loop
-        playsinline={false}
-        onClick={e => stopPropagation(e)}
-      >
+      <video width="690" className="video-tag" autoPlay muted loop playsInline onClick={e => stopPropagation(e)}>
         <source src="gd-token.mp4" type="video/mp4" />
         <source src="gd-token.mp4" type="video/ogg" />
         Your browser does not support HTML video.
