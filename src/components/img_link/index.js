@@ -9,10 +9,16 @@ export default function ImageLink(props) {
   }
 
   return (
-    <div className={` ${props.className ? props.className : ''}`}>
-      <a className="cursor-pointer main-logo inline-block" onClick={onClickEvent}>
+    <a
+      className="main-logo inline-block"
+      target={props.target}
+      href={props.path}
+      onClick={onClickEvent}
+      rel="noopener noreferrer"
+    >
+      <div className={`cursor-pointer ${props.className ? props.className : ''}`}>
         <Image alt="" src={props.img} width={props.width} height={props.height} />
-      </a>
-    </div>
+      </div>
+    </a>
   )
 }

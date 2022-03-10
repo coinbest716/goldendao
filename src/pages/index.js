@@ -125,6 +125,8 @@ export default function Index() {
         <ImgLink
           className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5"
           img={DiscordImg}
+          path={process.env.NEXT_PUBLIC_DISCORD_URL}
+          target="_blank"
           width={43}
           height={33}
         />

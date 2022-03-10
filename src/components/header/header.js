@@ -199,7 +199,13 @@ const Header = props => {
 
             <div className="w-full flex absolute left-[0] top-[12px] space-x-[16px] items-center justify-center md:hidden">
               <ImgLink img={TwitterImg} width={30} height={30} />
-              <ImgLink img={DiscordImg} width={30} height={30} />
+              <ImgLink
+                img={DiscordImg}
+                path={process.env.NEXT_PUBLIC_DISCORD_URL}
+                target="_blank"
+                width={30}
+                height={30}
+              />
               <ImgLink img={InstagramImg} width={30} height={30} />
             </div>
 
