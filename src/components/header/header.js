@@ -193,7 +193,7 @@ const Header = props => {
               <ImgLink img={LogoImg} path={'/'} width={130} height={150} />
             </div>
 
-            <div className="logo-small-img absolute left-[10px] top-[10px]">
+            <div className="logo-small-img absolute left-[10px] top-[10px]" style={{ zIndex: 1 }}>
               <ImgLink img={LogoSmallImg} path={'/'} width={30} height={30} />
             </div>
 

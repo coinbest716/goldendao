@@ -324,7 +324,7 @@ export default function Index() {
         onRequestClose={() => setIsOpenDlg(false)}
         shouldCloseOnOverlayClick={true}
       >
-        <div className="modal-wrapper grid md:grid-cols-2 grid-cols-1 2xl:w-[1240px] lg:w-[1000px] md:w-[800px] w-[400px] h-[auto]">
+        <div className="modal-wrapper grid md:grid-cols-2 grid-cols-1 2xl:w-[1240px] lg:w-[1000px] md:w-[800px] w-[400px] h-[auto] max-h-screen">
           <div className="bg-white 2xl:p-[40px] p-[20px] md:h-[100%] h-[auto]">
             <h4 className="modal-title 2xl:text-[24px] lg:text-[18px]">Minting Opens Saturday, March 12, 1:00pm EST</h4>
             <p className="2xl:text-[18px] md:text-[15px] text-[14px]">
