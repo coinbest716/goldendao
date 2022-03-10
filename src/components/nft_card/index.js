@@ -9,6 +9,7 @@ export default function NFTCard(props) {
   }
   const stopPropagation = e => {
     e.stopPropagation()
+    console.log('================')
   }
   return (
     <div
