@@ -598,3 +598,7 @@ a {
 .video-tag {
   object-fit: initial;
 }
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  margin-top: 36px;
+}
