@@ -24,9 +24,8 @@ export default function NFTCard(props) {
         playsInline
         onClick={e => stopPropagation(e)}
       >
-        <source src="gd-token.mp4#t=0.001" type="video/mp4" />
-        <source src="gd-token.mp4#t=0.001" type="video/ogg" />
-        <img src="thumbnail.png" />
+        <source src="gd-token.mp4" type="video/mp4" />
+        <source src="gd-token.mp4" type="video/ogg" />
         Your browser does not support HTML video.
       </video>
 

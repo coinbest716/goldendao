@@ -243,8 +243,9 @@ export default function Index() {
               allowFullScreen
             ></iframe> */}
             <video width="100%" controls>
-              <source src="andrew-yang-golden-dao.mov" type="video/mp4" />
-              <source src="andrew-yang-golden-dao.mov" type="video/ogg" />
+              <source src="andrew-yang-golden-dao.mov#t=0.001" type="video/mp4" />
+              <source src="andrew-yang-golden-dao.mov#t=0.001" type="video/ogg" />
+              <img src="thumbnail.png" />
               Your browser does not support HTML video.
             </video>
           </div>
