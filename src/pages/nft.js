@@ -59,7 +59,7 @@ export default function NFTDetail() {
                 <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">FOLLOW ON TWITTER</span>
               </DaoIconButton>
               <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px]">
-                <div className="2xl:w-[550px] md:w-[370px] singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
+                <div className="2xl:w-[550px] w-full singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
                   <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
                   <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]">
                     Sign up

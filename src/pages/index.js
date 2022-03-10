@@ -195,7 +195,7 @@ export default function Index() {
             <Image src={ImgLogo} path={'/'} alt="Golden Dao logo" width={250} height={250} />
           </div>
           <SectionInfo className="mt-[80px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
-            <div className="founder-info text-center space-y-[50px] pt-[20px]">
+            <div className="founder-info text-center lg:space-y-[50px] space-y-[20px] pt-[20px]">
               <p>ANDREW YANG</p>
               <p>JOHN DOE</p>
               <p>FRANK SINATRA</p>
@@ -203,15 +203,19 @@ export default function Index() {
           </SectionInfo>
 
           <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
-            <div className="artists-info grid md:grid-cols-1 grid-cols-1 pt-[20px]">
-              <div className="col-1 text-center space-y-[50px]">
+            <div className="artists-info grid md:grid-cols-1 xl:grid-cols-3 pt-[20px] lg:gap-[50px] gap-[20px]">
+              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
                 <p>Shane Fan</p>
-                <p>Eugene Lee</p>
-                <p>Ami Yoshimura</p>
                 <p>Sarah Lee</p>
-                <p>Devin Picciolini</p>
-                <p>Don Ho</p>
                 <p>Maxwell Amadeus Coombs</p>
+              </div>
+              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
+                <p>Eugene Lee</p>
+                <p>Devin Picciolini</p>
+              </div>
+              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
+                <p>Ami Yoshimura</p>
+                <p>Don Ho</p>
               </div>
             </div>
           </SectionInfo>
@@ -271,7 +275,7 @@ export default function Index() {
           </AllocationCard>
         </div>
       </section>
-      <section id="community" className="community-section pt-[185px] relative">
+      <section id="community" className="community-section pt-[95px] relative">
         <div className="background">
           <Image alt="" src={CommunityBackground} layout="fill" />
         </div>

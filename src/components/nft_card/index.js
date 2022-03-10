@@ -9,7 +9,6 @@ export default function NFTCard(props) {
   }
   const stopPropagation = e => {
     e.stopPropagation()
-    console.log('================')
   }
   return (
     <div
@@ -19,6 +18,7 @@ export default function NFTCard(props) {
       <video width="690" className="video-tag" autoPlay muted loop playsInline onClick={e => stopPropagation(e)}>
         <source src="gd-token.mp4" type="video/mp4" />
         <source src="gd-token.mp4" type="video/ogg" />
+        <img src="thumbnail.png" />
         Your browser does not support HTML video.
       </video>
 
