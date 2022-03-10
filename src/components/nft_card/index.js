@@ -4,15 +4,16 @@ import { useRouter } from 'next/router'
 
 export default function NFTCard(props) {
   const router = useRouter()
-  function onClickCard() {
+  function onClickCard(e) {
     router.push('/nft')
+    e.preventDefault()
   }
   return (
     <div
       className={`bg-gradient-to-t from-darkest_gold to-medium_gold inline-block p-[20px] rounded-[16px] ${props.className}`}
-      onClick={e => onClickCard()}
+      onClick={e => onClickCard(e)}
     >
-      <video width="690" autoplay="autoplay" muted="muted" defaultmuted="defaultmuted" loop="loop" metadata playsinline>
+      <video width="690" autoPlay="autoplay" muted="muted" defaultMuted="defaultmuted" loop="loop" metadata playsinline>
         <source src="gd-token.mp4" type="video/mp4" />
         <source src="gd-token.mp4" type="video/ogg" />
         Your browser does not support HTML video.
