@@ -228,7 +228,7 @@ export default function Index() {
           </SectionInfo>
 
           <div className="w-full mt-[60px] relative z-[1]">
-            <iframe
+            {/* <iframe
               className="mx-auto"
               width="100%"
               height="450"
@@ -237,7 +237,12 @@ export default function Index() {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-            ></iframe>
+            ></iframe> */}
+            <video width="100%" controls>
+              <source src="andrew-yang-golden-dao.mov" type="video/mp4" />
+              <source src="andrew-yang-golden-dao.mov" type="video/ogg" />
+              Your browser does not support HTML video.
+            </video>
           </div>
         </div>
       </section>
