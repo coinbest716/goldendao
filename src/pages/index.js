@@ -220,11 +220,11 @@ export default function Index() {
       <section className="message-section mt-[170px] relative">
         <div className="center-container">
           <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption3']}>
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat.
-            </p>
+            </p> */}
           </SectionInfo>
 
           <div className="w-full mt-[60px] relative z-[1]">
