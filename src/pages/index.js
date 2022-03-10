@@ -189,7 +189,7 @@ export default function Index() {
         </div>
         <div className="center-container">
           <div className="text-center">
-            <Image src={ImgLogo} alt="Golden Dao logo" width={250} height={250} />
+            <Image src={ImgLogo} path={'/'} alt="Golden Dao logo" width={250} height={250} />
           </div>
           <SectionInfo className="mt-[80px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
             <div className="founder-info text-center space-y-[50px] pt-[20px]">
@@ -341,7 +341,7 @@ export default function Index() {
             />
             <div className="lg:p-[50px] p-[24px] w-full h-full flex justify-center items-center">
               <div className="w-full h-auto relative">
-                <Image alt="" src={ImgLogo} layout="responsive" objectFit="cover" />
+                <Image alt="" path={'/'} src={ImgLogo} layout="responsive" objectFit="cover" />
               </div>
             </div>
           </div>

@@ -2,13 +2,13 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import SectionInfo from '@src/components/section_info'
 import NFTCard from '@src/components/nft_card'
-import Image from 'next/image'
+// import Image from 'next/image'
 import ImgLink from '@components/img_link'
 
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import EtherScanBtn from '@src/assets/images/etherscan-btn.png'
+// import EtherScanBtn from '@src/assets/images/etherscan-btn.png'
 
 import InstagramImg from '@src/assets/social_links/instagram.svg'
 import DiscordImg from '@src/assets/social_links/discord.svg'
@@ -43,9 +43,9 @@ export default function NFTDetail() {
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation commodo consequat.
               </p>
             </SectionInfo>
-            <div className="">
+            {/* <div className="">
               <Image alt="" src={EtherScanBtn} width={220} height={85} />
-            </div>
+            </div> */}
           </div>
         </div>
 

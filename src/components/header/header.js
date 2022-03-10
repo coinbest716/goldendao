@@ -190,11 +190,11 @@ const Header = props => {
         <div className="nav-menu-wrapper">
           <div className="container mx-auto bg-gray-100 relative">
             <div className="logo-big-img absolute xl:left-[50px] left-[10px] top-[-35px]">
-              <ImgLink img={LogoImg} width={130} height={150} />
+              <ImgLink img={LogoImg} path={'/'} width={130} height={150} />
             </div>
 
             <div className="logo-small-img absolute left-[10px] top-[10px]">
-              <ImgLink img={LogoSmallImg} width={30} height={30} />
+              <ImgLink img={LogoSmallImg} path={'/'} width={30} height={30} />
             </div>
 
             <div className="w-full flex absolute left-[0] top-[12px] space-x-[16px] items-center justify-center md:hidden">

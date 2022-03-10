@@ -20,7 +20,7 @@ export default function NFTCard(props) {
 
       <div className="text-center font-bold text-white my-[28px] space-y-[10px]">
         <p>MINT PRICE</p>
-        <p className="text-[15pt]">0.80 ETH (2,708.90$)</p>
+        <p className="text-[15pt]">1 ETH (2,624.28$)</p>
       </div>
     </div>
   )
