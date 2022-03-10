@@ -218,15 +218,21 @@ const Header = props => {
             </div>
 
             <div className="w-full flex absolute left-[0] top-[12px] space-x-[16px] items-center justify-center md:hidden">
-              <ImgLink img={TwitterImg} width={30} height={30} />
+              <ImgLink img={TwitterImg} width={30} height={30} target="_blank" path={process.env.REACT_APP_TWITTER} />
               <ImgLink
                 img={DiscordImg}
-                path={process.env.NEXT_PUBLIC_DISCORD_URL}
+                path={process.env.REACT_APP_DISCORD_URL}
                 target="_blank"
+                width={33}
+                height={33}
+              />
+              <ImgLink
+                img={InstagramImg}
                 width={30}
                 height={30}
+                path={process.env.REACT_APP_INSTAGRAM}
+                target="_blank"
               />
-              <ImgLink img={InstagramImg} width={30} height={30} />
             </div>
 
             <div className={`mobile-button ${menuOpen ? 'active' : ''}`} onClick={onMenuClicked}>

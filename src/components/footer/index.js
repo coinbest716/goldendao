@@ -13,9 +13,23 @@ export default function Footer(props) {
       }`}
     >
       <div className="flex space-x-[55px] justify-center">
-        <ImgLink className="mt-[10px]" img={TwitterImg} width={38} height={38} />
-        <ImgLink img={DiscordImg} path={process.env.NEXT_PUBLIC_DISCORD_URL} target="_blank" width={75} height={55} />
-        <ImgLink className="mt-[10px]" img={InstagramImg} width={38} height={38} />
+        <ImgLink
+          className="mt-[10px]"
+          img={TwitterImg}
+          width={38}
+          height={38}
+          path={process.env.REACT_APP_TWITTER}
+          target="_blank"
+        />
+        <ImgLink img={DiscordImg} path={process.env.REACT_APP_DISCORD_URL} target="_blank" width={75} height={55} />
+        <ImgLink
+          className="mt-[10px]"
+          img={InstagramImg}
+          width={38}
+          height={38}
+          path={process.env.REACT_APP_INSTAGRAM}
+          target="_blank"
+        />
       </div>
 
       <div className="space-y-[30px] mt-[50px]">

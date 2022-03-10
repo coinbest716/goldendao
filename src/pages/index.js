@@ -14,6 +14,7 @@ import toast from 'react-hot-toast'
 import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 import { useSelector } from 'react-redux'
+import MailchimpSubscribe from 'react-mailchimp-subscribe'
 
 import ImgLogo from '@src/assets/images/logo.png'
 import InstagramImg from '@src/assets/social_links/instagram.svg'
@@ -76,6 +77,9 @@ const customStyles = {
   },
 }
 
+const postUrl = `https://helloabdul.us20.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`
+// const postUrl = `https://helloabdul.us20.list-manage.com/subscribe/post?u=abc&id=def`
+
 export default function Index() {
   const [isOpenDlg, setIsOpenDlg] = useState(false)
   const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
@@ -121,16 +125,16 @@ export default function Index() {
   return (
     <>
       <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
-        <ImgLink img={TwitterImg} width={30} height={30} />
+        <ImgLink img={TwitterImg} width={30} height={30} target="_blank" path={process.env.REACT_APP_TWITTER} />
         <ImgLink
           className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5"
           img={DiscordImg}
-          path={process.env.NEXT_PUBLIC_DISCORD_URL}
           target="_blank"
+          path={process.env.REACT_APP_DISCORD_URL}
           width={43}
           height={33}
         />
-        <ImgLink img={InstagramImg} width={30} height={30} />
+        <ImgLink img={InstagramImg} width={30} height={30} path={process.env.REACT_APP_INSTAGRAM} target="_blank" />
       </div>
       <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px]">
         <div className="md:flex md:space-x-[50px]">
@@ -206,16 +210,18 @@ export default function Index() {
             <div className="artists-info grid md:grid-cols-1 xl:grid-cols-3 pt-[20px] lg:gap-[50px] gap-[20px]">
               <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
                 <p>Shane Fan</p>
-                <p>Sarah Lee</p>
-                <p>Maxwell Amadeus Coombs</p>
-              </div>
-              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
                 <p>Eugene Lee</p>
-                <p>Devin Picciolini</p>
+                <p>Ami Yoshimura</p>
               </div>
               <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
-                <p>Ami Yoshimura</p>
+                <p>Sarah Lee</p>
+                <p>Devin Picciolini</p>
                 <p>Don Ho</p>
+              </div>
+              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
+                <p>Maxwell Amadeus Coombs</p>
+                <p>Calista Wu</p>
+                <p>Benjamin Tang</p>
               </div>
             </div>
           </SectionInfo>
@@ -312,12 +318,26 @@ export default function Index() {
             </DaoIconButton>
           </div>
           <div className="flex justify-center mt-[50px]">
-            <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
+            {/* <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
               <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
               <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]">
                 Sign up
               </button>
-            </div>
+            </div> */}
+            <MailchimpSubscribe
+              url={postUrl}
+              render={({ subscribe, status, message }) => (
+                <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
+                  <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
+                  <button
+                    className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]"
+                    onClick={e => subscribe()}
+                  >
+                    Sign up
+                  </button>
+                </div>
+              )}
+            />
           </div>
         </div>
       </section>

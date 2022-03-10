@@ -29,7 +29,7 @@ export default function NFTCard(props) {
         Your browser does not support HTML video.
       </video>
 
-      <div className="text-center font-bold text-white 2xl:my-[28px] xl:my-[22px] md:my-[18px] sm:my-[14px] space-y-[10px]">
+      <div className="text-center font-bold text-white 2xl:mt-[18px] xl:mt-[16px] md:mt-[18px] sm:mt-[14px] space-y-[10px]">
         <p>MINT PRICE</p>
         {/* <p className="text-[15pt]">1 ETH (2,624.28$)</p> */}
         <p className="md:text-[30pt] sm:text-[24pt] text-[18pt]">1 ETH</p>

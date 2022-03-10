@@ -21,8 +21,8 @@ export default function NFTDetail() {
   const router = useRouter()
   return (
     <div>
-      <div className="container mx-auto md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
-        <ImgLink img={TwitterImg} width={30} height={30} />
+      <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
+        <ImgLink img={TwitterImg} width={30} height={30} target="_blank" path={process.env.REACT_APP_DISCORD_URL} />
         <ImgLink
           className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5"
           img={DiscordImg}
@@ -31,7 +31,7 @@ export default function NFTDetail() {
           width={43}
           height={33}
         />
-        <ImgLink img={InstagramImg} width={30} height={30} />
+        <ImgLink img={InstagramImg} width={30} height={30} path={process.env.REACT_APP_INSTAGRAM} target="_blank" />
       </div>
       <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px]">
         <div className="md:flex md:space-x-[50px] mt-[-50px]">
