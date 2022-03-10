@@ -596,4 +596,5 @@ a {
   text-align: center;
 }
 .video-tag {
+  object-fit: initial;
 }

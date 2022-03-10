@@ -312,7 +312,7 @@ export default function Index() {
           </div>
           <div className="flex justify-center mt-[50px]">
             <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
-              <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
+              <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
               <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]">
                 Sign up
               </button>
