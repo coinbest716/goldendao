@@ -152,7 +152,10 @@ export default function Index() {
             </DaoButton>
           </div>
 
-          <div className="cursor-pointer basis-1/2 justify-center md:mt-[0px] mt-[20px] z-10 opacity-80">
+          <div
+            className="cursor-pointer basis-1/2 justify-center md:mt-[0px] mt-[20px] opacity-80"
+            style={{ zIndex: 1 }}
+          >
             <NFTCard className="nft-card-shadow z-[1]" width={690} height={388}></NFTCard>
           </div>
         </div>

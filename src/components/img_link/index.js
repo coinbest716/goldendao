@@ -1,14 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 export default function ImageLink(props) {
-  function onClickEvent() {
-    if (props.onClick) {
-      props.onClick()
+  const router = useRouter()
+  const onClickEvent = () => {
+    if (props.target !== '_blank') {
+      router.push(props.path)
     }
   }
 
-  return (
+  return props.target === '_blank' ? (
     <a
       className="main-logo inline-block"
       target={props.target}
@@ -16,6 +18,12 @@ export default function ImageLink(props) {
       onClick={onClickEvent}
       rel="noopener noreferrer"
     >
+      <div className={`cursor-pointer ${props.className ? props.className : ''}`}>
+        <Image alt="" src={props.img} width={props.width} height={props.height} />
+      </div>
+    </a>
+  ) : (
+    <a className="main-logo inline-block" target={props.target} onClick={onClickEvent} rel="noopener noreferrer">
       <div className={`cursor-pointer ${props.className ? props.className : ''}`}>
         <Image alt="" src={props.img} width={props.width} height={props.height} />
       </div>
