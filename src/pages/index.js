@@ -209,8 +209,8 @@ export default function Index() {
           <SectionInfo className="mt-[80px] space-y-[20px]" info_title={CaptionInfo['team']['caption1']}>
             <div className="founder-info text-center lg:space-y-[50px] space-y-[20px] pt-[20px]">
               <p>ANDREW YANG</p>
-              <p>JOHN DOE</p>
-              <p>FRANK SINATRA</p>
+              <p>JACK LIANG</p>
+              <p>THEODORE LU</p>
             </div>
           </SectionInfo>
 
