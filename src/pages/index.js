@@ -77,11 +77,13 @@ const customStyles = {
   },
 }
 
-const postUrl = `https://helloabdul.us20.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&id=${process.env.REACT_APP_MAILCHIMP_ID}`
+const postUrl = `https://helloabdul.us20.list-manage.com/subscribe/post?u=golden_dao&id=lemonpepperbatteryfountaiN73!`
 // const postUrl = `https://helloabdul.us20.list-manage.com/subscribe/post?u=abc&id=def`
 
 export default function Index() {
+  console.log(postUrl)
   const [isOpenDlg, setIsOpenDlg] = useState(false)
+  const [email, setEmail] = useState('')
   const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
 
   async function onMintClicked() {
@@ -125,16 +127,22 @@ export default function Index() {
   return (
     <>
       <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
-        <ImgLink img={TwitterImg} width={30} height={30} target="_blank" path={process.env.REACT_APP_TWITTER} />
+        <ImgLink img={TwitterImg} width={30} height={30} target="_blank" path="https://twitter.com/Goldendaoxyz" />
         <ImgLink
           className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5"
           img={DiscordImg}
           target="_blank"
-          path={process.env.REACT_APP_DISCORD_URL}
+          path="https://discord.gg/JNEHDqSh"
           width={43}
           height={33}
         />
-        <ImgLink img={InstagramImg} width={30} height={30} path={process.env.REACT_APP_INSTAGRAM} target="_blank" />
+        <ImgLink
+          img={InstagramImg}
+          width={30}
+          height={30}
+          path="https://www.instagram.com/goldendao/"
+          target="_blank"
+        />
       </div>
       <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px]">
         <div className="md:flex md:space-x-[50px]">
@@ -325,14 +333,25 @@ export default function Index() {
             <MailchimpSubscribe
               url={postUrl}
               render={({ subscribe, status, message }) => (
-                <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
-                  <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
-                  <button
-                    className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]"
-                    onClick={e => subscribe()}
-                  >
-                    Sign up
-                  </button>
+                <div>
+                  <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
+                    <input
+                      className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
+                      placeholder="Email"
+                      onChange={e => setEmail(e.target.value)}
+                    />
+                    <button
+                      className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]"
+                      onClick={e => {
+                        subscribe(email)
+                      }}
+                    >
+                      Sign up
+                    </button>
+                  </div>
+                  {status === 'sending' && <div className="text-white">Sending...</div>}
+                  {status === 'error' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />}
+                  {status === 'success' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />}
                 </div>
               )}
             />

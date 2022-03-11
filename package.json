@@ -18,6 +18,7 @@
     "@next-tools/dynamic": "^0.0.11",
     "@walletconnect/web3-provider": "^1.7.3",
     "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
     "ethers": "^5.5.4",
     "next": "12.1.0",
     "next-images": "^1.8.4",
