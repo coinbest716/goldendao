@@ -20,13 +20,11 @@ import InstagramImg from '@src/assets/social_links/instagram.svg'
 import DiscordImg from '@src/assets/social_links/discord1.svg'
 import TwitterImg from '@src/assets/social_links/twitter.svg'
 
-const INFURA_ID = '460f40a260564ac4a4f4b3fffb032dad'
-
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
     options: {
-      infuraId: INFURA_ID, // required
+      infuraId: process.env.INFURA_ID, // required
     },
   },
   'custom-walletlink': {
@@ -37,7 +35,7 @@ const providerOptions = {
     },
     options: {
       appName: 'Coinbase', // Your app name
-      networkUrl: `https://mainnet.infura.io/v3/${INFURA_ID}`,
+      networkUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_ID}`,
       chainId: 1,
     },
     package: WalletLink,

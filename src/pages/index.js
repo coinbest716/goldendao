@@ -208,21 +208,15 @@ export default function Index() {
 
           <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
             <div className="artists-info grid md:grid-cols-1 xl:grid-cols-3 pt-[20px] lg:gap-[50px] gap-[20px]">
-              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
-                <p>Shane Fan</p>
-                <p>Eugene Lee</p>
-                <p>Ami Yoshimura</p>
-              </div>
-              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
-                <p>Sarah Lee</p>
-                <p>Devin Picciolini</p>
-                <p>Don Ho</p>
-              </div>
-              <div className="col-span-1 text-center lg:space-y-[50px] space-y-[20px]">
-                <p>Maxwell Amadeus Coombs</p>
-                <p>Calista Wu</p>
-                <p>Benjamin Tang</p>
-              </div>
+              <p className="text-center">Shane Fan</p>
+              <p className="text-center">Eugene Lee</p>
+              <p className="text-center">Ami Yoshimura</p>
+              <p className="text-center">Sarah Lee</p>
+              <p className="text-center">Devin Picciolini</p>
+              <p className="text-center">Don Ho</p>
+              <p className="text-center">Maxwell Amadeus Coombs</p>
+              <p className="text-center">Calista Wu</p>
+              <p className="text-center">Benjamin Tang</p>
             </div>
           </SectionInfo>
         </div>
@@ -312,7 +306,11 @@ export default function Index() {
           </SectionInfo>
           <SectionInfo className="mt-[180px]" info_title={CaptionInfo['community']['caption2']} />
           <div className="flex justify-center pt-[20px]">
-            <DaoIconButton width="580px" className="h-[60px]">
+            <DaoIconButton
+              width="580px"
+              className="h-[60px]"
+              onClick={e => window.open('https://discord.gg/JNEHDqSh', '_blank')}
+            >
               <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
               <span className="mt-[15px] ml-[8px] text-[19px]">JOIN DISCORD</span>
             </DaoIconButton>
