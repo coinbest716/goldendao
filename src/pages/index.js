@@ -16,6 +16,7 @@ import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 import { useSelector } from 'react-redux'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { postUrl } from '@src/common'
+import Signup from '@src/components/signup'
 
 import ImgLogo from '@src/assets/images/logo.png'
 import InstagramImg from '@src/assets/social_links/instagram.svg'
@@ -80,7 +81,6 @@ const customStyles = {
 
 export default function Index() {
   const [isOpenDlg, setIsOpenDlg] = useState(false)
-  const [email, setEmail] = useState('')
   const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
 
   async function onMintClicked() {
@@ -324,32 +324,13 @@ export default function Index() {
             <MailchimpSubscribe
               url={postUrl}
               render={({ subscribe, status, message }) => (
-                <div>
-                  <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px] w-full justify-center">
-                    <div className="sm:w-[580px] w-full singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
-                      <input
-                        className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
-                        placeholder="Email"
-                        onChange={e => setEmail(e.target.value)}
-                      />
-                      <button
-                        className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] w-[143px]"
-                        onClick={e => {
-                          console.log(email)
-                          subscribe({
-                            EMAIL: email,
-                          })
-                          setEmail('')
-                        }}
-                      >
-                        Sign up
-                      </button>
-                    </div>
-                  </div>
-                  {/* {status === 'sending' && <div className="text-white">Sending...</div>}
-                  {status === 'error' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />}
-                  {status === 'success' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />} */}
-                </div>
+                <Signup
+                  status={status}
+                  message={message}
+                  onValidated={formdata => {
+                    subscribe(formdata)
+                  }}
+                />
               )}
             />
           </div>
