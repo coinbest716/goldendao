@@ -324,13 +324,15 @@ export default function Index() {
             </DaoIconButton>
           </div>
           <div className="flex justify-center mt-[50px]">
-            {/* <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
-              <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
-              <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]">
-                Sign up
-              </button>
-            </div> */}
-            <MailchimpSubscribe
+            <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px] w-full justify-center">
+              <div className="sm:w-[580px] w-full singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
+                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
+                <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] w-[143px]">
+                  Sign up
+                </button>
+              </div>
+            </div>
+            {/* <MailchimpSubscribe
               url={postUrl}
               render={({ subscribe, status, message }) => (
                 <div>
@@ -354,7 +356,7 @@ export default function Index() {
                   {status === 'success' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />}
                 </div>
               )}
-            />
+            /> */}
           </div>
         </div>
       </section>
