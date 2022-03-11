@@ -15,6 +15,7 @@ import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 import { useSelector } from 'react-redux'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import { postUrl } from '@src/common'
 
 import ImgLogo from '@src/assets/images/logo.png'
 import InstagramImg from '@src/assets/social_links/instagram.svg'
@@ -77,11 +78,7 @@ const customStyles = {
   },
 }
 
-const postUrl = `https://helloabdul.us20.list-manage.com/subscribe/post?u=golden_dao&id=lemonpepperbatteryfountaiN73!`
-// const postUrl = `https://helloabdul.us20.list-manage.com/subscribe/post?u=abc&id=def`
-
 export default function Index() {
-  console.log(postUrl)
   const [isOpenDlg, setIsOpenDlg] = useState(false)
   const [email, setEmail] = useState('')
   const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
@@ -324,39 +321,37 @@ export default function Index() {
             </DaoIconButton>
           </div>
           <div className="flex justify-center mt-[50px]">
-            <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px] w-full justify-center">
-              <div className="sm:w-[580px] w-full singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
-                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
-                <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] w-[143px]">
-                  Sign up
-                </button>
-              </div>
-            </div>
-            {/* <MailchimpSubscribe
+            <MailchimpSubscribe
               url={postUrl}
               render={({ subscribe, status, message }) => (
                 <div>
-                  <div className="w-[580px] singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
-                    <input
-                      className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
-                      placeholder="Email"
-                      onChange={e => setEmail(e.target.value)}
-                    />
-                    <button
-                      className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] text-[20px]"
-                      onClick={e => {
-                        subscribe(email)
-                      }}
-                    >
-                      Sign up
-                    </button>
+                  <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px] w-full justify-center">
+                    <div className="sm:w-[580px] w-full singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
+                      <input
+                        className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
+                        placeholder="Email"
+                        onChange={e => setEmail(e.target.value)}
+                      />
+                      <button
+                        className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] w-[143px]"
+                        onClick={e => {
+                          console.log(email)
+                          subscribe({
+                            EMAIL: email,
+                          })
+                          setEmail('')
+                        }}
+                      >
+                        Sign up
+                      </button>
+                    </div>
                   </div>
-                  {status === 'sending' && <div className="text-white">Sending...</div>}
+                  {/* {status === 'sending' && <div className="text-white">Sending...</div>}
                   {status === 'error' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />}
-                  {status === 'success' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />}
+                  {status === 'success' && <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />} */}
                 </div>
               )}
-            /> */}
+            />
           </div>
         </div>
       </section>
@@ -387,7 +382,7 @@ export default function Index() {
             </DaoIconButton>
             <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px]">
               <div className="2xl:w-[550px] md:w-[370px] singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
-                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" />
+                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
                 <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]">
                   Sign up
                 </button>
