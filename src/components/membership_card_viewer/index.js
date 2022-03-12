@@ -18,7 +18,7 @@ const membershipContent = {
     'NFT gated members-only chat on Discord to collaborate and contribute to the future of GoldenDAO’s impact on the AAPI web3 community.',
   card31: 'Uniquely minted NFT representing founding membership',
   card32: 'Member voting rights on GoldenDAO’s community wallet fund contributions and initiatives.',
-  card33: 'VIP access to all of GoldenDAO’s Physical and Virtual events <br/>■ +1 to all events guaranteed.  <br/>■ GoldenDAO NFT tickets sent via airdrop to member wallets. Tickets can be used for exclusive event access, GoldenDAO merchandise, and exchanged with others in the community',
+  card33: 'GoldenDAO NFT tickets sent via airdrop to member wallets. Tickets can be used for exclusive event access, GoldenDAO merchandise, and exchanged with others in the community',
 }
 
 const membershipContentFinal = {
