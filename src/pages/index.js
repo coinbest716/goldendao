@@ -16,7 +16,8 @@ import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 import { useSelector } from 'react-redux'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { postUrl } from '@src/common'
-import Signup from '@src/components/signup'
+import Signup from '@src/components/signup/signup'
+import SignupOnDialog from '@src/components/signup/signup_dialog'
 
 import ImgLogo from '@src/assets/images/logo.png'
 import InstagramImg from '@src/assets/social_links/instagram.svg'
@@ -265,18 +266,19 @@ export default function Index() {
           <Faq className="pt-[40px] pr-[20px]" />
           <AllocationCard title={allocationCard.title} className="mt-[100px] relative">
             <p>
-              Public Sale: General Public mint <b>2000 mint total, Priced 1 ETH, Sale Date: 3/25/22</b>
+              Public Sale: General Public mint,{' '}
+              <b>Mint total 2000, Last Price Dutch Auction, 0.88 - 1.28 ETH , Sale Date: 3/31/22</b>
             </p>
             <br />
             <p>
-              Presale : Saved for individuals who show commitment (via social media, discord engagement or other
-              methods) to GoldenDAO initiatives, mission. <b>Mint Total 888, Priced 0.80 ETH, Sale Date:3/21/22</b>
+              Saved for individuals who show commitment (via social media, discord engagement, or other methods) to
+              GoldenDAO initiatives, mission<b>Mint Total 888, Priced 0.80 ETH, Sale Date:Week of 3/21/22</b>
             </p>
             <br />
             <p>
-              Reserves : Reserved for individuals, partners who show long term commitment to GoldenDAO initiatives,
-              mission (i.e. social and community engagement, appearance, performance, MC at GoldenDAO in-person event,
-              etc.) <b>Mint total 200</b>
+              Reserved for individuals, partners who show long-term commitment to GoldenDAO initiatives, mission (i.e.
+              social and community engagement, appearance, performance, MC at GoldenDAO in-person event, etc.)
+              <b>Mint total 200</b>
             </p>
           </AllocationCard>
         </div>
@@ -346,11 +348,11 @@ export default function Index() {
       >
         <div className="modal-wrapper grid md:grid-cols-2 grid-cols-1 2xl:w-[1240px] lg:w-[1000px] md:w-[800px] w-[400px] h-[auto] max-h-screen">
           <div className="bg-white 2xl:p-[40px] p-[20px] md:h-[100%] h-[auto]">
-            <h4 className="modal-title 2xl:text-[24px] lg:text-[18px]">Minting Opens Saturday, March 12, 1:00pm EST</h4>
+            <h4 className="modal-title 2xl:text-[24px] lg:text-[18px]">Minting Opens March, 31, 2022 at 10am PST</h4>
             <p className="2xl:text-[18px] md:text-[15px] text-[14px]">
-              Join our immersive community and be part of the core founding members by purchasing a founding member NFT
-              key. We look forward to seeing you in person for our launch party with special guests, celebrity
-              appearances, and our host, Andrew Yang.
+              Join our immersive community and be a part of the core founding members by purchasing an NFT key. We look
+              forward to seeing you in person for our launch party with special guests, celebrity appearances, and our
+              host, Andrew Yang in LA on March 31st during NFT week, held exclusively for members and partners.
             </p>
             <CountDown />
             <DaoIconButton className="2xl:w-[310px] md:w-[310px] 2xl:h-[60px] sm:h-[40px] h-[40px]">
@@ -362,12 +364,18 @@ export default function Index() {
               <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">FOLLOW ON TWITTER</span>
             </DaoIconButton>
             <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px]">
-              <div className="2xl:w-[550px] md:w-[370px] singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
-                <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
-                <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]">
-                  Sign up
-                </button>
-              </div>
+              <MailchimpSubscribe
+                url={postUrl}
+                render={({ subscribe, status, message }) => (
+                  <SignupOnDialog
+                    status={status}
+                    message={message}
+                    onValidated={formdata => {
+                      subscribe(formdata)
+                    }}
+                  />
+                )}
+              />
             </div>
           </div>
           <div className="bg-dao_dlg_color flex items-center justify-center md:h-[100%] h-[400px]">

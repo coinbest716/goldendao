@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react'
 
 const roadmapConts = [
-  {
-    date: 'February 2022',
-    content: 'Andrew Yang public announcement',
-  },
+  // {
+  //   date: 'February 2022',
+  //   content: 'Andrew Yang public announcement',
+  // },
   {
     date: 'March 2022',
     content: 'NFT founding membership key public sale + POAP launch',
@@ -16,12 +16,16 @@ const roadmapConts = [
   },
   {
     date: 'MARCH 2022',
-    content: 'Reveal Day',
+    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
   },
   {
     date: 'MARCH 2022',
     content:
-      'In-person launch party exclusively for founding members, hosted by Andrew Yang, with special guests, celebrity appearances and performances and GoldenDAO sponsors',
+      ' In-person launch party exclusively for founding members, hosted by Andrew Yang during NFT week in LA on 3/31, with special guests, celebrity appearances and performances, and GoldenDAO sponsors',
+  },
+  {
+    date: 'APRIL 2022',
+    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
   },
   {
     date: 'APRIL 2022',
@@ -33,26 +37,42 @@ const roadmapConts = [
   },
   {
     date: 'MAY 2022',
+    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
+  },
+  {
+    date: 'MAY 2022',
     content:
       'DAO community expansion - after GoldenDAO’s infrastructure is complete, the DAO will vote on how proceeds in the community wallet will be used. GoldenDAO will have a treasury aimed to fund AAPI empowerment projects, community initiatives, and further GoldenDAO’s mission.',
   },
   {
     date: 'MAY 2022',
     content:
-      'GoldenDAO vote on brand equity growth, partnerships, and logo usage. Potential, but not limited-to opportunities include: <p style="margin-left:30px;">• GoldenDAO metaverse outpost• GoldenDAO wearable tech\n • GoldenDAO physical location in major cities (NYC, LA,MIA, etc.) used as a hub for members and partners.\n • GoldenDAO x specific partnerships (cross community and project engagement, brand partnerships, etc.)</p>',
+      'GoldenDAO vote on brand equity growth, partnerships, and logo usage. Potential, but not limited-to opportunities include: <p style="margin-left:30px;">• GoldenDAO metaverse outpost\n• GoldenDAO wearable tech\n • GoldenDAO physical location in major cities (NYC, LA,MIA, etc.) used as a hub for members and partners.\n • GoldenDAO x specific partnerships (cross community and project engagement, brand partnerships, etc.)</p>',
+  },
+  {
+    date: 'Q2/Q3 2022',
+    content:
+      'GoldenDAO custom-built gold plated signet ring gifted to founding members, cross-matching # of minted NFT (i.e. #888, #747, #1)',
   },
   {
     date: 'JUNE 2022',
     content: 'GoldenDAO party in NYC for NFT week',
   },
   {
+    date: 'August 2022',
+    content: ' Two GoldenDAO NFT tickets airdropped to NFT holders',
+  },
+  {
     date: 'SEPTEMBER 2022',
     content: 'Autumn Moon Festival GoldenDAO membership in-person event hosted in LA (location subject to change)',
   },
   {
+    date: 'October 2022',
+    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
+  },
+  {
     date: 'NOVEMBER 2022',
-    content:
-      'GoldenDAO custom gold plated signet ring gifted to founding members, cross matching # of minted NFT (i.e. #888, #747, #1) <a class="roadmap-content-link text-lightest_gold">View 3D rendering of ring</a>',
+    content: 'GoldenDAO members meet-up in Miami for Art Basel ',
   },
   {
     date: '2023',
@@ -63,9 +83,13 @@ export default function Roadmap(props) {
   const timeline = useRef(null)
   let initalArray = []
   let diamondsRefs = []
-  for (var i = 0; i < 13; i++) {
+  for (var i = 0; i < 17; i++) {
     initalArray.push('')
   }
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
+  diamondsRefs.push(useRef(null))
   diamondsRefs.push(useRef(null))
   diamondsRefs.push(useRef(null))
   diamondsRefs.push(useRef(null))

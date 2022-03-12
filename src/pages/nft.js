@@ -6,10 +6,11 @@ import DaoIconButton from '@src/components/dao_icon_btn'
 import CountDown from '@src/components/countdown'
 import Image from 'next/image'
 import ImgLink from '@components/img_link'
-
+import MailchimpSubscribe from 'react-mailchimp-subscribe'
+import { postUrl } from '@src/common'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import SignupOnNFT from '@src/components/signup/signup_nft'
 // import EtherScanBtn from '@src/assets/images/etherscan-btn.png'
 
 import InstagramImg from '@src/assets/social_links/instagram.svg'
@@ -73,12 +74,18 @@ export default function NFTDetail() {
                 <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">FOLLOW ON TWITTER</span>
               </DaoIconButton>
               <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px]">
-                <div className="2xl:w-[370px] md:w-[310px] w-full singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
-                  <input className="signup-info basis-3/4  rounded m-[2px] px-[4px]" placeholder="Email" />
-                  <button className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]">
-                    Sign up
-                  </button>
-                </div>
+                <MailchimpSubscribe
+                  url={postUrl}
+                  render={({ subscribe, status, message }) => (
+                    <SignupOnNFT
+                      status={status}
+                      message={message}
+                      onValidated={formdata => {
+                        subscribe(formdata)
+                      }}
+                    />
+                  )}
+                />
               </div>
             </div>
           </div>

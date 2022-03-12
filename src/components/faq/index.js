@@ -10,8 +10,8 @@ const faqQuestions = [
   {
     question: 'How do I mint a GoldenDAO founding member NFT?',
     answer: [
-      'Step 1: Download MetaMask (preferred), or other compatible wallet (WalletConnect, Trezor, Ledger, etc.)',
-      'Step 2: Fund your MetaMask by sending ETH from your Coinbase or other cryptocurrency wallet (see below on how to purchase ETH)',
+      'Step 1: Download <a class="underline" href="https://metamask.io/" target="_blank">MetaMask</a> (preferred), or other compatible wallet (WalletConnect, Trezor, Ledger, etc.)',
+      'Step 2: Fund your MetaMask by sending ETH from your <a class="underline" href="https://metamask.io/" target="_blank">Coinbase</a> or other cryptocurrency wallet (see below on how to purchase ETH)',
       'Step 3: Connect your wallet here before our sale',
       'Step 4: Once wallet is connected and authorized, click add to cart during our sale',
       'Step 5: Review transaction details and complete purchase',
@@ -20,18 +20,26 @@ const faqQuestions = [
   {
     question: 'How can I become a founding member?',
     answer: [
-      'You can become a founding member by purchasing one of our limited NFT gated founding membership keys on our website when the public sale launches. Stay tuned for more details and announcements for the public sale by following our social media (insert social links here)',
+      'You can become a founding member by purchasing one of our limited NFT gated founding membership keys on our website when the public sale launches. Stay tuned for more details and announcements for the public sale by following our social media',
     ],
   },
   {
     question: 'If I’m unable to purchase one of the NFTs upon public sale, how else can I become a member?',
     answer: [
-      'Founding membership keys are exclusive to the initial launch. They will be continue to be available for purchase from a secondary market (i.e. OpenSea)',
+      'Founding membership keys are exclusive to the initial launch. They will be continue to be available for purchase from a secondary market',
     ],
   },
   {
     question: 'How much will the NFT cost?',
-    answer: ['1 ETH plus gas fees.'],
+    answer: [
+      'Initial price will be set at 1.28 ETH. Final price could be anywhere between 0.88 - 1.28 ETH plus gas fees.',
+    ],
+  },
+  {
+    question: 'Why Last Price Dutch Auction?',
+    answer: [
+      'Given our limited mint number and potential interest, we want to be cognizant of high gas fees. With Last Price Dutch Auction minting, the thought is that transactions are spread out over time as people observe pricing changes, helping reduce competitive gas prices. Unlike a normal dutch auction, purchasers do not pay a higher premium even if they mint at a higher price. The difference between the higher price paid and the last price are refunded, i.e. Minter pays 1.25 ETH but the final price is 1 ETH post minting. Minter who paid 1.25 ETH receives a 0.25 ETH refund.',
+    ],
   },
   {
     question: 'How long am I a member for?',
@@ -42,13 +50,13 @@ const faqQuestions = [
   {
     question: 'Can I attend GoldenDAO events if I do not have an NFT membership key?',
     answer: [
-      'Currently, all planned events in-person and virtually are exclusively held for GoldenDAO members and partners. We plan on expanding membership for our Season 2 NFT drop (see roadmap for details). Membership will continue to be available for individuals via the secondary market (i.e. OpenSea)',
+      'Currently, all planned events in-person and virtually are exclusively held for GoldenDAO members and partners. We plan on expanding membership for our Season 2 NFT drop (see roadmap for details). Membership will continue to be available for individuals via the secondary market',
     ],
   },
   {
     question: 'When do I receive the GoldenDAO member ring?',
     answer: [
-      'You must be a member (have the NFT in your wallet) in the designated month that the signet rings would be delivered to be able to receive one.',
+      'You must be a member (have the NFT in your wallet) in the designated month that the signet rings are delivered.',
     ],
   },
   {
@@ -58,7 +66,7 @@ const faqQuestions = [
   {
     question: 'When can I mint the NFT?',
     answer: [
-      'Our presale date will be on 3/21/22 and our public sale date will be on 3/25/22. Stay tuned for announcements on Twitter and Discord for exact sale time windows.',
+      'Our presale date will be announced during the week of 3/21/22 and our public sale date will be on 3/31/22. Stay tuned for announcements on Twitter and Discord for exact sale time windows.',
     ],
   },
 ]
@@ -69,7 +77,7 @@ export default function Faq(props) {
         return (
           <Collapsible key={index} trigger={faq.question} transitionTime={200}>
             {faq.answer.map((item, index) => (
-              <p key={index}>{item}</p>
+              <div className="relative " key={index} dangerouslySetInnerHTML={{ __html: item }} />
             ))}
           </Collapsible>
         )
