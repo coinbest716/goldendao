@@ -51,12 +51,10 @@ export default function NFTDetail() {
           <div className="basis-1/2 mt-[50px]">
             <div className="modal-wrapper">
               <h4 className="modal-title 2xl:text-[24px] lg:text-[18px] text-white">
-                Minting Opens Saturday, March 12, 1:00pm EST
+                Minting Opens Saturday, March 31, 10:00am PST
               </h4>
               <p className="2xl:text-[18px] md:text-[15px] text-[14px] text-white">
-                Join our immersive community and be part of the core founding members by purchasing a founding member
-                NFT key. We look forward to seeing you in person for our launch party with special guests, celebrity
-                appearances, and our host, Andrew Yang.
+              Join our immersive community and be a part of the core founding members by purchasing an NFT key. We look forward to seeing you in person for our launch party with special guests, celebrity appearances, and our host, Andrew Yang in LA on March 31st during NFT week, held exclusively for members and partners.
               </p>
               <CountDown />
               <DaoIconButton

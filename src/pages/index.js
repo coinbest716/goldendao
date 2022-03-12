@@ -46,7 +46,7 @@ const CaptionInfo = {
     content1:
       'Become a member of GoldenDAO and join a core network of individuals contributing to the future of the web3 community across the metaverse and IRL.',
     content2: ' As a founding member, you will have access to:',
-    content3: ' See FAQ tab to learn more on how to become a member.',
+    // content3: ' See FAQ tab to learn more on how to become a member.',
   },
   roadmap: {
     caption: 'ROADMAP',
@@ -181,7 +181,7 @@ export default function Index() {
             <SectionInfo className="sm:m-0 m-[-10px]" info_title={CaptionInfo['membership']['caption']}>
               <p className="mb-[36px]">{CaptionInfo['membership']['content1']}</p>
               <p>{CaptionInfo['membership']['content2']}</p>
-              <p>{CaptionInfo['membership']['content3']}</p>
+              {/* <p>{CaptionInfo['membership']['content3']}</p> */}
             </SectionInfo>
           </div>
           <MembershipCardViewer className="mx-auto relative" onMintBtnEvent={() => setIsOpenDlg(true)} />
