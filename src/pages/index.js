@@ -223,6 +223,7 @@ export default function Index() {
               <p className="text-center">Maxwell Amadeus Coombs</p>
               <p className="text-center">Calista Wu</p>
               <p className="text-center">Benjamin Tang</p>
+              <p className="text-center">Apollo NFT Studios</p>
             </div>
           </SectionInfo>
         </div>

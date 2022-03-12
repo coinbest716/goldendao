@@ -21,12 +21,13 @@ const faqQuestions = [
     question: 'How can I become a founding member?',
     answer: [
       'You can become a founding member by purchasing one of our limited NFT gated founding membership keys on our website when the public sale launches. Stay tuned for more details and announcements for the public sale by following our social media',
+      '<a class="main-logo inline-block" target="_blank" href="https://twitter.com/Goldendaoxyz" ><img src="twitter.svg" style="width:30px;height:30px"></a>&nbsp;<a class="main-logo inline-block" target="_blank" href="https://discord.gg/JNEHDqSh" ><img src="discord.svg" style="width:30px;height:30px"></a>&nbsp;<a class="main-logo inline-block" target="_blank" href="https://www.instagram.com/goldendao/" ><img src="instagram.svg" style="width:30px;height:30px"></a>',
     ],
   },
   {
     question: 'If I’m unable to purchase one of the NFTs upon public sale, how else can I become a member?',
     answer: [
-      'Founding membership keys are exclusive to the initial launch. They will be continue to be available for purchase from a secondary market',
+      'Founding membership keys are exclusive to the initial launch. They will be continue to be available for purchase from a secondary market(i.e. OpenSea).',
     ],
   },
   {
@@ -50,7 +51,7 @@ const faqQuestions = [
   {
     question: 'Can I attend GoldenDAO events if I do not have an NFT membership key?',
     answer: [
-      'Currently, all planned events in-person and virtually are exclusively held for GoldenDAO members and partners. We plan on expanding membership for our Season 2 NFT drop (see roadmap for details). Membership will continue to be available for individuals via the secondary market',
+      'Currently, all planned events in-person and virtually are exclusively held for GoldenDAO members and partners. We plan on expanding membership for our Season 2 NFT drop (see roadmap for details). Membership will continue to be available for individuals via the secondary market(i.e. OpenSea).',
     ],
   },
   {

@@ -28,12 +28,6 @@ export default function NFTCard(props) {
         <source src="gd-token.mp4" type="video/ogg" />
         Your browser does not support HTML video.
       </video>
-
-      <div className="text-center font-bold text-white 2xl:mt-[18px] xl:mt-[16px] md:mt-[18px] sm:mt-[14px] space-y-[10px]">
-        <p>MINT PRICE</p>
-        {/* <p className="text-[15pt]">1 ETH (2,624.28$)</p> */}
-        <p className="md:text-[30pt] sm:text-[24pt] text-[18pt]">1 ETH</p>
-      </div>
       <div className="absolute left-0 top-0 bottom-0 right-0 z-10"></div>
     </div>
   )
