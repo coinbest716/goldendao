@@ -18,12 +18,13 @@ const membershipContent = {
     'NFT gated members-only chat on Discord to collaborate and contribute to the future of GoldenDAO’s impact on the AAPI web3 community.',
   card31: 'Uniquely minted NFT representing founding membership',
   card32: 'Member voting rights on GoldenDAO’s community wallet fund contributions and initiatives.',
-  card33: 'GoldenDAO NFT tickets sent via airdrop to member wallets. Tickets can be used for exclusive event access, GoldenDAO merchandise, and exchanged with others in the community',
+  card33:
+    'GoldenDAO NFT tickets sent via airdrop to member wallets. Tickets can be used for exclusive event access, GoldenDAO merchandise, and exchanged with others in the community',
 }
 
 const membershipContentFinal = {
   content:
-    'IRL and virtual GoldenDAO gifts, including our prestigious, precious metal forged, silver sterling 18K gold plated signet ring, cross-referencing the NFT mint #. The ring is designed by Max Coombs, founder of streetwear brand Control Sector, and an active designer for LVMH Hennessy merchandise.'
+    'IRL and virtual GoldenDAO gifts, including our prestigious, precious metal forged, silver sterling 18K gold plated signet ring, cross-referencing the NFT mint #. The ring is designed by Max Coombs, founder of streetwear brand Control Sector, and an active designer for LVMH Hennessy merchandise.',
 }
 
 const imageList = [{ url: '/viewer/ring-1.jpg' }, { url: '/viewer/ring-2.jpg' }, { url: '/viewer/ring-3.jpg' }]
@@ -34,7 +35,7 @@ export default function MembershipCardViewer(props) {
       className={`membership-card-viewer xl:w-[1200px] xl:h-[920px] w-[360px] h-[2180px] mt-[80px] ${props.className}`}
     >
       <span className="w-[2px] h-[50px] bg-dark_gold absolute xl:top-[232px] xl:left-[180px] top-[232px] left-[180px]" />
-      <span className="w-[2px] xl:h-[115px] xl:bottom-[-115px] h-[50px] bg-dark_gold absolute xl:top-[369px] xl:left-[180px]  top-[370px] left-[180px]" />
+      <span className="w-[2px] xl:h-[182px] xl:bottom-[-115px] h-[50px] bg-dark_gold absolute xl:top-[369px] xl:left-[180px]  top-[370px] left-[180px]" />
       {/* first column */}
       <MemberShipCard
         className="xl:top-0 xl:left-0 top-0 left-0 hover:top-[-30px] h-[232px] hover:h-[292px]"
@@ -48,7 +49,7 @@ export default function MembershipCardViewer(props) {
 
       {/* second column */}
       <span className="w-[2px] xl:h-[70px] h-[50px] bg-dark_gold absolute xl:top-[112px] xl:left-[588px] top-[532px] left-[180px]" />
-      <span className="w-[2px] xl:h-[140px] xl:bottom-[-140px] h-[50px] bg-dark_gold absolute xl:top-[341px] xl:left-[588px] top-[742px] left-[180px]" />
+      <span className="w-[2px] xl:h-[212px] xl:bottom-[-140px] h-[50px] bg-dark_gold absolute xl:top-[341px] xl:left-[588px] top-[742px] left-[180px]" />
       <MemberShipCard
         className="xl:top-0 xl:left-[410px] top-[420px] left-0 xl:hover:top-[-30px] hover:top-[390px] h-[112px] hover:h-[172px]"
         content={membershipContent.card21}
@@ -66,7 +67,7 @@ export default function MembershipCardViewer(props) {
       {/* third column */}
       <span className="w-[2px] xl:h-[60px] h-[50px] bg-dark_gold absolute xl:top-[80px] xl:right-[192px] top-[872px] right-[180px]" />
       <span className="w-[2px] h-[50px] bg-dark_gold absolute xl:top-[251px] xl:right-[192px] top-[1034px] right-[180px]" />
-      <span className="w-[2px] xl:h-[70px] h-[50px] bg-dark_gold absolute xl:top-[413px]  xl:right-[192px] top-[1196px] right-[180px]" />
+      <span className="w-[2px] xl:h-[70px] h-[50px] bg-dark_gold absolute xl:top-[485px]  xl:right-[192px] top-[1267px] right-[180px]" />
       <MemberShipCard
         className="xl:top-0 xl:left-[820px] top-[792px] left-0 xl:hover:top-[-30px] hover:top-[762px] h-[80px] hover:h-[140px]"
         content={membershipContent.card31}
@@ -76,11 +77,11 @@ export default function MembershipCardViewer(props) {
         content={membershipContent.card32}
       ></MemberShipCard>
       <MemberShipCard
-        className="xl:top-[300px] xl:left-[820px] top-[1084px] left-0 xl:hover:top-[270px] hover:top-[1054px] h-[112px] hover:h-[172px]"
+        className="xl:top-[300px] xl:left-[820px] top-[1084px] left-0 xl:hover:top-[270px] hover:top-[1054px] h-[184px] hover:h-[244px]"
         content={membershipContent.card33}
       ></MemberShipCard>
 
-      <div className="xl:top-[482px] xl:left-0 top-[1672px] left-0 xl:w-[360px] w-[340px] absolute">
+      <div className="xl:top-[554px] xl:left-0 top-[1744px] left-0 xl:w-[360px] w-[340px] absolute">
         <div className="carousel-background" />
         <Carousel showThumbs={false} showArrows={true} showStatus={false} emulateTouch={true} infiniteLoop={true}>
           <div>
@@ -96,11 +97,11 @@ export default function MembershipCardViewer(props) {
       </div>
       {/* <span className="w-[2px] h-[70px] bg-dark_gold absolute top-[1196px] left-[180px] xl:hidden" /> */}
       <MemberShipCard
-        className="xl:top-[482px] xl:left-[410px] top-[1246px] left-0 xl:w-[770px] xl:hover:top-[452px] hover:top-[1216px] xl:h-[184px] xl:hover:h-[244px] h-[376px] hover:h-[436px]"
+        className="xl:top-[554px] xl:left-[410px] top-[1318px] left-0 xl:w-[770px] xl:hover:top-[524px] hover:top-[1288px] xl:h-[184px] xl:hover:h-[244px] h-[376px] hover:h-[436px]"
         content={membershipContentFinal.content}
       />
       <DaoButton
-        className="absolute xl:top-[675px] xl:left-[595px] top-[2082px] left-[15px] w-[330px] xl:w-[410] mt-[50px] h-[60px]"
+        className="absolute xl:top-[747px] xl:left-[595px] top-[2154px] left-[15px] w-[330px] xl:w-[410] mt-[50px] h-[60px]"
         onClick={() => (props.onMintBtnEvent ? props.onMintBtnEvent() : '')}
       >
         MINT YOUR NFT
