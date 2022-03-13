@@ -273,7 +273,7 @@ export default function Index() {
             <br />
             <p>
               Saved for individuals who show commitment (via social media, discord engagement, or other methods) to
-              GoldenDAO initiatives, mission<b>Mint Total 888, Priced 0.80 ETH, Sale Date:Week of 3/21/22</b>
+              GoldenDAO initiatives, mission <b>Mint Total 888, Priced 0.80 ETH, Sale Date:Week of 3/21/22</b>
             </p>
             <br />
             <p>
