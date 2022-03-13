@@ -47,7 +47,7 @@ const roadmapConts = [
   {
     date: 'MAY 2022',
     content:
-      'GoldenDAO vote on brand equity growth, partnerships, and logo usage. Potential, but not limited-to opportunities include: <p style="margin-left:30px;">• GoldenDAO metaverse outpost\n• GoldenDAO wearable tech\n • GoldenDAO physical location in major cities (NYC, LA,MIA, etc.) used as a hub for members and partners.\n • GoldenDAO x specific partnerships (cross community and project engagement, brand partnerships, etc.)</p>',
+      'GoldenDAO vote on brand equity growth, partnerships, and logo usage. Potential, but not limited-to opportunities include: <p style="margin-left:30px;">• GoldenDAO metaverse outpost\n• GoldenDAO wearable tech\n • GoldenDAO physical location in major cities (NYC, LA, MIA, etc.) used as a hub for members and partners.\n • GoldenDAO x specific partnerships (cross community and project engagement, brand partnerships, etc.)</p>',
   },
   {
     date: 'Q2/Q3 2022',
