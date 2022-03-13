@@ -73,12 +73,12 @@ const faqQuestions = [
 ]
 export default function Faq(props) {
   return (
-    <div className={`faq-wrapper space-y-[40px] ${props.className ? props.className : ''}`}>
+    <div className={`faq-wrapper space-y-[32px] ${props.className ? props.className : ''}`}>
       {faqQuestions.map((faq, index) => {
         return (
           <Collapsible key={index} trigger={faq.question} transitionTime={200}>
             {faq.answer.map((item, index) => (
-              <div className="relative " key={index} dangerouslySetInnerHTML={{ __html: item }} />
+              <div className="relative pl-[16px]" key={index} dangerouslySetInnerHTML={{ __html: item }} />
             ))}
           </Collapsible>
         )

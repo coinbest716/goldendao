@@ -273,6 +273,8 @@ a {
 .Collapsible .Collapsible__trigger {
   display: block;
   position: relative;
+  font-weight: 700;
+  padding-bottom: 8px;
 }
 
 .Collapsible .Collapsible__trigger.is-open::after {
