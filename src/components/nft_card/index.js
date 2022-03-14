@@ -15,6 +15,9 @@ export default function NFTCard(props) {
       className={`relative bg-gradient-to-t from-darkest_gold to-medium_gold inline-block sm:p-[20px] p-[8px] sm:rounded-[16px] rounded-[8px] ${props.className}`}
       onClick={e => onClickCard(e)}
     >
+      <div class="ribbon ribbon-top-right">
+        <span>888 / 20 Sold</span>
+      </div>
       <video
         width="690"
         className="video-tag 2xl:h-[400px] xl:h-[330px] md:h-[280px]"
