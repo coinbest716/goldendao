@@ -224,7 +224,7 @@ export default function Index() {
               <p className="text-center">Calista Wu</p>
               <p className="text-center">Apollo NFT Studios</p>
               <p className="text-center"></p>
-              <p className="text-center mt-[-50px]">Benjamin Tang</p>
+              <p className="text-center lg:mt-[-50px] mt-[-20px]">Benjamin Tang</p>
             </div>
           </SectionInfo>
         </div>
