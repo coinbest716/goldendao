@@ -17,7 +17,7 @@ const CountDown = () => {
 
   Object.keys(timeLeft).forEach(interval => {
     timerComponents.push(
-      <li className="cursor-pointer clock-item">
+      <li key={interval} className="cursor-pointer clock-item">
         <span className="count-number">{timeLeft[interval] || 0}</span>
         <p className="count-text">{interval}</p>
       </li>

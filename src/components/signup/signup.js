@@ -29,7 +29,7 @@ export default function Signup(props) {
   }, [status])
 
   return (
-    <div>
+    <>
       <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px] w-full justify-center">
         <div className="sm:w-[580px] w-full singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
           <input
@@ -50,6 +50,6 @@ export default function Signup(props) {
       {isShowing === true && status === 'success' && (
         <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />
       )}
-    </div>
+    </>
   )
 }

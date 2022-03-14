@@ -267,7 +267,7 @@ export default function Index() {
           <SectionInfo info_title={CaptionInfo['faq']['caption']}></SectionInfo>
           <Faq className="pt-[40px] pr-[20px]" />
           <AllocationCard title={allocationCard.title} className="mt-[100px] relative">
-            <p>
+            <div>
               ● Public Sale:
               <div className="ml-[16px]">
                 <p>○ General Public mint</p>
@@ -281,9 +281,9 @@ export default function Index() {
                   <b>○ Sale Date: </b>3/31/22
                 </p>
               </div>
-            </p>
+            </div>
             <br />
-            <p>
+            <div>
               ● Presale:
               <div className="ml-[16px]">
                 <p>
@@ -300,9 +300,9 @@ export default function Index() {
                   <b>○ Sale Date: </b>Week of 3/21/22
                 </p>
               </div>
-            </p>
+            </div>
             <br />
-            <p>
+            <div>
               ● Reserves:
               <div className="ml-[16px]">
                 <p>
@@ -313,7 +313,7 @@ export default function Index() {
                   <b>○ Mint total: </b>200
                 </p>
               </div>
-            </p>
+            </div>
           </AllocationCard>
         </div>
       </section>

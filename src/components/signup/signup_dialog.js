@@ -22,14 +22,14 @@ export default function SignupOnDialog(props) {
         setIsShowing(false)
       }, 1000)
     }
-    console.log(status)
+
     if (status == 'error') {
       setIsSending(false)
     }
   }, [status])
 
   return (
-    <div>
+    <>
       <div className="2xl:w-[550px] md:w-[370px] singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
         <input
           className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
@@ -48,6 +48,6 @@ export default function SignupOnDialog(props) {
       {isShowing === true && status === 'success' && (
         <div className="text-white" dangerouslySetInnerHTML={{ __html: message }} />
       )}
-    </div>
+    </>
   )
 }
