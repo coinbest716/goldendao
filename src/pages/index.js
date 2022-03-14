@@ -222,8 +222,9 @@ export default function Index() {
               <p className="text-center">Don Ho</p>
               <p className="text-center">Maxwell Amadeus Coombs</p>
               <p className="text-center">Calista Wu</p>
-              <p className="text-center">Benjamin Tang</p>
               <p className="text-center">Apollo NFT Studios</p>
+              <p className="text-center"></p>
+              <p className="text-center mt-[-50px]">Benjamin Tang</p>
             </div>
           </SectionInfo>
         </div>
@@ -267,19 +268,51 @@ export default function Index() {
           <Faq className="pt-[40px] pr-[20px]" />
           <AllocationCard title={allocationCard.title} className="mt-[100px] relative">
             <p>
-              Public Sale: General Public mint,{' '}
-              <b>Mint total 2000, Last Price Dutch Auction, 0.88 - 1.28 ETH , Sale Date: 3/31/22</b>
+              ● Public Sale:
+              <div className="ml-[16px]">
+                <p>○ General Public mint</p>
+                <p>
+                  <b>○ Mint total: </b>2000
+                </p>
+                <p>
+                  <b>○ Priced: </b>Last Price Dutch Auction, .88 - 1.28 ETH
+                </p>
+                <p>
+                  <b>○ Sale Date: </b>3/31/22
+                </p>
+              </div>
             </p>
             <br />
             <p>
-              Saved for individuals who show commitment (via social media, discord engagement, or other methods) to
-              GoldenDAO initiatives, mission <b>Mint Total 888, Priced 0.80 ETH, Sale Date:Week of 3/21/22</b>
+              ● Presale:
+              <div className="ml-[16px]">
+                <p>
+                  ○ Saved for individuals who show commitment (via social media, discord engagement, or other methods)
+                  to GoldenDAO initiatives, mission
+                </p>
+                <p>
+                  <b>○ Mint total: </b>888
+                </p>
+                <p>
+                  <b>○ Priced: </b>0.80 ETH
+                </p>
+                <p>
+                  <b>○ Sale Date: </b>Week of 3/21/22
+                </p>
+              </div>
             </p>
             <br />
             <p>
-              Reserved for individuals, partners who show long-term commitment to GoldenDAO initiatives, mission (i.e.
-              social and community engagement, appearance, performance, MC at GoldenDAO in-person event, etc.)
-              <b>Mint total 200</b>
+              ● Reserves:
+              <div className="ml-[16px]">
+                <p>
+                  ○ Reserved for individuals, partners who show long-term commitment to GoldenDAO initiatives, mission
+                  (i.e. social and community engagement, appearance, performance, MC at GoldenDAO in-person event, etc.)
+                </p>
+                <p>
+                  <b>○ Mint total: </b>200
+                </p>
+              </div>
             </p>
           </AllocationCard>
         </div>
