@@ -608,8 +608,8 @@ a {
 }
 
 .ribbon {
-  width: 150px;
-  height: 150px;
+  width: 135px;
+  height: 135px;
   overflow: hidden;
   position: absolute;
 }
@@ -620,7 +620,7 @@ a {
   z-index: 0;
   content: '';
   display: block;
-  border: 5px solid #2980b9;
+  border: 5px solid #530a3d;
 }
 
 .ribbon span {
@@ -628,7 +628,7 @@ a {
   display: block;
   width: 225px;
   padding: 15px 0;
-  background-color: #3498db;
+  background-color: #730a8d;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
   font: 700 18px/1 'Lato', sans-serif;
