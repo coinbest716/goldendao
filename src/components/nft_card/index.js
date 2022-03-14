@@ -28,7 +28,7 @@ export default function NFTCard(props) {
         <source src="gd-token.mp4" type="video/ogg" />
         Your browser does not support HTML video.
       </video>
-      <div className="absolute left-0 top-0 bottom-0 right-0 z-10"></div>
+      {/* <div className="absolute left-0 top-0 bottom-0 right-0 z-10"></div> */}
     </div>
   )
 }

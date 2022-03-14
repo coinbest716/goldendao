@@ -1,8 +1,47 @@
 import React, { useEffect, useState } from 'react'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ethers } from 'ethers'
+import ContractAbi from '@src/abi/GoldenDaoNFT.json'
+import { useSelector } from 'react-redux'
+import toast, { Toaster } from 'react-hot-toast'
 
 export default function MintCompontent(props) {
+  const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
+
+  async function onMintClicked() {
+    // if (web3Provider != null) {
+    //   const signer = web3Provider.getSigner()
+    //   const GoldenDaoContract = new ethers.Contract(process.env.REACT_APP_NFT_ADDRESS, ContractAbi, signer)
+    //   try {
+    //     await GoldenDaoContract.requestPrivateSale({ value: price })
+    //       .then(tx => {
+    //         return tx.wait().then(
+    //           receipt => {
+    //             // This is entered if the transaction receipt indicates success
+    //             toast.success('Presale Success!')
+    //             return true
+    //           },
+    //           error => {
+    //             toast.error('Presale Fail!')
+    //           }
+    //         )
+    //       })
+    //       .catch(error => {
+    //         if (error.message.indexOf('not exist') > 0) {
+    //           toast.error("You aren't whitelisted!")
+    //         } else if (error.message.indexOf('signature')) {
+    //           toast.error('You canceled transaction!')
+    //         } else {
+    //           toast.error(error.message)
+    //         }
+    //       })
+    //   } catch (error) {
+    //     toast.error('Presale Fail!')
+    //   }
+    // }
+  }
+
   const [count, setCount] = useState(1)
   const increase = () => {
     if (count < 5) setCount(++count)
@@ -13,10 +52,12 @@ export default function MintCompontent(props) {
   }
 
   const onClickBtn = () => {
-    alert('Mint pressed')
+    toast.success('Presale Success!')
+    console.log(chainId)
   }
   return (
     <div className={`mint-compontent-wrapper w-fit flex items-center ${props.className} bg-dark_black rounded-full`}>
+      <Toaster />
       <FontAwesomeIcon
         icon={faMinus}
         onClick={() => decrease()}
