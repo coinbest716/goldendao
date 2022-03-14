@@ -11,6 +11,10 @@ export default function MintCompontent(props) {
   const decrease = () => {
     if (count > 1) setCount(--count)
   }
+
+  const onClickBtn = () => {
+    alert('Mint pressed')
+  }
   return (
     <div className={`mint-compontent-wrapper w-fit flex items-center ${props.className} bg-dark_black rounded-full`}>
       <FontAwesomeIcon
@@ -28,7 +32,10 @@ export default function MintCompontent(props) {
         onClick={() => increase()}
         className="text-white cursor-pointer p-[8px] bg-dark_gold rounded-full hover:bg-white hover:text-black"
       />
-      <button className="text-white bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold  h-[50px] lg:w-[180px] w-[140px] rounded-full ml-[16px]">
+      <button
+        className="text-white bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold  h-[50px] lg:w-[180px] w-[140px] rounded-full ml-[16px]"
+        onClick={() => onClickBtn()}
+      >
         {0.88 * count}ETH Mint
       </button>
     </div>
