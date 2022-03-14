@@ -8,7 +8,7 @@ export default function DaoIconButton(props) {
   }
   return (
     <div
-      className={`dao-btn-wrapper cursor-pointer flex justify-center align-middle text-white font-bold rounded ${props.className}`}
+      className={`bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold cursor-pointer flex justify-center align-middle text-white font-bold rounded ${props.className}`}
       style={styles}
       onClick={() => (onClick ? onClick() : '')}
     >

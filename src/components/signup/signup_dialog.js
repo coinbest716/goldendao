@@ -30,7 +30,7 @@ export default function SignupOnDialog(props) {
 
   return (
     <>
-      <div className="2xl:w-[550px] md:w-[370px] singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
+      <div className="2xl:w-[550px] md:w-[370px] singup-wrapper bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
         <input
           className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
           placeholder="Email"
@@ -38,7 +38,7 @@ export default function SignupOnDialog(props) {
           onChange={e => setEmail(e.target.value)}
         />
         <button
-          className="basis-2/5 dao-btn-wrapper text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]"
+          className="basis-2/5 bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold text-white rounded font-extrabold 2xl:h-[60px] sm:h-[40px] h-[40px] w-[143px]"
           onClick={e => onClickEvent()}
         >
           {isSending === true ? 'Sending...' : 'Signup'}

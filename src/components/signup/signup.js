@@ -31,7 +31,7 @@ export default function Signup(props) {
   return (
     <>
       <div className="flex 2xl:mt-[20px] lg:mt-[20px] mt-[10px] w-full justify-center">
-        <div className="sm:w-[580px] w-full singup-wrapper dao-btn-wrapper flex rounded h-[60px]">
+        <div className="sm:w-[580px] w-full singup-wrapper bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold flex rounded h-[60px]">
           <input
             className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
             placeholder="Email"
@@ -39,7 +39,7 @@ export default function Signup(props) {
             onChange={e => setEmail(e.target.value)}
           />
           <button
-            className="basis-1/4 dao-btn-wrapper text-white rounded font-extrabold h-[60px] w-[143px]"
+            className="basis-1/4 bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold text-white rounded font-extrabold h-[60px] w-[143px]"
             onClick={e => onClickEvent()}
           >
             {isSending === true ? 'Sending...' : 'Signup'}

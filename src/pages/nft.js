@@ -11,6 +11,7 @@ import { postUrl } from '@src/common'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SignupOnNFT from '@src/components/signup/signup_nft'
+import MintCompontent from '@src/components/mint_component'
 // import EtherScanBtn from '@src/assets/images/etherscan-btn.png'
 
 import InstagramImg from '@src/assets/social_links/instagram.svg'
@@ -46,6 +47,9 @@ export default function NFTDetail() {
         <div className="md:flex md:space-x-[50px] mt-[-50px]">
           <div className="basis-1/2 justify-center mt-[50px]">
             <NFTCard className="nft-card-shadow" width={690} height={388}></NFTCard>
+            <div className="mt-[16px]">
+              <MintCompontent className="m-auto"></MintCompontent>
+            </div>
           </div>
 
           <div className="basis-1/2 mt-[50px]">

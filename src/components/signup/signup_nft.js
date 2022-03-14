@@ -29,7 +29,7 @@ export default function SignupOnNFT(props) {
 
   return (
     <>
-      <div className="2xl:w-[370px] md:w-[310px] w-full singup-wrapper dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
+      <div className="2xl:w-[370px] md:w-[310px] w-full bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold dao-btn-wrapper flex rounded 2xl:h-[60px] sm:h-[40px] h-[40px]">
         <input
           className="signup-info basis-3/4  rounded m-[2px] px-[4px]"
           placeholder="Email"

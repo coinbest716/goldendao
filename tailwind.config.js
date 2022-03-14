@@ -14,6 +14,7 @@ module.exports = {
       dao_dlg_color: '#222222',
       black: '#000',
       blue: '#2563eb',
+      dark_black: '#181715',
     },
     screens: {
       sm: '640px',

@@ -223,11 +223,9 @@ a {
   display: inline-block;
 }
 
-.dao-btn-wrapper {
-  /* font-size: 15pt;
-  height: 60px; */
+/* .dao-btn-wrapper {
   background: linear-gradient(#c6a000, #895f1f);
-}
+} */
 
 .nft-card-shadow {
   box-shadow: 0px 0px 200px rgba(255, 255, 255, 0.5);
@@ -603,4 +601,8 @@ a {
 
 .ReactModal__Content.ReactModal__Content--after-open {
   margin-top: 36px;
+}
+
+.mint-compontent-input {
+  background: transparent;
 }
