@@ -6,19 +6,25 @@ const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
     options: {
-      infuraId: process.env.INFURA_ID, // required
+      rpc: {
+        56: 'https://bsc-dataseed.binance.org/',
+        // 1: 'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+        // 4: 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+      },
+      network: 'binance',
+      chainId: 56,
     },
   },
   'custom-walletlink': {
     display: {
       logo: 'https://play-lh.googleusercontent.com/PjoJoG27miSglVBXoXrxBSLveV6e3EeBPpNY55aiUUBM9Q1RCETKCOqdOkX2ZydqVf0',
       name: 'Coinbase',
-      description: 'Connect to Coinbase Wallet (not Coinbase App)',
+      description: 'Connect to Coinbase Wallet',
     },
     options: {
-      appName: 'Coinbase', // Your app name
-      networkUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_ID}`,
-      chainId: 1,
+      appName: 'Golden Dao', // Your app name
+      networkUrl: 'https://bsc-dataseed.binance.org/',
+      chainId: 56,
     },
     package: WalletLink,
     connector: async (_, options) => {
