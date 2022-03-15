@@ -607,36 +607,16 @@ a {
   background: transparent;
 }
 
-.ribbon {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
+.ribbon3 {
+  width: 140px;
+  height: 40px;
+  display: inline-block;
   position: absolute;
-}
-
-.ribbon span {
-  position: absolute;
-  display: block;
-  width: 207px;
-  padding: 8px 0;
-  background-color: #ffffff33;
+  text-align: center;
+  left: 28px;
+  top: 28px;
+  border-radius: 20px;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   background: #ffffff22;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  color: #fff;
-  font: 700 18px/1 'Lato', sans-serif;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-/* top right*/
-.ribbon-top-right {
-  top: 20px;
-  right: 20px;
-}
-
-.ribbon-top-right span {
-  top: 26px;
-  transform: rotate(45deg);
 }
