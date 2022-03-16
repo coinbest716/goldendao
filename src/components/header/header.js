@@ -81,20 +81,12 @@ const Header = props => {
     [provider]
   )
 
-  // Auto connect to the cached provider
-  useEffect(() => {
-    if (web3Modal.cachedProvider) {
-      connect()
-    }
-  }, [connect])
-
   // A `provider` should come with EIP-1193 events. We'll listen for those events
   // here so that when a user switches accounts or networks, we can update the
   // local React state with that new information.
   useEffect(() => {
     if (provider?.on) {
       const handleAccountsChanged = accounts => {
-        // eslint-disable-next-line no-console
         dispatch(setAddress(accounts[0]))
       }
 
@@ -104,7 +96,6 @@ const Header = props => {
       }
 
       const handleDisconnect = () => {
-        // eslint-disable-next-line no-console
         console.log('disconnect', error)
         disconnect()
       }
@@ -112,8 +103,6 @@ const Header = props => {
       provider.on('accountsChanged', handleAccountsChanged)
       provider.on('chainChanged', handleChainChanged)
       provider.on('disconnect', handleDisconnect)
-
-      // Subscription Cleanup
       return () => {
         if (provider.removeListener) {
           provider.removeListener('accountsChanged', handleAccountsChanged)
@@ -123,6 +112,12 @@ const Header = props => {
       }
     }
   }, [provider, disconnect])
+
+  useEffect(() => {
+    if (web3Modal.cachedProvider) {
+      connect()
+    }
+  }, [connect])
 
   return (
     <header className={`main_header ${fixed}`}>
