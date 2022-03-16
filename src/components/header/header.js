@@ -164,7 +164,7 @@ const Header = props => {
                 target="_blank"
                 path="https://twitter.com/Goldendaoxyz"
               />
-              <ImgLink img={DiscordImg} path="https://discord.gg/JNEHDqSh" target="_blank" width={33} height={33} />
+              <ImgLink img={DiscordImg} path="https://discord.gg/goldendao" target="_blank" width={33} height={33} />
               <ImgLink
                 img={InstagramImg}
                 width={30}

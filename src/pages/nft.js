@@ -33,7 +33,7 @@ export default function NFTDetail() {
           path="https://twitter.com/Goldendaoxyz"
           target="_blank"
         />
-        <ImgLink img={DiscordImg} path="https://discord.gg/JNEHDqSh" target="_blank" width={75} height={55} />
+        <ImgLink img={DiscordImg} path="https://discord.gg/goldendao" target="_blank" width={75} height={55} />
         <ImgLink
           className="mt-[10px]"
           img={InstagramImg}
@@ -66,7 +66,7 @@ export default function NFTDetail() {
               <CountDown />
               <DaoIconButton
                 className="2xl:w-[370px] md:w-[310px] 2xl:h-[60px] sm:h-[40px] h-[40px]"
-                onClick={() => window.open('https://discord.gg/JNEHDqSh')}
+                onClick={() => window.open('https://discord.gg/goldendao')}
               >
                 <Image className="mt-[5px]" src={DiscordWhiteImg} alt="Golden Dao logo" width={26} height={26} />
                 <span className="2xl:mt-[15px] mt-[6px] 2xl:ml-[8px] lg:ml-[4px] text-[19px]">JOIN DISCORD</span>

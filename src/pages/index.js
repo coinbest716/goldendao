@@ -93,7 +93,7 @@ export default function Index() {
           className="bg-gradient-to-r from-medium_gold to-darkest_gold rounded-full p-5"
           img={DiscordImg}
           target="_blank"
-          path="https://discord.gg/JNEHDqSh"
+          path="https://discord.gg/goldendao"
           width={43}
           height={33}
         />
@@ -313,7 +313,7 @@ export default function Index() {
             <DaoIconButton
               width="580px"
               className="h-[60px]"
-              onClick={e => window.open('https://discord.gg/JNEHDqSh', '_blank')}
+              onClick={e => window.open('https://discord.gg/goldendao', '_blank')}
             >
               <Image className="mt-[5px]" src={DiscordImg} alt="Golden Dao logo" width={25} height={25} />
               <span className="mt-[15px] ml-[8px] text-[19px]">JOIN DISCORD</span>

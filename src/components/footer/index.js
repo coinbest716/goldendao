@@ -105,7 +105,7 @@ export default function Footer(props) {
           path="https://twitter.com/Goldendaoxyz"
           target="_blank"
         />
-        <ImgLink img={DiscordImg} path="https://discord.gg/JNEHDqSh" target="_blank" width={75} height={55} />
+        <ImgLink img={DiscordImg} path="https://discord.gg/goldendao" target="_blank" width={75} height={55} />
         <ImgLink
           className="mt-[10px]"
           img={InstagramImg}
