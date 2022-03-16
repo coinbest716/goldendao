@@ -52,7 +52,7 @@ export default function MintCompontent(props) {
   }
 
   const onClickBtn = () => {
-    toast.success('Presale Success!')
+    toast.success('Coming Soon!')
     console.log(chainId)
   }
   return (
