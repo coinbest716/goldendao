@@ -44,7 +44,7 @@ export default function MintCompontent(props) {
 
   const [count, setCount] = useState(1)
   const increase = () => {
-    if (count < 5) setCount(++count)
+    if (count < 2) setCount(++count)
   }
 
   const decrease = () => {
@@ -77,7 +77,7 @@ export default function MintCompontent(props) {
         className="text-white bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold  h-[50px] lg:w-[180px] w-[140px] rounded-full ml-[16px]"
         onClick={() => onClickBtn()}
       >
-        {1 * count} ETH Mint
+        {1.28 * count} ETH Mint
       </button>
     </div>
   )
