@@ -77,7 +77,7 @@ export default function MintCompontent(props) {
         className="text-white bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold  h-[50px] lg:w-[180px] w-[140px] rounded-full ml-[16px]"
         onClick={() => onClickBtn()}
       >
-        {0.88 * count}ETH Mint
+        {1 * count} ETH Mint
       </button>
     </div>
   )
