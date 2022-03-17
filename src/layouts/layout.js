@@ -10,6 +10,8 @@ export default function Layout({ children }) {
         <meta name="title" content="GoldenDao NFT" />
         <meta name="description" content="GoldenDao NFT" />
         <meta name="keywords" content="GoldenDao" />
+        <meta property="og:image" content="https://www.goldendao.xyz/logo1.png" />
+        <meta property="og:site_name" content="GoldenDao NFT" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.goldendao.xyz/" />
         <meta property="og:title" content="GoldenDao NFT" />
@@ -17,8 +19,6 @@ export default function Layout({ children }) {
           property="og:description"
           content="Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives."
         />
-        <meta property="og:image" content="https://www.goldendao.xyz/logo1.png" />
-        <meta property="og:site_name" content="GoldenDao NFT" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.goldendao.xyz/" />
