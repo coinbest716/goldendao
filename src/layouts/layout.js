@@ -17,7 +17,7 @@ export default function Layout({ children }) {
           property="og:description"
           content="Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives."
         />
-        <meta property="og:image" content="logo.png" />
+        <meta property="og:image" content="https://www.goldendao.xyz/logo.png" />
         <meta property="og:site_name" content="GoldenDao NFT" />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
           property="twitter:description"
           content="Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives."
         />
-        <meta property="twitter:card" content="logo.png" />
+        <meta property="twitter:card" content="https://www.goldendao.xyz/logo.png" />
         <meta property="twitter:site_name" content="GoldenDao NFT" />
       </Head>
       <div className="page-background">
