@@ -175,13 +175,6 @@ export default function Index() {
               <p>THEODORE LU</p>
             </div>
           </SectionInfo>
-          <SectionInfo className="mt-[170px] space-y-[20px]" info_title={CaptionInfo['team']['caption4']}>
-            <div className="founder-info text-center lg:space-y-[50px] space-y-[20px] pt-[20px]">
-              <p>Jaeson Ma</p>
-              <p>William Tang</p>
-              <p>Andrew Wang</p>
-            </div>
-          </SectionInfo>
           <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
             <div className="artists-info grid md:grid-cols-1 xl:grid-cols-3 pt-[20px] lg:gap-[50px] gap-[20px]">
               <p className="text-center">Shane Fan</p>
@@ -195,6 +188,13 @@ export default function Index() {
               <p className="text-center">Apollo NFT Studios</p>
               <p className="text-center">IRENE ZHAO</p>
               <p className="text-center">Benjamin Tang</p>
+            </div>
+          </SectionInfo>
+          <SectionInfo className="mt-[170px] space-y-[20px]" info_title={CaptionInfo['team']['caption4']}>
+            <div className="founder-info text-center lg:space-y-[50px] space-y-[20px] pt-[20px]">
+              <p>Jaeson Ma</p>
+              <p>William Tang</p>
+              <p>Andrew Wang</p>
             </div>
           </SectionInfo>
         </div>
