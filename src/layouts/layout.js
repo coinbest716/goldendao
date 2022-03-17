@@ -7,13 +7,20 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>Golden Dao</title>
-        <meta name="description" content="GoldenDao" />
-        <meta property="og:title" content="GoldenDao" />
-        <meta property="og:description" content="Also want these pretty website previews?" />
-        <meta property="og:url" content="http://richpreview.com/" />
-        <meta property="og:image" content="logo" />
-        <meta name="description" content="GoldenDao" />
+        <meta name="title" content="Golden Dao" />
+        <meta name="description" content="GoldenDao NFT" />
         <meta name="keywords" content="GoldenDao" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.goldendao.xyz/" />
+        <meta property="og:title" content="Golden Dao" />
+        <meta property="og:description" content="GoldenDao NFT" />
+        <meta property="og:image" content="logo.jpeg" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.goldendao.xyz/" />
+        <meta property="twitter:title" content="Golden Dao" />
+        <meta property="twitter:description" content="GoldenDao NFT" />
+        <meta property="twitter:image" content="logo.jpeg" />
       </Head>
       <div className="page-background">
         <Header />
