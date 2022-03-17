@@ -17,10 +17,7 @@ export default function Layout({ children }) {
           property="og:description"
           content="Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives."
         />
-        <meta
-          property="og:image"
-          content="https://gateway.pinata.cloud/ipfs/QmUiTeEmo8i9DKh91pURiWtsSp782pp7R4SiMmiZmjmNGx"
-        />
+        <meta property="og:image" content="logo.png" />
         <meta property="og:site_name" content="GoldenDao NFT" />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -30,10 +27,7 @@ export default function Layout({ children }) {
           property="twitter:description"
           content="Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives."
         />
-        <meta
-          property="twitter:image"
-          content="https://gateway.pinata.cloud/ipfs/QmUiTeEmo8i9DKh91pURiWtsSp782pp7R4SiMmiZmjmNGx"
-        />
+        <meta property="twitter:card" content="logo.png" />
         <meta property="twitter:site_name" content="GoldenDao NFT" />
       </Head>
       <div className="page-background">
