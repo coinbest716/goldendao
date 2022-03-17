@@ -13,13 +13,20 @@ export default function Layout({ children }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.goldendao.xyz/" />
         <meta property="og:title" content="GoldenDao NFT" />
-        <meta property="og:description" content="GoldenDao NFT" />
+        <meta
+          property="og:description"
+          content="Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives."
+        />
         <meta property="og:image" content="logo.jpeg" />
+        <meta property="og:site_name" content="Apple" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.goldendao.xyz/" />
         <meta property="twitter:title" content="GoldenDao NFT" />
-        <meta property="twitter:description" content="GoldenDao NFT" />
+        <meta
+          property="twitter:description"
+          content="Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives."
+        />
         <meta property="twitter:image" content="logo.jpeg" />
       </Head>
       <div className="page-background">
