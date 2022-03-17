@@ -52,6 +52,7 @@ const CaptionInfo = {
     caption1: 'CORE FOUNDERS',
     caption2: 'ARTISTS / ENGINEEERS / COMMUNITY',
     caption3: 'MESSAGE FROM ANDREW',
+    caption4: 'Strategic Advisors',
   },
   faq: {
     caption: 'FREQUENTLY ASKED QUESTIONS',
@@ -174,7 +175,13 @@ export default function Index() {
               <p>THEODORE LU</p>
             </div>
           </SectionInfo>
-
+          <SectionInfo className="mt-[170px] space-y-[20px]" info_title={CaptionInfo['team']['caption4']}>
+            <div className="founder-info text-center lg:space-y-[50px] space-y-[20px] pt-[20px]">
+              <p>Jaeson Ma</p>
+              <p>William Tang</p>
+              <p>Andrew Wang</p>
+            </div>
+          </SectionInfo>
           <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption2']}>
             <div className="artists-info grid md:grid-cols-1 xl:grid-cols-3 pt-[20px] lg:gap-[50px] gap-[20px]">
               <p className="text-center">Shane Fan</p>
