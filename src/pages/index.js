@@ -190,12 +190,14 @@ export default function Index() {
               <p className="text-center">Benjamin Tang</p>
             </div>
           </SectionInfo>
-          <SectionInfo className="mt-[170px] space-y-[20px]" info_title={CaptionInfo['team']['caption4']}>
-            <div className="founder-info text-center lg:space-y-[50px] space-y-[20px] pt-[20px]">
-              <p>Jaeson Ma</p>
-              <p>William Tong</p>
-              <p>Andrew Wang</p>
-              <p>Justin Kan</p>
+          <SectionInfo className="mt-[170px]" info_title={CaptionInfo['team']['caption4']}>
+            <div className="artists-info grid md:grid-cols-1 xl:grid-cols-3 pt-[20px] lg:gap-[50px] gap-[20px]">
+              <p className="text-center">Jaeson Ma</p>
+              <p className="text-center">William Tong</p>
+              <p className="text-center">Andrew Wang</p>
+              <p className="text-center">Justin Kan</p>
+              <p className="text-center">Li Jiang</p>
+              <p className="text-center">Zi Wang</p>
             </div>
           </SectionInfo>
         </div>
