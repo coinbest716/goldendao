@@ -62,26 +62,26 @@ export default function MembershipCardViewer(props) {
         content={membershipContent.card22}
       ></MemberShipCard>
       <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[320px] xl:left-[360px] left-[-500px]" />
-      <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[320px] xl:left-[770px] left-[-500px]" />
+      <span className="w-[50px] h-[2px] bg-dark_gold absolute top-[330px] xl:left-[770px] left-[-500px]" />
 
       {/* third column */}
       <span className="w-[2px] xl:h-[60px] h-[50px] bg-dark_gold absolute xl:top-[80px] xl:right-[192px] top-[872px] right-[180px]" />
-      <span className="w-[2px] h-[50px] bg-dark_gold absolute xl:top-[251px] xl:right-[192px] top-[1034px] right-[180px]" />
-      <span className="w-[2px] xl:h-[70px] h-[50px] bg-dark_gold absolute xl:top-[485px]  xl:right-[192px] top-[1267px] right-[180px]" />
+      <span className="w-[2px] h-[50px] bg-dark_gold absolute xl:top-[275px] xl:right-[192px] top-[1058px] right-[180px]" />
+      <span className="w-[2px] xl:h-[50px] h-[50px] bg-dark_gold absolute xl:top-[504px]  xl:right-[192px] top-[1291px] right-[180px]" />
       <MemberShipCard
         className="xl:top-0 xl:left-[820px] top-[792px] left-0 xl:hover:top-[-30px] hover:top-[762px] h-[80px] hover:h-[140px]"
         content={membershipContent.card31}
       ></MemberShipCard>
       <MemberShipCard
-        className="xl:top-[138px] xl:left-[820px] top-[922px] left-0 xl:hover:top-[108px] hover:top-[892px] h-[112px] hover:h-[172px]"
+        className="xl:top-[138px] xl:left-[820px] top-[922px] left-0 xl:hover:top-[108px] hover:top-[892px] h-[136px] hover:h-[196px]"
         content={membershipContent.card32}
       ></MemberShipCard>
       <MemberShipCard
-        className="xl:top-[300px] xl:left-[820px] top-[1084px] left-0 xl:hover:top-[270px] hover:top-[1054px] h-[184px] hover:h-[244px]"
+        className="xl:top-[324px] xl:left-[820px] top-[1108px] left-0 xl:hover:top-[294px] hover:top-[1078px] h-[184px] hover:h-[244px]"
         content={membershipContent.card33}
       ></MemberShipCard>
 
-      <div className="xl:top-[554px] xl:left-0 top-[1744px] left-0 xl:w-[360px] w-[340px] absolute">
+      <div className="xl:top-[554px] xl:left-0 top-[1770px] left-0 xl:w-[360px] w-[340px] absolute">
         <div className="carousel-background" />
         <Carousel showThumbs={false} showArrows={true} showStatus={false} emulateTouch={true} infiniteLoop={true}>
           <div>
@@ -97,11 +97,11 @@ export default function MembershipCardViewer(props) {
       </div>
       {/* <span className="w-[2px] h-[70px] bg-dark_gold absolute top-[1196px] left-[180px] xl:hidden" /> */}
       <MemberShipCard
-        className="xl:top-[554px] xl:left-[410px] top-[1318px] left-0 xl:w-[770px] xl:hover:top-[524px] hover:top-[1288px] xl:h-[184px] xl:hover:h-[244px] h-[376px] hover:h-[436px]"
+        className="xl:top-[554px] xl:left-[410px] top-[1344px] left-0 xl:w-[770px] xl:hover:top-[524px] hover:top-[1304px] xl:h-[184px] xl:hover:h-[244px] h-[376px] hover:h-[436px]"
         content={membershipContentFinal.content}
       />
       <DaoButton
-        className="absolute xl:top-[747px] xl:left-[595px] top-[2154px] left-[15px] w-[330px] xl:w-[410] mt-[50px] h-[60px]"
+        className="absolute xl:top-[747px] xl:left-[595px] top-[2180px] left-[15px] w-[330px] xl:w-[410] mt-[50px] h-[60px]"
         onClick={() => (props.onMintBtnEvent ? props.onMintBtnEvent() : '')}
       >
         MINT YOUR NFT
