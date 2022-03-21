@@ -16,16 +16,16 @@ const roadmapConts = [
   },
   {
     date: 'MARCH 2022',
-    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
+    content: 'Two GoldenDAO NFT tickets airdropped to S1 NFT holders',
   },
   {
     date: 'MARCH 2022',
     content:
-      ' In-person launch party exclusively for founding members, hosted by Andrew Yang during NFT week in LA on 3/31, with special guests, celebrity appearances and performances, and GoldenDAO sponsors',
+      'In-person launch party exclusively for founding members, hosted by Andrew Yang during NFT week in LA on 3/31, with special guests, celebrity appearances and performances, and GoldenDAO sponsors',
   },
   {
     date: 'APRIL 2022',
-    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
+    content: 'Two GoldenDAO NFT tickets airdropped to S1 NFT holders',
   },
   {
     date: 'APRIL 2022',
@@ -33,11 +33,11 @@ const roadmapConts = [
   },
   {
     date: 'MAY 2022',
-    content: 'Season 2 NFT launch',
+    content: 'Season 2 NFT launch - 1 Season 2 NFT gifted via airdrop for founding members',
   },
   {
     date: 'MAY 2022',
-    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
+    content: 'Two GoldenDAO NFT tickets airdropped to S1 & S2 NFT holders',
   },
   {
     date: 'MAY 2022',
@@ -60,7 +60,7 @@ const roadmapConts = [
   },
   {
     date: 'August 2022',
-    content: ' Two GoldenDAO NFT tickets airdropped to NFT holders',
+    content: 'Two GoldenDAO NFT tickets airdropped to S1 NFT holders',
   },
   {
     date: 'SEPTEMBER 2022',
@@ -68,7 +68,7 @@ const roadmapConts = [
   },
   {
     date: 'October 2022',
-    content: 'Two GoldenDAO NFT tickets airdropped to NFT holders',
+    content: 'Two GoldenDAO NFT tickets airdropped to S1 NFT holders',
   },
   {
     date: 'NOVEMBER 2022',

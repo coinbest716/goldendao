@@ -17,14 +17,14 @@ const membershipContent = {
   card22:
     'NFT gated members-only chat on Discord to collaborate and contribute to the future of GoldenDAO’s impact on the AAPI web3 community.',
   card31: 'Uniquely minted NFT representing founding membership',
-  card32: 'Member voting rights on GoldenDAO’s community wallet fund contributions and initiatives.',
+  card32: 'Member voting rights on GoldenDAO’s community wallet fund contributions and initiatives using Snapshot',
   card33:
     'GoldenDAO NFT tickets sent via airdrop to member wallets. Tickets can be used for exclusive event access, GoldenDAO merchandise, and exchanged with others in the community',
 }
 
 const membershipContentFinal = {
   content:
-    'IRL and virtual GoldenDAO gifts, including our prestigious, precious metal forged, silver sterling 18K gold plated signet ring, cross-referencing the NFT mint #. The ring is designed by Max Coombs, founder of streetwear brand Control Sector, and an active designer for LVMH Hennessy merchandise. *ring sizes available will be from 5 - 12. * the inner section of the ring is subject to change due to total mint #.',
+    'IRL and virtual GoldenDAO gifts, including our prestigious, precious metal forged, silver sterling 18K gold plated signet ring, cross-referencing the NFT mint #. The ring is designed by Max Coombs, founder of streetwear brand Control Sector, and an active designer for LVMH Hennessy merchandise. *ring sizes available will be from 5 - 12.',
 }
 
 const imageList = [{ url: '/viewer/ring-1.jpg' }, { url: '/viewer/ring-2.jpg' }, { url: '/viewer/ring-3.jpg' }]

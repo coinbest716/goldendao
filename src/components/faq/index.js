@@ -67,7 +67,7 @@ const faqQuestions = [
   {
     question: 'When can I mint the NFT?',
     answer: [
-      'Our presale date will be announced during the week of 3/21/22 and our public sale date will be on 3/31/22. Stay tuned for announcements on Twitter and Discord for exact sale time windows.',
+      'Our presale date will be on 3/28/22. Stay tuned for announcements on Twitter and Discord for exact sale time windows and public sale info.',
     ],
   },
 ]

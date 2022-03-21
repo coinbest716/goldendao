@@ -199,6 +199,7 @@ export default function Index() {
               <p className="text-center">Li Jiang</p>
               <p className="text-center">Zi Wang</p>
               <p className="text-center">Eric Siu</p>
+              <p className="text-center">Matt Liu</p>
             </div>
           </SectionInfo>
         </div>
@@ -246,13 +247,13 @@ export default function Index() {
               <div className="ml-[16px]">
                 <p>○ General Public mint</p>
                 <p>
-                  <b>○ Mint total: </b>2000
+                  <b>○ Mint total: </b>TBA
                 </p>
                 <p>
                   <b>○ Priced: </b>Last Price Dutch Auction, .88 - 1.28 ETH
                 </p>
                 <p>
-                  <b>○ Sale Date: </b>3/31/22
+                  <b>○ Sale Date: </b>Week of 3/28/22
                 </p>
               </div>
             </div>
@@ -271,7 +272,7 @@ export default function Index() {
                   <b>○ Priced: </b>0.80 ETH
                 </p>
                 <p>
-                  <b>○ Sale Date: </b>Week of 3/21/22
+                  <b>○ Sale Date: </b>Week of 3/28/22
                 </p>
               </div>
             </div>
@@ -284,7 +285,7 @@ export default function Index() {
                   (i.e. social and community engagement, appearance, performance, MC at GoldenDAO in-person event, etc.)
                 </p>
                 <p>
-                  <b>○ Mint total: </b>200
+                  <b>○ Mint total: </b>112
                 </p>
               </div>
             </div>
