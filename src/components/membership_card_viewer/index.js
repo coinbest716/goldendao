@@ -5,8 +5,8 @@ import DaoButton from '@components/dao_button'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
-import Diamond1 from '@src/assets/images/viewer/ring-1.jpg'
-import Diamond2 from '@src/assets/images/viewer/ring-2.jpg'
+import Diamond1 from '@src/assets/images/viewer/ring-1.JPG'
+import Diamond2 from '@src/assets/images/viewer/ring-2.JPG'
 // import Diamond3 from '@src/assets/images/viewer/ring-3.JPG'
 
 const membershipContent = {
@@ -26,8 +26,6 @@ const membershipContentFinal = {
   content:
     'IRL and virtual GoldenDAO gifts, including our prestigious, precious metal forged, silver sterling 18K gold plated signet ring, cross-referencing the NFT mint #. The ring is designed by Max Coombs, founder of streetwear brand Control Sector, and an active designer for LVMH Hennessy merchandise. *ring sizes available will be from 5 - 12.',
 }
-
-const imageList = [{ url: '/viewer/ring-1.jpg' }, { url: '/viewer/ring-2.jpg' }, { url: '/viewer/ring-3.jpg' }]
 
 export default function MembershipCardViewer(props) {
   return (
