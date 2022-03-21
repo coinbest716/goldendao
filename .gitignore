@@ -36,3 +36,4 @@ yarn-error.log*
 /.env
 /yarn.lock
 /.firebase
+package-lock.json
