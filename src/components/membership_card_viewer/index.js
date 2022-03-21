@@ -5,9 +5,9 @@ import DaoButton from '@components/dao_button'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
-import Diamond1 from '@src/assets/images/viewer/ring-1.JPG'
-import Diamond2 from '@src/assets/images/viewer/ring-2.JPG'
-import Diamond3 from '@src/assets/images/viewer/ring-3.JPG'
+import Diamond1 from '@src/assets/images/viewer/ring-1.jpg'
+import Diamond2 from '@src/assets/images/viewer/ring-2.jpg'
+// import Diamond3 from '@src/assets/images/viewer/ring-3.JPG'
 
 const membershipContent = {
   card11:
@@ -90,9 +90,9 @@ export default function MembershipCardViewer(props) {
           <div>
             <Image alt="" src={Diamond2} layout="responsive" />
           </div>
-          <div>
+          {/* <div>
             <Image alt="" src={Diamond3} layout="responsive" />
-          </div>
+          </div> */}
         </Carousel>
       </div>
       {/* <span className="w-[2px] h-[70px] bg-dark_gold absolute top-[1196px] left-[180px] xl:hidden" /> */}
