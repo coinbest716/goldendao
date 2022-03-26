@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import SectionInfo from '@src/components/section_info'
 import NFTCard from '@src/components/nft_card'
@@ -23,9 +23,13 @@ import ClipLoader from 'react-spinners/ClipLoader'
 
 export default function NFTDetail() {
   const router = useRouter()
+  const [loader, setLoader] = useState(false)
+
+  const setLoading = showLoader => {
+    setLoader(showLoader)
+  }
   return (
-    <div>
-      <ClipLoader color="#eeeeee" loading={true} size={150} />
+    <div className="relative">
       <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
         <ImgLink
           className="mt-[10px]"
@@ -50,7 +54,7 @@ export default function NFTDetail() {
           <div className="basis-1/2 justify-center mt-[50px]">
             <NFTCard className="nft-card-shadow" width={690} height={388}></NFTCard>
             <div className="mt-[16px]">
-              <MintCompontent className="m-auto"></MintCompontent>
+              <MintCompontent className="m-auto" showLoader={setLoading}></MintCompontent>
             </div>
           </div>
 
@@ -110,6 +114,9 @@ export default function NFTDetail() {
           </span>
         </div>
       </section>
+      <div className="absolute left-[48%] top-[48%]">
+        <ClipLoader color="#eeeeee" loading={loader} size={150} />
+      </div>
     </div>
   )
 }

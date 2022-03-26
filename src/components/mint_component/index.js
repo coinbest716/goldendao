@@ -8,96 +8,101 @@ import toast, { Toaster } from 'react-hot-toast'
 import { getMerkleProof, NFT_ADDRESS, getContractInfo } from '@src/utils/helpers'
 
 export default function MintCompontent(props) {
+  const showLoader = props.showLoader
   const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
-
   const [count, setCount] = useState(1)
+  const [isLoading, setIsLoading] = useState(false)
   const increase = () => {
-    if (count < 2) setCount(++count)
+    if (count < 3) setCount(++count)
   }
 
   const decrease = () => {
     if (count > 1) setCount(--count)
   }
 
-  // const onClickBtn = () => {
-  //   toast.success('Coming Soon!')
-  //   console.log(chainId)
-  // }
-
   async function onMintClicked() {
-    if (web3Provider != null) {
-      const signer = web3Provider.getSigner()
-      const GoldenDaoContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, signer)
-      const proof = getMerkleProof(address)
-      const { presaleStart, presaleEnd, publicStart, maxCount, priceBigNumber } = await getContractInfo(
-        GoldenDaoContract
-      )
+    if (isLoading == false) {
+      setIsLoading(true)
+      showLoader(true)
+      if (web3Provider != null) {
+        const signer = web3Provider.getSigner()
+        const GoldenDaoContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, signer)
+        const proof = getMerkleProof(address)
+        const { presaleStart, presaleEnd, publicStart, maxCount, priceBigNumber } = await getContractInfo(
+          GoldenDaoContract
+        )
 
-      try {
-        const now = new Date()
-        console.log(presaleStart)
-        console.log(presaleEnd)
-        console.log(publicStart)
-        console.log(maxCount)
-        console.log(now)
-        if (now > presaleStart && now < presaleEnd) {
-          const price = ethers.utils.formatEther(priceBigNumber) * count
-          const wei = ethers.utils.parseEther(price.toString())
-
-          await GoldenDaoContract.presaleMint(count, proof, { value: wei })
-            .then(tx => {
-              return tx.wait().then(
-                receipt => {
-                  toast.success('Presale Success!')
-                  return true
-                },
-                error => {
-                  console.log(error)
-                  toast.error('Presale Fail!')
-                }
-              )
-            })
-            .catch(error => {
-              if (error.message.indexOf('not exist') > 0) {
-                toast.error("You aren't whitelisted!")
-              } else if (error.message.indexOf('signature')) {
-                toast.error('You canceled transaction!')
-              } else {
-                toast.error(error.message)
-              }
-            })
-        } else if (now > publicStart) {
-          const price = await GoldenDaoContract.currentPrice()
-          const totalPrice = price * count
-          await GoldenDaoContract.publicMint(count, proof, { value: totalPrice })
-            .then(tx => {
-              return tx.wait().then(
-                receipt => {
-                  // This is entered if the transaction receipt indicates success
-                  toast.success('Presale Success!')
-                  return true
-                },
-                error => {
-                  toast.error('Public sale Fail!')
-                }
-              )
-            })
-            .catch(error => {
-              if (error.message.indexOf('not exist') > 0) {
-                toast.error("You aren't whitelisted!")
-              } else if (error.message.indexOf('signature')) {
-                toast.error('You canceled transaction!')
-              } else {
-                toast.error(error.message)
-              }
-            })
+        if (maxCount < count) {
+          toast('Max count is ' + maxCount)
+          setIsLoading(false)
+          showLoader(false)
         }
-      } catch (error) {
-        toast.error('Try catch Error!')
-        console.log(error)
+        try {
+          const now = new Date()
+
+          if (now > presaleStart && now < presaleEnd) {
+            const price = ethers.utils.formatEther(priceBigNumber) * count
+            const wei = ethers.utils.parseEther(price.toString())
+
+            await GoldenDaoContract.presaleMint(count, proof, { value: wei })
+              .then(tx => {
+                return tx.wait().then(
+                  receipt => {
+                    toast.success('Presale Success!')
+                    return true
+                  },
+                  error => {
+                    console.log(error)
+                    toast.error('Presale Fail!')
+                  }
+                )
+              })
+              .catch(error => {
+                if (error.message.indexOf('not exist') > 0) {
+                  toast.error("You aren't whitelisted!")
+                } else if (error.message.indexOf('signature')) {
+                  toast.error('You canceled transaction!')
+                } else {
+                  toast.error(error.message)
+                }
+              })
+          } else if (now > publicStart) {
+            const pubicSalePrice = await GoldenDaoContract.currentPrice()
+            const price = ethers.utils.formatEther(pubicSalePrice) * count
+            const wei = ethers.utils.parseEther(price.toString())
+
+            await GoldenDaoContract.publicMint(count, proof, { value: wei })
+              .then(tx => {
+                return tx.wait().then(
+                  receipt => {
+                    // This is entered if the transaction receipt indicates success
+                    toast.success('Presale Success!')
+                    return true
+                  },
+                  error => {
+                    toast.error('Public sale Fail!')
+                  }
+                )
+              })
+              .catch(error => {
+                if (error.message.indexOf('not exist') > 0) {
+                  toast.error("You aren't whitelisted!")
+                } else if (error.message.indexOf('signature')) {
+                  toast.error('You canceled transaction!')
+                } else {
+                  toast.error(error.message)
+                }
+              })
+          }
+        } catch (error) {
+          toast.error('Try catch Error!')
+          console.log(error)
+        }
+      } else {
+        toast('Connect Wallet')
       }
-    } else {
-      toast('Connect Wallet')
+      showLoader(false)
+      setIsLoading(false)
     }
   }
   return (
