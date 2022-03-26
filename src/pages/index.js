@@ -200,6 +200,10 @@ export default function Index() {
               <p className="text-center">Zi Wang</p>
               <p className="text-center">Eric Siu</p>
               <p className="text-center">Matt Liu</p>
+              <p className="text-center">Clara Tsao</p>
+              <p className="text-center">Michelle Phan</p>
+              <p className="text-center">Calista Wu</p>
+
             </div>
           </SectionInfo>
         </div>
