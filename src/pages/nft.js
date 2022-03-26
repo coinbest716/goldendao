@@ -19,11 +19,13 @@ import DiscordImg from '@src/assets/social_links/discord1.svg'
 import DiscordWhiteImg from '@src/assets/social_links/discord.svg'
 import TwitterImg from '@src/assets/social_links/twitter.svg'
 import TwitterWhiteImg from '@src/assets/social_links/twitter_white.svg'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 export default function NFTDetail() {
   const router = useRouter()
   return (
     <div>
+      <ClipLoader color="#eeeeee" loading={true} size={150} />
       <div className="container mx-auto  md:flex justify-end space-x-[10px] xl:pr-[50px] pr-[10px] pt-[120px] hidden">
         <ImgLink
           className="mt-[10px]"
