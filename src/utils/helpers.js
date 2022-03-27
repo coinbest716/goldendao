@@ -3,7 +3,7 @@ import keccak256 from 'keccak256'
 import whiteListJson from '@src/utils/whitelist.json'
 import { ethers } from 'ethers'
 
-export const NFT_ADDRESS = '0x4328C55c61665c1470707C0A89aff7A28e9aB0Ab'
+export const NFT_ADDRESS = '0x3c231489cCA248d5c192a2be3eAb8b315c51A7c6'
 export const calculateTimeLeft = endDate => {
   // let year = new Date().getFullYear()
   let difference = +new Date(endDate) - +new Date()
@@ -65,6 +65,7 @@ export async function getPublicPrice(publicStart, now, contract) {
   if (DUTCH_AUCTION_LENGTH < elapsed) {
     return end_price
   } else {
-    return start_price - (elapsed * (start_price - end_price)) / auction_length
+    const price = start_price - (elapsed * (start_price - end_price)) / auction_length
+    return price
   }
 }

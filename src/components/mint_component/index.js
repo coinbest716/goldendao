@@ -49,6 +49,7 @@ export default function MintCompontent(props) {
         price = await getPublicPrice(publicStart, now, GoldenDaoContract)
         setStagePrice(price)
       }
+      console.log(price)
     }
   }
 
@@ -81,6 +82,7 @@ export default function MintCompontent(props) {
 
       const totalPrice = stagePrice * count
       const wei = ethers.utils.parseEther(totalPrice.toString())
+      console.log(wei)
       if (stage == 1) {
         //presale
         const proof = getMerkleProof(address)
@@ -193,7 +195,7 @@ export default function MintCompontent(props) {
             className="text-white bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold  h-[50px] lg:w-[180px] w-[140px] rounded-full ml-[16px]"
             onClick={() => onMintClicked()}
           >
-            {stagePrice * count} ETH Mint
+            {stagePrice.toPrecision(5) * count} ETH Mint
           </button>
         </div>
       )}
