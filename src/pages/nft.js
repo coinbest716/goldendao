@@ -29,10 +29,9 @@ export default function NFTDetail() {
   const [currentSupply, setCurrentSupply] = useState(0)
 
   const getNFTInfo = async () => {
-    const max = await getMaxSupply()
+    // const max = await getMaxSupply()
     const current = await getCurrentSupply()
-    console.log(current)
-    setMaxSupply(parseInt(max))
+    // setMaxSupply(parseInt(max))
     setCurrentSupply(current)
   }
 

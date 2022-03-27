@@ -89,10 +89,9 @@ export default function Index() {
   }, [isOpenDlg])
 
   const getNFTInfo = async () => {
-    const max = await getMaxSupply()
+    // const max = await getMaxSupply()
     const current = await getCurrentSupply()
-    console.log(current)
-    setMaxSupply(parseInt(max))
+    // setMaxSupply(parseInt(max))
     setCurrentSupply(current)
   }
 

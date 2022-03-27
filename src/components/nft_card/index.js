@@ -18,7 +18,8 @@ export default function NFTCard(props) {
       onClick={e => onClickCard(e)}
     >
       <p className="ribbon3 text-white">
-        {currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold
+        {/* {currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold */}
+        {currentSupply}/888 Sold
       </p>
 
       <video
