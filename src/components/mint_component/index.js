@@ -5,7 +5,14 @@ import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 import { useSelector } from 'react-redux'
 import toast, { Toaster } from 'react-hot-toast'
-import { getMerkleProof, NFT_ADDRESS, getContractInfo, getPublicPrice, getPresalePrice } from '@src/utils/helpers'
+import {
+  getMerkleProof,
+  NFT_ADDRESS,
+  getContractInfo,
+  getPublicPrice,
+  getPresalePrice,
+  NETWORK_ID,
+} from '@src/utils/helpers'
 import { AbiCoder } from 'ethers/lib/utils'
 
 export default function MintCompontent(props) {
@@ -40,24 +47,20 @@ export default function MintCompontent(props) {
       if (now > presaleStart && now < presaleEnd) {
         setStage(1) //presale
         price = await getPresalePrice(GoldenDaoContract)
-        setStagePrice(price)
+        setStagePrice(price.toPrecision(5))
       } else if (now > presaleEnd && now < publicStart) {
         setStage(2) //between preasale and public sale
         setStagePrice(0)
       } else if (now >= publicStart) {
         setStage(3) //public sale
         price = await getPublicPrice(publicStart, now, GoldenDaoContract)
-        setStagePrice(price)
+        setStagePrice(price.toPrecision(5))
       }
       console.log(price)
     }
   }
 
   async function onMintClicked() {
-    // const now = (await web3Provider.getBlock()).timestamp
-    // console.log(now)
-    // return
-
     if (web3Provider == null) {
       toast('Connect Wallet')
       return
@@ -67,9 +70,9 @@ export default function MintCompontent(props) {
       return
     }
 
-    if (chainId != 4) {
+    if (chainId != NETWORK_ID) {
       //only for rinkeby
-      toast.error('Please select Rinkeby net')
+      toast.error('Please select Main net')
       return
     }
 
@@ -167,6 +170,9 @@ export default function MintCompontent(props) {
       toast.error('Please select Rinkeby net')
       return
     }
+    if (chainId != NETWORK_ID) {
+      toast.error('Please Select MainNet')
+    }
     calculatePrcieAndStage()
   }, [web3Provider, address, chainId])
   return (
@@ -195,7 +201,7 @@ export default function MintCompontent(props) {
             className="text-white bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold  h-[50px] lg:w-[180px] w-[140px] rounded-full ml-[16px]"
             onClick={() => onMintClicked()}
           >
-            {stagePrice.toPrecision(5) * count} ETH Mint
+            {stagePrice * count} ETH Mint
           </button>
         </div>
       )}
