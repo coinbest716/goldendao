@@ -16,7 +16,7 @@ import {
 import { AbiCoder } from 'ethers/lib/utils'
 
 export default function MintCompontent(props) {
-  const showLoader = props.showLoader
+  const { showLoader, setSoldCountFn } = props
   const { provider, web3Provider, address, chainId } = useSelector(store => store.wallet)
   const [count, setCount] = useState(1)
   const [isLoading, setIsLoading] = useState(false)
@@ -38,25 +38,24 @@ export default function MintCompontent(props) {
       const GoldenDaoContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, signer)
       const now = (await web3Provider.getBlock()).timestamp
       const { presaleStart, presaleEnd, publicStart, maxCount } = await getContractInfo(GoldenDaoContract)
-      console.log('presaleStart ' + presaleStart)
-      console.log('presaleEnd ' + presaleEnd)
-      console.log('publicStart ' + publicStart)
-      console.log('now ' + now)
+      // console.log('presaleStart ' + presaleStart)
+      // console.log('presaleEnd ' + presaleEnd)
+      // console.log('publicStart ' + publicStart)
+      // console.log('now ' + now)
       setMaxCount(maxCount)
       const price = 0
       if (now > presaleStart && now < presaleEnd) {
         setStage(1) //presale
         price = await getPresalePrice(GoldenDaoContract)
-        setStagePrice(price.toPrecision(5))
+        setStagePrice(price)
       } else if (now > presaleEnd && now < publicStart) {
         setStage(2) //between preasale and public sale
         setStagePrice(0)
       } else if (now >= publicStart) {
         setStage(3) //public sale
         price = await getPublicPrice(publicStart, now, GoldenDaoContract)
-        setStagePrice(price.toPrecision(5))
+        setStagePrice(price)
       }
-      console.log(price)
     }
   }
 
@@ -94,6 +93,7 @@ export default function MintCompontent(props) {
             return tx.wait().then(
               receipt => {
                 toast.success('Presale Success!')
+                setSoldCountFn(count)
                 return true
               },
               error => {
@@ -121,6 +121,7 @@ export default function MintCompontent(props) {
           .then(tx => {
             return tx.wait().then(
               receipt => {
+                setSoldCountFn(count)
                 toast.success('Public Sale Success!')
                 return true
               },
@@ -162,19 +163,16 @@ export default function MintCompontent(props) {
   //   calculatePrcieAndStage()
   // }, [])
 
-  useEffect(() => {
-    if (web3Provider == null) {
-      toast('Connect Wallet')
-    }
-    if (web3Provider != null && chainId != 4) {
-      toast.error('Please select Rinkeby net')
-      return
-    }
-    if (chainId != NETWORK_ID) {
-      toast.error('Please Select MainNet')
-    }
-    calculatePrcieAndStage()
-  }, [web3Provider, address, chainId])
+  // useEffect(() => {
+  //   if (web3Provider == null) {
+  //     toast('Connect Wallet')
+  //   }
+  //   if (chainId != NETWORK_ID) {
+  //     toast.error('Please Select MainNet')
+  //     return
+  //   }
+  //   calculatePrcieAndStage()
+  // }, [web3Provider, address, chainId])
   return (
     <>
       <Toaster />

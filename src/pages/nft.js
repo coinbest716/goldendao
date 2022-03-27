@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import SectionInfo from '@src/components/section_info'
 import NFTCard from '@src/components/nft_card'
@@ -20,10 +20,28 @@ import DiscordWhiteImg from '@src/assets/social_links/discord.svg'
 import TwitterImg from '@src/assets/social_links/twitter.svg'
 import TwitterWhiteImg from '@src/assets/social_links/twitter_white.svg'
 import ClipLoader from 'react-spinners/ClipLoader'
+import { getCurrentSupply, getMaxSupply } from '@src/utils/helpers'
 
 export default function NFTDetail() {
   const router = useRouter()
   const [loader, setLoader] = useState(false)
+  const [maxSupply, setMaxSupply] = useState(0)
+  const [currentSupply, setCurrentSupply] = useState(0)
+
+  const getNFTInfo = async () => {
+    const max = await getMaxSupply()
+    const current = await getCurrentSupply()
+    console.log(current)
+    setMaxSupply(parseInt(max))
+    setCurrentSupply(current)
+  }
+
+  const setSoldCount = count => {
+    setCurrentSupply(currentSupply + count)
+  }
+  useEffect(() => {
+    getNFTInfo()
+  }, [])
 
   const setLoading = showLoader => {
     setLoader(showLoader)
@@ -53,9 +71,19 @@ export default function NFTDetail() {
         <section className="container mx-auto welcome-section center-container md:pt-[20px] pt-[120px]">
           <div className="md:flex md:space-x-[50px] mt-[-50px]">
             <div className="basis-1/2 justify-center mt-[50px]">
-              <NFTCard className="nft-card-shadow" width={690} height={388}></NFTCard>
+              <NFTCard
+                className="nft-card-shadow"
+                width={690}
+                height={388}
+                maxSupply={maxSupply}
+                currentSupply={currentSupply}
+              ></NFTCard>
               <div className="mt-[16px]">
-                <MintCompontent className="m-auto" showLoader={setLoading}></MintCompontent>
+                <MintCompontent
+                  className="m-auto"
+                  showLoader={setLoading}
+                  setSoldCountFn={setSoldCount}
+                ></MintCompontent>
               </div>
             </div>
 

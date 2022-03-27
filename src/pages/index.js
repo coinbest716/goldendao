@@ -10,7 +10,7 @@ import DaoIconButton from '@src/components/dao_icon_btn'
 import Roadmap from '@src/components/roadmap'
 import ImgLink from '@components/img_link'
 import Modal from 'react-modal'
-
+import { getCurrentSupply, getMaxSupply } from '@src/utils/helpers'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { postUrl } from '@src/common'
 import Signup from '@src/components/signup/signup'
@@ -80,11 +80,25 @@ const customStyles = {
 
 export default function Index() {
   const [isOpenDlg, setIsOpenDlg] = useState(false)
+  const [maxSupply, setMaxSupply] = useState(0)
+  const [currentSupply, setCurrentSupply] = useState(0)
 
   useEffect(() => {
     const body = document.querySelector('body')
     body.style.overflow = isOpenDlg ? 'hidden' : 'auto'
   }, [isOpenDlg])
+
+  const getNFTInfo = async () => {
+    const max = await getMaxSupply()
+    const current = await getCurrentSupply()
+    console.log(current)
+    setMaxSupply(parseInt(max))
+    setCurrentSupply(current)
+  }
+
+  useEffect(() => {
+    getNFTInfo()
+  }, [])
 
   return (
     <>
@@ -130,7 +144,13 @@ export default function Index() {
             className="cursor-pointer basis-1/2 justify-center md:mt-[0px] mt-[20px] opacity-80"
             style={{ zIndex: 1 }}
           >
-            <NFTCard className="nft-card-shadow z-[1]" width={690} height={388}></NFTCard>
+            <NFTCard
+              className="nft-card-shadow z-[1]"
+              width={690}
+              height={388}
+              maxSupply={maxSupply}
+              currentSupply={currentSupply}
+            ></NFTCard>
           </div>
         </div>
       </section>

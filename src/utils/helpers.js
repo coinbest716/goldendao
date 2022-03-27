@@ -69,7 +69,7 @@ export async function getPublicPrice(publicStart, now, contract) {
     return end_price
   } else {
     const price = start_price - (elapsed * (start_price - end_price)) / auction_length
-    return price
+    return parseFloat(price).toPrecision(5)
   }
 }
 
@@ -78,7 +78,7 @@ export async function getCurrentSupply() {
   const tokenContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, provider)
 
   const totalSupply = await tokenContract.totalSupply(0)
-  console.log(totalSupply)
+  return parseInt(totalSupply) - 112
 }
 
 export async function getMaxSupply() {
@@ -86,5 +86,5 @@ export async function getMaxSupply() {
   const tokenContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, provider)
 
   const maxSupply = await tokenContract.MAX_SUPPLY()
-  console.log(parseInt(maxSupply))
+  return parseInt(maxSupply) - 112
 }

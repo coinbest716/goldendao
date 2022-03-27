@@ -2,12 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-import { getCurrentSupply, getMaxSupply } from '@src/utils/helpers'
-
 export default function NFTCard(props) {
-  const [maxSupply, setMaxSupply] = useState(0)
-  const [currentSupply, setCurrentSupply] = useState(0)
-
+  const { currentSupply, maxSupply } = props
   const router = useRouter()
   function onClickCard() {
     router.push('/nft')
@@ -16,24 +12,13 @@ export default function NFTCard(props) {
     e.stopPropagation()
   }
 
-  const getNFTInfo = async () => {
-    const max = await getMaxSupply()
-    const current = await getCurrentSupply()
-    setMaxSupply(max)
-    setCurrentSupply(current)
-  }
-
-  useEffect(() => {
-    getNFTInfo()
-  }, [])
-
   return (
     <div
       className={`relative bg-gradient-to-t from-darkest_gold to-medium_gold inline-block sm:p-[20px] p-[8px] sm:rounded-[16px] rounded-[8px] ${props.className}`}
       onClick={e => onClickCard(e)}
     >
-      <p class="ribbon3 text-white">
-        {currentSupply == 0 ? '--' : currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold
+      <p className="ribbon3 text-white">
+        {currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold
       </p>
 
       <video
