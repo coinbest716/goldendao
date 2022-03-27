@@ -62,11 +62,8 @@ export async function getPublicPrice(publicStart, now, contract) {
 
   const elapsed = now - publicStart
   if (DUTCH_AUCTION_LENGTH < elapsed) {
-    console.log(auction_length)
     return end_price
   } else {
-    console.log(elapsed)
-    console.log(auction_length)
     return start_price - (elapsed * (start_price - end_price)) / auction_length
   }
 }

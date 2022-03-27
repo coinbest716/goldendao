@@ -26,7 +26,6 @@ export default function MintCompontent(props) {
 
   const calculatePrcieAndStage = async () => {
     if (web3Provider != null) {
-      console.log(chainId)
       const signer = web3Provider.getSigner()
       const GoldenDaoContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, signer)
       const now = (await web3Provider.getBlock()).timestamp
@@ -58,6 +57,12 @@ export default function MintCompontent(props) {
       return
     }
 
+    if (chainId != 4) {
+      //only for rinkeby
+      toast.error('Please select Rinkeby net')
+      return
+    }
+
     if (isLoading == false) {
       setIsLoading(true)
       showLoader(true)
@@ -86,8 +91,10 @@ export default function MintCompontent(props) {
           .catch(error => {
             if (error.message.indexOf('not exist') > 0) {
               toast.error("You aren't whitelisted!")
-            } else if (error.message.indexOf('signature')) {
+            } else if (error.message.indexOf('signature') > 0) {
               toast.error('You canceled transaction!')
+            } else if (error.message.indexOf('Max per person') > 0) {
+              toast.error("You can't mint any more")
             } else {
               toast.error(error.message)
             }
@@ -108,13 +115,12 @@ export default function MintCompontent(props) {
             )
           })
           .catch(error => {
-            console.log(error)
             if (error.message.indexOf('not exist') > 0) {
               toast.error("You aren't whitelisted!")
-            } else if (error.message.indexOf('signature')) {
+            } else if (error.message.indexOf('signature') > 0) {
               toast.error('You canceled transaction!')
-            } else {
-              toast.error(error.message)
+            } else if (error.message.indexOf('Max per person') > 0) {
+              toast.error("You can't mint any more")
             }
           })
       } else {
@@ -126,6 +132,10 @@ export default function MintCompontent(props) {
   }
 
   useEffect(() => {
+    if (web3Provider != null && chainId != 4) {
+      toast.error('Please select Rinkeby net')
+      return
+    }
     calculatePrcieAndStage()
   }, [])
 
