@@ -104,8 +104,10 @@ export default function MintCompontent(props) {
               toast.error('You canceled transaction!')
             } else if (error.message.indexOf('Max per person') > 0) {
               toast.error("You can't mint any more")
+            } else if (error.message.indexOf('err: insufficient funds') > 0) {
+              toast.error('Insufficient funds for purchase')
             } else {
-              toast.error(error.message)
+              console.log(error.message)
             }
           })
       } else if (stage == 3) {
@@ -130,6 +132,10 @@ export default function MintCompontent(props) {
               toast.error('You canceled transaction!')
             } else if (error.message.indexOf('Max per person') > 0) {
               toast.error("You can't mint any more")
+            } else if (error.message.indexOf('err: insufficient funds') > 0) {
+              toast.error('Insufficient funds for purchase')
+            } else {
+              console.log(error)
             }
           })
       } else {
