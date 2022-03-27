@@ -98,7 +98,7 @@ export default function MintCompontent(props) {
             )
           })
           .catch(error => {
-            if (error.message.indexOf('not exist') > 0) {
+            if (error.message.indexOf('Invalid proof') > 0) {
               toast.error("You aren't whitelisted!")
             } else if (error.message.indexOf('signature') > 0) {
               toast.error('You canceled transaction!')
