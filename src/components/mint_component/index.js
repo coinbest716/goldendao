@@ -163,16 +163,16 @@ export default function MintCompontent(props) {
   //   calculatePrcieAndStage()
   // }, [])
 
-  // useEffect(() => {
-  //   if (web3Provider == null) {
-  //     toast('Connect Wallet')
-  //   }
-  //   if (chainId != NETWORK_ID) {
-  //     toast.error('Please Select MainNet')
-  //     return
-  //   }
-  //   calculatePrcieAndStage()
-  // }, [web3Provider, address, chainId])
+  useEffect(() => {
+    if (web3Provider == null) {
+      toast('Connect Wallet')
+    }
+    if (chainId != NETWORK_ID) {
+      toast.error('Please Select MainNet')
+      return
+    }
+    calculatePrcieAndStage()
+  }, [web3Provider, address, chainId])
   return (
     <>
       <Toaster />
