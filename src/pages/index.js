@@ -203,7 +203,6 @@ export default function Index() {
               <p className="text-center">Clara Tsao</p>
               <p className="text-center">Michelle Phan</p>
               <p className="text-center">Calista Wu</p>
-
             </div>
           </SectionInfo>
         </div>
@@ -251,7 +250,7 @@ export default function Index() {
               <div className="ml-[16px]">
                 <p>○ General Public mint</p>
                 <p>
-                  <b>○ Mint total: </b>TBA
+                  <b>○ Mint total: </b>888
                 </p>
                 <p>
                   <b>○ Priced: </b>Last Price Dutch Auction, .88 - 1.28 ETH
