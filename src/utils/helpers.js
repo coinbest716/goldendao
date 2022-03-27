@@ -47,8 +47,9 @@ export async function getContractInfo(contract) {
 }
 
 export async function getPresalePrice(contract) {
-  const presalePrice = await contract.PRESALE_PRICE()
-  return { presalePrice }
+  const presalePriceBigNum = await contract.PRESALE_PRICE()
+  const presalePrice = ethers.utils.formatEther(presalePriceBigNum)
+  return presalePrice
 }
 
 export async function getPublicPrice(publicStart, now, contract) {
