@@ -6,6 +6,7 @@ import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 import { useSelector } from 'react-redux'
 import toast, { Toaster } from 'react-hot-toast'
 import { getMerkleProof, NFT_ADDRESS, getContractInfo, getPublicPrice, getPresalePrice } from '@src/utils/helpers'
+import { AbiCoder } from 'ethers/lib/utils'
 
 export default function MintCompontent(props) {
   const showLoader = props.showLoader
@@ -30,12 +31,16 @@ export default function MintCompontent(props) {
       const GoldenDaoContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, signer)
       const now = (await web3Provider.getBlock()).timestamp
       const { presaleStart, presaleEnd, publicStart, maxCount } = await getContractInfo(GoldenDaoContract)
+      console.log('presaleStart ' + presaleStart)
+      console.log('presaleEnd ' + presaleEnd)
+      console.log('publicStart ' + publicStart)
+      console.log('now ' + now)
       setMaxCount(maxCount)
       const price = 0
-      if (now < presaleStart) {
+      if (now > presaleStart && now < presaleEnd) {
         setStage(1) //presale
         price = await getPresalePrice(GoldenDaoContract)
-        setStagePrice(ethers.utils.formatEther(price))
+        setStagePrice(price)
       } else if (now > presaleEnd && now < publicStart) {
         setStage(2) //between preasale and public sale
         setStagePrice(0)
@@ -48,6 +53,10 @@ export default function MintCompontent(props) {
   }
 
   async function onMintClicked() {
+    // const now = (await web3Provider.getBlock()).timestamp
+    // console.log(now)
+    // return
+
     if (web3Provider == null) {
       toast('Connect Wallet')
       return
@@ -131,14 +140,27 @@ export default function MintCompontent(props) {
     }
   }
 
+  // useEffect(() => {
+  //   if (web3Provider == null) {
+  //     toast('Connect Wallet')
+  //   }
+  //   if (web3Provider != null && chainId != 4) {
+  //     toast.error('Please select Rinkeby net')
+  //     return
+  //   }
+  //   calculatePrcieAndStage()
+  // }, [])
+
   useEffect(() => {
+    if (web3Provider == null) {
+      toast('Connect Wallet')
+    }
     if (web3Provider != null && chainId != 4) {
       toast.error('Please select Rinkeby net')
       return
     }
     calculatePrcieAndStage()
-  }, [])
-
+  }, [web3Provider, address, chainId])
   return (
     <>
       <Toaster />
