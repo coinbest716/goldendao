@@ -29,8 +29,6 @@ export function getMerkleProof(address) {
   })
   const hashedAddress = keccak256(address)
   const proof = merkleTree.getHexProof(hashedAddress)
-  console.log(proof)
-
   return proof
 }
 
@@ -39,16 +37,36 @@ export async function getContractInfo(contract) {
   let presaleEnd = await contract.presaleEnd()
   let publicStart = await contract.publicStart()
   const maxCount = await contract.PRESALE_MAX_PER_TX()
-  const priceBigNumber = await contract.PRESALE_PRICE()
-  presaleStart = presaleStart * 1000
-  presaleEnd = presaleEnd * 1000
-  publicStart = publicStart * 1000
 
   return {
     presaleStart,
     presaleEnd,
     publicStart,
     maxCount,
-    priceBigNumber,
+  }
+}
+
+export async function getPresalePrice(contract) {
+  const presalePrice = await contract.PRESALE_PRICE()
+  return { presalePrice }
+}
+
+export async function getPublicPrice(publicStart, now, contract) {
+  const DUTCH_AUCTION_START_PRICE = await contract.DUTCH_AUCTION_START_PRICE()
+  const DUTCH_AUCTION_END_PRICE = await contract.DUTCH_AUCTION_END_PRICE()
+  const DUTCH_AUCTION_LENGTH = await contract.DUTCH_AUCTION_LENGTH()
+  const start_price = ethers.utils.formatEther(DUTCH_AUCTION_START_PRICE)
+  const end_price = ethers.utils.formatEther(DUTCH_AUCTION_END_PRICE)
+  const auction_length = DUTCH_AUCTION_LENGTH
+  if (now <= publicStart) return start_price
+
+  const elapsed = now - publicStart
+  if (DUTCH_AUCTION_LENGTH < elapsed) {
+    console.log(auction_length)
+    return end_price
+  } else {
+    console.log(elapsed)
+    console.log(auction_length)
+    return start_price - (elapsed * (start_price - end_price)) / auction_length
   }
 }
