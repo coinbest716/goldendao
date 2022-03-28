@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { calculateTimeLeft } from '@src/utils/helpers'
 
 const CountDown = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(`3/31/2022 10:00`))
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(`3/28/2022 11:00`))
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft(`3/31/2022 10:00`))
+      setTimeLeft(calculateTimeLeft(`3/28/2022 11:00`))
     }, 1000)
 
     return () => clearTimeout(timer)
@@ -26,7 +26,7 @@ const CountDown = () => {
 
   return (
     <div className="countdown py-4 md:py-8">
-      <ul id="countdown" className="w-full flex justify-between" data-date="Feb 12, 2022 9:00:00 PM UTC">
+      <ul id="countdown" className="w-full flex justify-between" data-date="March 28, 2022 6:00:00 PM UTC">
         {timerComponents.length ? (
           timerComponents
         ) : (
