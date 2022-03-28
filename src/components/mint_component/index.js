@@ -81,7 +81,7 @@ export default function MintCompontent(props) {
       calculatePrcieAndStage()
       const signer = web3Provider.getSigner()
       const GoldenDaoContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, signer)
-      const totalPrice = (stagePrice + 0.000001) * count
+      const totalPrice = stagePrice * count
       const wei = ethers.utils.parseEther(totalPrice.toString())
       console.log(wei)
       if (stage == 1) {
