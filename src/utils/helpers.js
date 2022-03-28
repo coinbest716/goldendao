@@ -4,7 +4,7 @@ import whiteListJson from '@src/utils/whitelist.json'
 import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 
-export const NFT_ADDRESS = '0x25d40B8f20C8ACfd871f52586694834575905855'
+export const NFT_ADDRESS = '0xE27C770BAeBd5E558895CEcBaA8d7c76e1f9e629'
 export const RPC_URL = 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
 export const NETWORK_ID = 4
 export const calculateTimeLeft = endDate => {
