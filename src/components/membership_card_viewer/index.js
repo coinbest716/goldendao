@@ -99,7 +99,7 @@ export default function MembershipCardViewer(props) {
         content={membershipContentFinal.content}
       />
       <DaoButton
-        className="absolute xl:top-[747px] xl:left-[595px] top-[2180px] left-[15px] w-[330px] xl:w-[410] mt-[50px] h-[60px]"
+        className="absolute xl:top-[747px] xl:left-[595px] top-[2180px] left-[15px] w-[330px] xl:w-[410] mt-[50px] h-[60px] z-[1]"
         onClick={() => (props.onMintBtnEvent ? props.onMintBtnEvent() : '')}
       >
         MINT YOUR NFT

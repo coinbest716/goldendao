@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import SectionInfo from '@src/components/section_info'
 import DaoButton from '@src/components/dao_button'
 import NFTCard from '@src/components/nft_card'
@@ -82,7 +83,7 @@ export default function Index() {
   const [isOpenDlg, setIsOpenDlg] = useState(false)
   const [maxSupply, setMaxSupply] = useState(0)
   const [currentSupply, setCurrentSupply] = useState(0)
-
+  const router = useRouter()
   useEffect(() => {
     const body = document.querySelector('body')
     body.style.overflow = isOpenDlg ? 'hidden' : 'auto'
@@ -132,7 +133,7 @@ export default function Index() {
               className="h-[60px] relative z-[1]"
               width="280px"
               onClick={() => {
-                setIsOpenDlg(true)
+                router.push('/nft')
               }}
             >
               MINT YOUR NFT
@@ -167,7 +168,7 @@ export default function Index() {
               {/* <p>{CaptionInfo['membership']['content3']}</p> */}
             </SectionInfo>
           </div>
-          <MembershipCardViewer className="mx-auto relative" onMintBtnEvent={() => setIsOpenDlg(true)} />
+          <MembershipCardViewer className="mx-auto relative" onMintBtnEvent={() => router.push('/nft')} />
         </div>
       </section>
       <section id="roadmap" className="roadmap-section pt-[160px] relative">
