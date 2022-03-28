@@ -88,9 +88,7 @@ export default function NFTDetail() {
 
             <div className="basis-1/2 mt-[50px]">
               <div className="modal-wrapper">
-                <h4 className="modal-title 2xl:text-[24px] lg:text-[18px] text-white">
-                Pre-Sale Minting Opens March, 28, 2022 at 11am PST
-                </h4>
+                <h4 className="modal-title 2xl:text-[24px] lg:text-[18px] text-white">Pre-Sale Minting Now Open</h4>
                 <p className="2xl:text-[18px] md:text-[15px] text-[14px] text-white">
                   Join our immersive community and be a part of the core founding members by purchasing an NFT key. We
                   look forward to seeing you in person for our launch party with special guests, celebrity appearances,

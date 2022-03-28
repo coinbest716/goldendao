@@ -4,9 +4,9 @@ import whiteListJson from '@src/utils/whitelist.json'
 import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 
-export const NFT_ADDRESS = '0xC90D32Ec12ddAc7024d89684FBb9fEB40104290F'
-export const RPC_URL = 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
-export const NETWORK_ID = 4
+export const NFT_ADDRESS = '0x7e7c8ae51546933ddc3afaeba61266309157f786'
+export const RPC_URL = 'https://eth-mainnet.alchemyapi.io/v2/AJQ3xAToNbhrRgr-JKAnZzYYT0-KrC8P' //'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
+export const NETWORK_ID = 1 //4
 
 export const RPC_MAIN_NET = 'https://eth-mainnet.alchemyapi.io/v2/AJQ3xAToNbhrRgr-JKAnZzYYT0-KrC8P'
 export const NETWORK_ID_MAIN = 1
