@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
 import { calculateTimeLeft } from '@src/utils/helpers'
 
 const CountDown = () => {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(`Mar 28, 2022 10:00:00 AM PST`))
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(`Mar 28, 2022 11:00:00 AM PST`))
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft(`Mar 28, 2022 10:00:00 AM PST`))
+      setTimeLeft(calculateTimeLeft(`Mar 28, 2022 11:00:00 AM PST`))
     }, 1000)
 
     return () => clearTimeout(timer)
