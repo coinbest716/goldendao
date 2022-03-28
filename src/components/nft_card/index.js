@@ -17,10 +17,10 @@ export default function NFTCard(props) {
       className={`relative bg-gradient-to-t from-darkest_gold to-medium_gold inline-block sm:p-[20px] p-[8px] sm:rounded-[16px] rounded-[8px] ${props.className}`}
       onClick={e => onClickCard(e)}
     >
-      <p className="ribbon3 text-white">
-        {/* {currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold */}
-        {/* {currentSupply}/888 Sold */}
-      </p>
+      {/* <p className="ribbon3 text-white"> */}
+      {/* {currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold */}
+      {/* {currentSupply}/888 Sold */}
+      {/* </p> */}
 
       <video
         width="690"
