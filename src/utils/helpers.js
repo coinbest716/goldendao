@@ -4,7 +4,7 @@ import whiteListJson from '@src/utils/whitelist.json'
 import { ethers } from 'ethers'
 import ContractAbi from '@src/abi/GoldenDaoNFT.json'
 
-export const NFT_ADDRESS = '0xE27C770BAeBd5E558895CEcBaA8d7c76e1f9e629'
+export const NFT_ADDRESS = '0xC90D32Ec12ddAc7024d89684FBb9fEB40104290F'
 export const RPC_URL = 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
 export const NETWORK_ID = 4
 export const calculateTimeLeft = endDate => {
@@ -69,7 +69,7 @@ export async function getPublicPrice(publicStart, now, contract) {
     return end_price
   } else {
     const price = start_price - (elapsed * (start_price - end_price)) / auction_length
-    return parseFloat(price).toPrecision(5)
+    return price
   }
 }
 

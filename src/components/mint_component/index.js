@@ -81,8 +81,7 @@ export default function MintCompontent(props) {
       calculatePrcieAndStage()
       const signer = web3Provider.getSigner()
       const GoldenDaoContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, signer)
-
-      const totalPrice = stagePrice * count
+      const totalPrice = (stagePrice + 0.000001) * count
       const wei = ethers.utils.parseEther(totalPrice.toString())
       console.log(wei)
       if (stage == 1) {
@@ -164,7 +163,6 @@ export default function MintCompontent(props) {
   // }, [])
 
   useEffect(() => {
-    console.log('abcdef')
     if (web3Provider == null) {
       // toast('Connect Wallet')
       return
@@ -201,7 +199,7 @@ export default function MintCompontent(props) {
             className="text-white bg-gradient-to-t from-darkest_gold to-medium_gold hover:from-medium_gold hover:to-darkest_gold  h-[50px] lg:w-[180px] w-[140px] rounded-full ml-[16px]"
             onClick={() => onMintClicked()}
           >
-            {stagePrice * count} ETH Mint
+            {parseFloat(stagePrice).toPrecision(2) * count} ETH Mint
           </button>
         </div>
       )}
