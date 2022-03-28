@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 export default function NFTCard(props) {
+  const { currentSupply, maxSupply } = props
   const router = useRouter()
   function onClickCard() {
     router.push('/nft')
@@ -10,12 +11,16 @@ export default function NFTCard(props) {
   const stopPropagation = e => {
     e.stopPropagation()
   }
+
   return (
     <div
       className={`relative bg-gradient-to-t from-darkest_gold to-medium_gold inline-block sm:p-[20px] p-[8px] sm:rounded-[16px] rounded-[8px] ${props.className}`}
       onClick={e => onClickCard(e)}
     >
-      {/* <p class="ribbon3 text-white">0/888 Sold</p> */}
+      <p className="ribbon3 text-white">
+        {/* {currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold */}
+        {currentSupply}/888 Sold
+      </p>
 
       <video
         width="690"
