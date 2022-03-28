@@ -30,9 +30,10 @@ const CountDown = () => {
         {timerComponents.length ? (
           timerComponents
         ) : (
-          <h1 className="heading" style={{ fontSize: '5rem' }}>
-            Time&apos;s up!
-          </h1>
+          <></>
+          // <h1 className="heading" style={{ fontSize: '5rem' }}>
+          //   Time&apos;s up!
+          // </h1>
         )}
       </ul>
     </div>
