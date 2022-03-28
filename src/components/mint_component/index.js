@@ -164,8 +164,10 @@ export default function MintCompontent(props) {
   // }, [])
 
   useEffect(() => {
+    console.log('abcdef')
     if (web3Provider == null) {
       toast('Connect Wallet')
+      return
     }
     if (chainId != NETWORK_ID) {
       toast.error('Please Select MainNet')

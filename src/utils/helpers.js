@@ -75,8 +75,8 @@ export async function getPublicPrice(publicStart, now, contract) {
 
 export async function getCurrentSupply() {
   let provider = new ethers.providers.JsonRpcProvider(RPC_URL)
-  const now = (await provider.getBlock()).timestamp
-  console.log('now ' + now)
+  // const now = (await provider.getBlock()).timestamp
+  // console.log('now ' + now)
   const tokenContract = new ethers.Contract(NFT_ADDRESS, ContractAbi, provider)
 
   const totalSupply = await tokenContract.totalSupply(0)
