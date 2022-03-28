@@ -25,7 +25,7 @@ export default function MintCompontent(props) {
   const [maxCount, setMaxCount] = useState(3)
 
   const increase = () => {
-    if (count < 3) setCount(++count)
+    if (count < 2) setCount(++count)
   }
 
   const decrease = () => {
