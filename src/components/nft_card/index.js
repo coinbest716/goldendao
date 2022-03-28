@@ -19,7 +19,7 @@ export default function NFTCard(props) {
     >
       <p className="ribbon3 text-white">
         {/* {currentSupply}/{maxSupply == 0 ? '--' : maxSupply} Sold */}
-        {/* {currentSupply}/888 Sold */}
+        {currentSupply}/888 Sold
       </p>
 
       <video
