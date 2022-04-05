@@ -35,7 +35,7 @@ import CountDown from '@src/components/countdown'
 
 const CaptionInfo = {
   welcome: {
-    caption: 'WELCOME TO GOLDENDAO',
+    caption: 'WELCOME TO Danny Bouwer',
     content:
       'A highly engaged, collaborative, and impact-focused community. Our mission is to launch a DAO to collectively advance AAPI solidarity and empowerment through real world events + gatherings, and web3 infrastructure + initiatives.',
   },
