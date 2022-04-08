@@ -14,7 +14,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.0.0",
     "@fortawesome/free-solid-svg-icons": "^6.0.0",
     "@fortawesome/react-fontawesome": "^0.1.17",
-    "@madzadev/image-slider": "^1.0.5",
+    "@madzadev/image-slider": "^1.0.8",
     "@next-tools/dynamic": "^0.0.11",
     "@walletconnect/web3-provider": "^1.7.3",
     "axios": "^0.26.0",
